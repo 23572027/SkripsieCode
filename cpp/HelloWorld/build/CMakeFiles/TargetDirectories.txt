@@ -1,0 +1,3 @@
+/home/paul/Skripsie/Code/SkripsieCode/cpp/HelloWorld/build/CMakeFiles/Glyph3D.dir
+/home/paul/Skripsie/Code/SkripsieCode/cpp/HelloWorld/build/CMakeFiles/edit_cache.dir
+/home/paul/Skripsie/Code/SkripsieCode/cpp/HelloWorld/build/CMakeFiles/rebuild_cache.dir
