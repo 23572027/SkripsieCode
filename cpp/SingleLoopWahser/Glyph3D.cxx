@@ -92,7 +92,7 @@ int main(int argc, char* argv[])
     
     // loop through all points  output->GetNumberOfPoints()
     auto num = output->GetNumberOfPoints();
-//    int num = 28;
+//    int num = 34;
     for (int i = 0; i < num; i++ ){
       // This gets each cell connected to this point (each triangle)
       //reused variables
@@ -111,13 +111,10 @@ int main(int argc, char* argv[])
 
         // Then use cell ids to get points
         output->GetCellPoints(tcells[k],npts,pts);
-        Point ptot = {0 , 0, 0, 0};
-        // cout << "Cell: " << tcells[k] << " Pts: " << " CharPt: i";
         for (int j = 0; j< npts; j++){
-          //ensure characteristic point is not included
-          // cout << pts[j] << " ";
+
           if(pts[j] != i){
-//             this is the incorrect implementation. We must find the geometric mean of all cells
+              // for boundry conditions
             point_vec.push_back(Cell::MeanPoints(
               Cell::vtkPtsToPoint(PointArray,pts[j]),
               Cell::vtkPtsToPoint(PointArray,i)
@@ -126,20 +123,24 @@ int main(int argc, char* argv[])
           // ptot = ptot + Cell::vtkPtsToPoint(PointArray,pts[j]);
           
         }
+        //compute circumcenter
         Point p1 = Cell::vtkPtsToPoint(PointArray,pts[0]);
         Point p2 = Cell::vtkPtsToPoint(PointArray,pts[1]);
         Point p3 = Cell::vtkPtsToPoint(PointArray,pts[2]);
-        // find circumcenter TODO: test
         double X_sol =  (p1.x*p1.x*p2.y - p1.x*p1.x*p3.y - p2.x*p2.x*p1.y + p2.x*p2.x*p3.y + p3.x*p3.x*p1.y - p3.x*p3.x*p2.y + p1.y*p1.y*p2.y - p1.y*p1.y*p3.y - p1.y*p2.y*p2.y + p1.y*p3.y*p3.y + p2.y*p2.y*p3.y - p2.y*p3.y*p3.y)/(2*(p1.x*p2.y - p2.x*p1.y - p1.x*p3.y + p3.x*p1.y + p2.x*p3.y - p3.x*p2.y));
         double Y_sol = (-p1.x*p1.x*p2.x + p1.x*p1.x*p3.x + p1.x*p2.x*p2.x - p1.x*p3.x*p3.x + p1.x*p2.y*p2.y - p1.x*p3.y*p3.y - p2.x*p2.x*p3.x + p2.x*p3.x*p3.x - p2.x*p1.y*p1.y + p2.x*p3.y*p3.y + p3.x*p1.y*p1.y - p3.x*p2.y*p2.y)/(2*(p1.x*p2.y - p2.x*p1.y - p1.x*p3.y + p3.x*p1.y + p2.x*p3.y - p3.x*p2.y));
         double Z_sol = p1.z;
-
         point_vec.push_back({X_sol,Y_sol,Z_sol});
-        // cout << endl;
 
       }
       //create new cell object
-        Cells.push_back(new Cell(point_vec, Cell::vtkPtsToPoint(PointArray,i), point_vec.size(),i));
+        if (ncells <= 2) {
+            point_vec.push_back(Cell::vtkPtsToPoint(PointArray,i));
+            Point charpt = Cell::MeanPoints(point_vec);
+            Cells.push_back(new Cell(point_vec, charpt, point_vec.size(),i));
+        } else {
+            Cells.push_back(new Cell(point_vec, Cell::vtkPtsToPoint(PointArray,i), point_vec.size(),i));
+        }
 
     }
 

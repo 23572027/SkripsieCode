@@ -33,7 +33,7 @@ double angleXY(Point p){
 #endif
     double add = 0;
         // second quadrant
-
+    if (p.x == 0 && p.y == 0) {return 0;}
     if (p.y == 0) return (p.x > 0) ? 0 : PI;
     if (p.x == 0) return (p.y >0) ? PI/2 : 3*PI/2;
 
