@@ -92,6 +92,7 @@ int main(int argc, char* argv[])
     
     // loop through all points  output->GetNumberOfPoints()
     auto num = output->GetNumberOfPoints();
+//    int num = 28;
     for (int i = 0; i < num; i++ ){
       // This gets each cell connected to this point (each triangle)
       //reused variables
@@ -116,7 +117,7 @@ int main(int argc, char* argv[])
           //ensure characteristic point is not included
           // cout << pts[j] << " ";
           if(pts[j] != i){
-            // this is the incorrect implementation. We must find the geometric mean of all cells
+//             this is the incorrect implementation. We must find the geometric mean of all cells
             point_vec.push_back(Cell::MeanPoints(
               Cell::vtkPtsToPoint(PointArray,pts[j]),
               Cell::vtkPtsToPoint(PointArray,i)
@@ -130,10 +131,10 @@ int main(int argc, char* argv[])
         Point p3 = Cell::vtkPtsToPoint(PointArray,pts[2]);
         // find circumcenter TODO: test
         double X_sol =  (p1.x*p1.x*p2.y - p1.x*p1.x*p3.y - p2.x*p2.x*p1.y + p2.x*p2.x*p3.y + p3.x*p3.x*p1.y - p3.x*p3.x*p2.y + p1.y*p1.y*p2.y - p1.y*p1.y*p3.y - p1.y*p2.y*p2.y + p1.y*p3.y*p3.y + p2.y*p2.y*p3.y - p2.y*p3.y*p3.y)/(2*(p1.x*p2.y - p2.x*p1.y - p1.x*p3.y + p3.x*p1.y + p2.x*p3.y - p3.x*p2.y));
-        double Y_sol = (- p1.x*p1.x*p2.x + p1.x*p1.x*p3.x + p1.x*p2.x*p2.x - p1.x*p3.x*p3.x + p1.x*p2.y*p2.y - p1.x*p3.y*p2.y - p2.x*p2.x*p3.x + p2.x*p3.x*p3.x - p2.x*p1.y*p1.y + p2.x*p3.y*p3.y + p3.x*p1.y*p1.y - p3.x*p2.y*p2.y)/(2*(p1.x*p2.y - p2.x*p1.y - p1.x*p3.y + p3.x*p1.y + p2.x*p3.y - p3.x*p2.y));
+        double Y_sol = (-p1.x*p1.x*p2.x + p1.x*p1.x*p3.x + p1.x*p2.x*p2.x - p1.x*p3.x*p3.x + p1.x*p2.y*p2.y - p1.x*p3.y*p3.y - p2.x*p2.x*p3.x + p2.x*p3.x*p3.x - p2.x*p1.y*p1.y + p2.x*p3.y*p3.y + p3.x*p1.y*p1.y - p3.x*p2.y*p2.y)/(2*(p1.x*p2.y - p2.x*p1.y - p1.x*p3.y + p3.x*p1.y + p2.x*p3.y - p3.x*p2.y));
         double Z_sol = p1.z;
-        ptot = ptot/(double) npts;
-        point_vec.push_back(ptot);
+
+        point_vec.push_back({X_sol,Y_sol,Z_sol});
         // cout << endl;
 
       }
@@ -141,25 +142,6 @@ int main(int argc, char* argv[])
         Cells.push_back(new Cell(point_vec, Cell::vtkPtsToPoint(PointArray,i), point_vec.size(),i));
 
     }
-
-    // surface area example
-    // double SurfaceArea = 0.0;
-    // t_Point pt1;
-    // t_Point pt2;
-    // t_Point pt3;  
-    // for (int i = 0; i < ConnectivityArray->GetNumberOfTuples()-2;i+=3){
-    //   // get 3 connected points
-    //   double n_p1 = *(ConnectivityArray->GetTuple(i));
-    //   double n_p2 = *(ConnectivityArray->GetTuple(i+1));
-    //   double n_p3 = *(ConnectivityArray->GetTuple(i+2));
-    //   // get points from Point array
-    //   double *p1 = PointArray->GetPoint((int) n_p1);
-    //   pt1.x = 1E6*p1[0]; pt1.y = 1E6*p1[1]; pt1.z = 1E6*p1[2];
-    //   double *p2 = PointArray->GetPoint((int) n_p2);
-    //   pt2.x = 1E6*p2[0]; pt2.y = 1E6*p2[1]; pt2.z = 1E6*p2[2];
-    //   double *p3 = PointArray->GetPoint((int) n_p3);
-    //   pt3.x = 1E6*p3[0]; pt3.y = 1E6*p3[1]; pt3.z = 1E6*p3[2];
-    // }
 
     #ifdef debug
     // draw poly data

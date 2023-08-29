@@ -22,6 +22,7 @@ numPoints is the number of points in the polygon (excluding the characteristic p
 
 #include <vector>
 #include <math.h>
+#include <string>
 
 
 typedef struct Point { 
