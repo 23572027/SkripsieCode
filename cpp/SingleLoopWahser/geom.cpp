@@ -1,3 +1,6 @@
+
+
+
 #define PI 3.141592653589793238463
 #define debug1
 
@@ -56,18 +59,19 @@ bool comparePoint(Point p1, Point p2){
 
 
 // class methods
-Cell :: Cell(vector<Point> p_pts, Point p_charPt, int p_numPts, int CharId) : 
+Cell :: Cell(vector<Point> p_pts, Point p_charPt, int p_numPts, int CharId,Point p_B_field) :
       pts(std::move(p_pts)),
       charPt(p_charPt),
       numPts(p_numPts),
-      charId(CharId) 
+      charId(CharId),
+      B_field(p_B_field)
     {
         area = 0;
         areaComputed = false;
         getArea();
     }
 
-Cell :: ~Cell()= default;
+Cell :: ~Cell() = default;
 
 void Cell :: _translate() {
     // implement and test
@@ -150,8 +154,8 @@ void Cell :: test() {
 }
 
 
-Point Cell :: MeanPoints(vector<Point> pts){
-    double n = (double) pts.size();
+Point Cell :: MeanPoints(const vector<Point>& pts){
+    auto n = (double) pts.size();
     Point avg = {0,0,0};
     for (Point pt : pts){
         avg = avg + pt;
@@ -179,6 +183,10 @@ Point Cell :: GetPoint(int index){
 std::string Cell :: toString() {
         return "(size: " +  to_string(this->getNumPts()) + " Area: " + to_string(this->getArea()) + " Charpt id: " + to_string(this->getCharPtId()) + ")";
     }
+
+Point Cell::getB() {
+    return B_field;
+}
 
 
 std::ostream& operator<<(std::ostream &s, Point pt) {

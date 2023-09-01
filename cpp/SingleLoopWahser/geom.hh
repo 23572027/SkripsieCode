@@ -9,9 +9,18 @@ numPoints is the number of points in the polygon (excluding the characteristic p
 
 */
 
+/*
+ TODO: Gotta make this work in 3D man. Current solution is getting the normal and detecting when the
+ object is oriented in the x-z or y-z plane. These are calculated with the normal algorithm except x or y is replaced by z.
+ If object is not perfectly oriented in one of these planes project onto xy plane and use formula to calculate are when not projected.
+*/
+
 #ifndef GEOM_
 #define GEOM_
 
+
+
+#define B_PT(v) {v[0], v[1], v[3]}
 #define PT(pt) pt.x , pt.y, pt.z
 
 #include <vtkGenericDataObjectReader.h>
@@ -36,6 +45,7 @@ Point operator+(Point a, Point b);
 Point operator-(Point a, Point b);
 double operator*(Point a, Point b);
 Point operator/(Point a, double b);
+std::ostream& operator<<(std::ostream &s, Point pt);
 
 class Cell {
     private:
@@ -45,6 +55,7 @@ class Cell {
         Point charPt;
         int numPts;
         int charId;
+        Point B_field;
 
         void _orderPts();
         void _translate();
@@ -53,7 +64,7 @@ class Cell {
 
 
     public:
-        Cell(std::vector<Point> p_pts, Point p_charPt, int p_numPts, int CharId);
+        Cell(std::vector<Point> p_pts, Point p_charPt, int p_numPts, int CharId, Point p_B_field);
         ~Cell();
         double getArea();
         double getNumPts();
@@ -62,10 +73,10 @@ class Cell {
         int getCharPtId();
         std::string toString();
         static void test();
-        static Point MeanPoints(std::vector<Point> points);
+        static Point MeanPoints(const std::vector<Point>& points);
         static Point MeanPoints(Point pt1, Point pt2);
         static Point vtkPtsToPoint(vtkPoints *PointArray, int pid);
-    
+        Point getB();
 };
 
 #endif

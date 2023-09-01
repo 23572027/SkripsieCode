@@ -1,12 +1,22 @@
+#define B_PT(v) {v[0], v[1], v[3]}
+
+// Temporary current data for loop
+#define curr 0.79190019755 Amps
+
 #define debug
 
 
 //debugging 
 #ifdef debug
+//#include <vtkDecimatePolylineFilter.h>
+//#include <vtkMath.h>
+//#include <vtkLabeledDataMapper.h>
+//#include <vtkTextProperty.h>
+//#include <vtkActor2D.h>
+#include <vtkArrowSource.h>
+#include <vtkGlyph3D.h>
 #include <vtkActor.h>
 #include <vtkCellArray.h>
-#include <vtkDecimatePolylineFilter.h>
-#include <vtkMath.h>
 #include <vtkNamedColors.h>
 #include <vtkNew.h>
 #include <vtkPolyData.h>
@@ -16,11 +26,8 @@
 #include <vtkRenderWindowInteractor.h>
 #include <vtkRenderer.h>
 #include <vtkCellData.h>
-#include <vtkLabeledDataMapper.h>
-#include <vtkDoubleArray.h>
-#include <vtkTextProperty.h>
-#include <vtkActor2D.h>
 #include <vtkPointData.h>
+#include <vtkDoubleArray.h>
 #endif
 
 /*
@@ -29,10 +36,10 @@ Units: All lengths are in um -> this extends to areas, volumes etc.. !
 
 
 #include <vtkGenericDataObjectReader.h>
-#include <vtkNew.h>
-#include <vtkPolyData.h>
+//#include <vtkNew.h>
+//#include <vtkPolyData.h>
 #include <vtkStructuredGrid.h>
-#include <vtkUnstructuredGrid.h>
+//#include <vtkUnstructuredGrid.h>
 
 
 
@@ -45,26 +52,12 @@ std::ostream& operator<<(std::ostream &s, Cell cell){
     return s << cell.toString();
 }
 
-double AreaFromPoints(double *p1, double *p2, double *p3);
-
-// type to store points
-typedef struct t_Point {
-  double x;
-  double y; 
-  double z;
-} t_Point;
-
-// type to store point objects
-typedef struct t_VTK_Pt  {
-  t_Point loc;
-  int pid;
-}t_VTK_Pt;
 
 using namespace std;
 
 int main(int argc, char* argv[])
 {
-  
+
   // Ensure a filename was specified.
   if (argc != 2)
   {
@@ -84,7 +77,8 @@ int main(int argc, char* argv[])
     std::cout << "Reading file" << std::endl;
     auto output = reader->GetUnstructuredGridOutput();
     vtkPoints *PointArray = output->GetPoints();
-    
+    // get data array
+    vtkDoubleArray* D_array = vtkDoubleArray::SafeDownCast(output->GetPointData()->GetArray("10.000GHz_fone_imag"));
     //vector to store cell data
     vector <Cell *> Cells;
     // compute cell neighbors 
@@ -104,7 +98,6 @@ int main(int argc, char* argv[])
       vector<Point> point_vec;
       
       for (int k = 0; k < ncells; k++) {
-
         
         vtkIdType npts;
         vtkIdType const * pts;
@@ -116,7 +109,7 @@ int main(int argc, char* argv[])
           if(pts[j] != i){
               // for boundry conditions
             point_vec.push_back(Cell::MeanPoints(
-              Cell::vtkPtsToPoint(PointArray,pts[j]),
+              Cell::vtkPtsToPoint(PointArray,(int)pts[j]),
               Cell::vtkPtsToPoint(PointArray,i)
               ));
           }
@@ -124,24 +117,28 @@ int main(int argc, char* argv[])
           
         }
         //compute circumcenter
-        Point p1 = Cell::vtkPtsToPoint(PointArray,pts[0]);
-        Point p2 = Cell::vtkPtsToPoint(PointArray,pts[1]);
-        Point p3 = Cell::vtkPtsToPoint(PointArray,pts[2]);
+        Point p1 = Cell::vtkPtsToPoint(PointArray,(int)pts[0]);
+        Point p2 = Cell::vtkPtsToPoint(PointArray,(int)pts[1]);
+        Point p3 = Cell::vtkPtsToPoint(PointArray,(int)pts[2]);
         double X_sol =  (p1.x*p1.x*p2.y - p1.x*p1.x*p3.y - p2.x*p2.x*p1.y + p2.x*p2.x*p3.y + p3.x*p3.x*p1.y - p3.x*p3.x*p2.y + p1.y*p1.y*p2.y - p1.y*p1.y*p3.y - p1.y*p2.y*p2.y + p1.y*p3.y*p3.y + p2.y*p2.y*p3.y - p2.y*p3.y*p3.y)/(2*(p1.x*p2.y - p2.x*p1.y - p1.x*p3.y + p3.x*p1.y + p2.x*p3.y - p3.x*p2.y));
         double Y_sol = (-p1.x*p1.x*p2.x + p1.x*p1.x*p3.x + p1.x*p2.x*p2.x - p1.x*p3.x*p3.x + p1.x*p2.y*p2.y - p1.x*p3.y*p3.y - p2.x*p2.x*p3.x + p2.x*p3.x*p3.x - p2.x*p1.y*p1.y + p2.x*p3.y*p3.y + p3.x*p1.y*p1.y - p3.x*p2.y*p2.y)/(2*(p1.x*p2.y - p2.x*p1.y - p1.x*p3.y + p3.x*p1.y + p2.x*p3.y - p3.x*p2.y));
         double Z_sol = p1.z;
         point_vec.push_back({X_sol,Y_sol,Z_sol});
 
       }
-      //create new cell object
+        //create new cell object
+        double *vecDat = D_array->GetTuple3(i);
         if (ncells <= 2) {
             point_vec.push_back(Cell::vtkPtsToPoint(PointArray,i));
             Point charpt = Cell::MeanPoints(point_vec);
-            Cells.push_back(new Cell(point_vec, charpt, point_vec.size(),i));
+            Cells.push_back(new Cell(point_vec, charpt, (int)point_vec.size(),i, B_PT(vecDat)));
         } else {
-            Cells.push_back(new Cell(point_vec, Cell::vtkPtsToPoint(PointArray,i), point_vec.size(),i));
+            Cells.push_back(new Cell(point_vec, Cell::vtkPtsToPoint(PointArray,i), (int)point_vec.size(),i,B_PT(vecDat)));
         }
-
+//#ifdef debug
+//        Point vec = Cells[i]->getB();
+//        cout << vec << endl;
+//#endif
     }
 
     #ifdef debug
@@ -160,12 +157,12 @@ int main(int argc, char* argv[])
       for (int i = 0; i < c->getNumPts(); i++){
         points->InsertNextPoint(PT(c->GetPoint(i)));
       }
-      polygon->InsertNextCell(c->getNumPts()+1);
+      polygon->InsertNextCell((int)c->getNumPts()+1);
       for (int j = 0; j < c->getNumPts(); j++){
         polygon->InsertCellPoint(j+increment);
       }
       polygon->InsertCellPoint(increment);
-      increment += c->getNumPts();
+      increment += (int) c->getNumPts();
       double p[3] = {0+inc/n*255,0+inc/n*255,0+inc/n*255};
       col->InsertNextTuple(p);
       inc++;
@@ -179,6 +176,17 @@ int main(int argc, char* argv[])
     // plotting stuff
     vtkNew<vtkNamedColors> colors;
 
+    vtkNew<vtkArrowSource> arrowSource;
+    vtkNew<vtkGlyph3D> Glyph3D;
+    Glyph3D->SetSourceConnection(arrowSource->GetOutputPort());
+//    Glyph3D->SetVectorModeToUseNormal();
+    Glyph3D->SetInputData(output);
+    Glyph3D->SetScaleFactor(.000002);
+    Glyph3D->Update();
+
+    vtkNew<vtkPolyDataMapper> g_mapper;
+    g_mapper->SetInputConnection(Glyph3D->GetOutputPort());
+
     vtkNew<vtkPolyDataMapper> c_mapper;
     c_mapper->SetInputData(polyData);
     c_mapper->ScalarVisibilityOff();
@@ -188,8 +196,14 @@ int main(int argc, char* argv[])
     c_actor->SetMapper(c_mapper);
 //    c_actor->GetProperty()->SetColor(colors->GetColor3d("Banana").GetData());
     c_actor->GetProperty()->SetLineWidth(3);
+
+    vtkNew<vtkActor> g_actor;
+    g_actor->SetMapper(g_mapper);
+    g_actor->GetProperty()->SetColor(colors->GetColor3d("Gold").GetData());
+
     vtkNew<vtkRenderer> ren;
     ren->AddActor(c_actor);
+//    ren->AddActor(g_actor);
     ren->SetBackground(colors->GetColor3d("SlateGray").GetData());
     vtkNew<vtkRenderWindow> renwin;
     renwin->AddRenderer(ren);
@@ -216,29 +230,4 @@ int main(int argc, char* argv[])
   }
 
   return EXIT_SUCCESS;
-}
-
-
-
-
-
-
-
-
-double AreaFromPoints(double *p1, double *p2, double *p3){
-  // (p1 - p3) X (p2 - p3) -> norm -> div 2
-  double diff1[3] = {p1[0] - p3[0], p1[1] - p3[1], p1[2] - p3[2]};
-  double diff2[3] = {p2[0] - p3[0], p2[1] - p3[1], p2[2] - p3[2]};
-  // double diff1[3] = {1.0,3.0,4.0};
-  // double diff2[3] = {2.0,7.0,-5};
-
-  // diff1 x diff2
-  double cDiff[3] = {diff1[1]*diff2[2] - diff2[1]*diff1[2], diff1[2]*diff2[0] - diff2[2]*diff1[0],diff1[0]*diff2[1] - diff2[0]*diff1[1]};
-  // magnitude
-  double magCdiff = std::sqrt(std::pow(cDiff[0],2)+std::pow(cDiff[1],2)+std::pow(cDiff[2],2));
-
-
-  // std::cout << cDiff[0] << "i "<< cDiff[1] << "j " << cDiff[2] << "k " << std::endl; 
-
-  return magCdiff/2.0L;
 }

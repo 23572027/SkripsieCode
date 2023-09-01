@@ -8,6 +8,7 @@ find_package(VTK COMPONENTS
   IOLegacy
   CommonColor
   FiltersCore
+  FiltersSources
   InteractionStyle
   RenderingContextOpenGL2
   RenderingCore

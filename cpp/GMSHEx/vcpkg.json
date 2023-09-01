@@ -1,0 +1,9 @@
+{
+  "name" : "gmshex",
+  "version-string" : "1.0.0",
+  "builtin-baseline" : "8568364fbeb414db3fa5b5bfc436e57b4368c55f",
+  "dependencies" : [ {
+    "name" : "nlohmann-json",
+    "version>=" : "3.11.2"
+  } ]
+}
