@@ -47,6 +47,8 @@ double operator*(Point a, Point b);
 Point operator/(Point a, double b);
 std::ostream& operator<<(std::ostream &s, Point pt);
 
+
+
 class Cell {
     private:
         double area;
@@ -78,5 +80,8 @@ class Cell {
         static Point vtkPtsToPoint(vtkPoints *PointArray, int pid);
         Point getB();
 };
+
+
+std::ostream& operator<<(std::ostream &s, Cell cell);
 
 #endif

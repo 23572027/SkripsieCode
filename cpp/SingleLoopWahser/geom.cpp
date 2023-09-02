@@ -26,6 +26,9 @@ double operator*(Point a, Point b){
 Point operator/(Point a,double b){
     return {a.x/b, a.y/b, a.z/b};
 }
+std::ostream& operator<<(std::ostream &s, Cell cell){
+    return s << cell.toString();
+}
 
 // helper methods -> TODO: move to static methods in class
 // angle of points used in sorting
