@@ -34,10 +34,17 @@ numPoints is the number of points in the polygon (excluding the characteristic p
 #include <string>
 
 
+typedef struct simplePoint {
+    double x;
+    double y;
+    double z;
+} simplePoint;
+
 typedef struct Point { 
     double x, y, z;
     int pid = 0;
     double norm() { return std::sqrt(x*x + y*y + z*z); }
+    simplePoint planeNormal = {0,0,0};
 } Point;
 
 
