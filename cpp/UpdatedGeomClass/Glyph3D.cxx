@@ -26,9 +26,9 @@ int main(int argc, char* argv[])
     Point p3 = {1.0, 2.0, 3.0};
 
     cell c;
-    c.pushPoints(p2,p1,p1);
-    c.pushPoints(p3,p3,p1);
-    c.pushPoints(p2,p2,p1);
+    c.pushPoints(p2,p1);
+    c.pushPoints(p3,p3);
+    c.pushPoints(p2,p2);
 //    c.pushPoints(p2);
     c.printPoints();
     return EXIT_SUCCESS;

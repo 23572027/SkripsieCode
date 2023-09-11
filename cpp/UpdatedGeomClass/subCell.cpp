@@ -26,6 +26,10 @@ subCell::subCell(vector<simplePoint> pts, simplePoint center, simplePoint norm):
 }
 
 void subCell::_translate() {
+    for (auto p : points) {
+        mid = mid + p;
+    }
+    mid = mid / (double) points.size();
     for(auto pt: points){
         pt = pt - mid;
     }
@@ -98,6 +102,8 @@ bool subCell::comparePt(simplePoint p1, simplePoint p2) {
 
 double subCell::getArea() {
     if (areaComputed) {return area;};
+    this->_translate();
+    this->_orderPts();
     return this->_computeArea();
 }
 
@@ -105,7 +111,7 @@ void subCell::pushPoint(simplePoint pt) {
     points.push_back(pt);
 }
 
-subCell::subCell(simplePoint center, simplePoint norm) : mid(center), normal(norm){
+subCell::subCell(simplePoint norm) : normal(norm){
     areaComputed = false;
     uv_comp = false;
 }

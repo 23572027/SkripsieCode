@@ -8,13 +8,13 @@ cell::cell() {
 
 }
 
-void cell::pushPoints(Point p, Point norm, Point mid) {
+void cell::pushPoints(Point p, Point norm) {
     auto it = ptMap.find(norm);
     if (it != ptMap.end()){
         it->second->pushPoint((simplePoint) p);
     } else {
         //create new subcell
-        ptMap[norm] = make_shared<subCell>((simplePoint) mid, (simplePoint) norm);
+        ptMap[norm] = make_shared<subCell>((simplePoint) norm);
         ptMap[norm]->pushPoint((simplePoint) p);
     }
 }

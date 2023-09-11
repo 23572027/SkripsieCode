@@ -18,7 +18,7 @@ using namespace std;
 class subCell {
     public:
         subCell(vector<simplePoint> pts, simplePoint center, simplePoint norm);
-        subCell(simplePoint center, simplePoint norm);
+        subCell(simplePoint norm);
         double getArea();
         void pushPoint(simplePoint pt);
         void printPoints();

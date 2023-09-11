@@ -18,7 +18,7 @@ using namespace std;
 class cell {
     public:
         cell();
-        void pushPoints(Point p, Point norm, Point mid);
+        void pushPoints(Point p, Point norm);
         void printPoints();
     private:
         unordered_map<Point, shared_ptr<subCell>, point_hash> ptMap;
