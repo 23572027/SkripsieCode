@@ -7,10 +7,21 @@
 
 #ifndef GLYPH3D_CELL_H
 #define GLYPH3D_CELL_H
+#include "subCell.h"
+#include <vector>
+#include <unordered_map>
+#include <memory>
 
+
+using namespace std;
 
 class cell {
-
+    public:
+        cell();
+        void pushPoints(Point p, Point norm, Point mid);
+        void printPoints();
+    private:
+        unordered_map<Point, shared_ptr<subCell>, point_hash> ptMap;
 };
 
 

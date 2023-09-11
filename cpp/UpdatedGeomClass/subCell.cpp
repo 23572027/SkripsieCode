@@ -11,10 +11,6 @@
 subCell::subCell(vector<simplePoint> pts, simplePoint center, simplePoint norm): points(std::move(pts)), mid(center), normal(norm) {
     this->_translate();
     areaComputed = false;
-    v = points[0];
-    v = v / v.norm();
-    u = cross(v,normal);
-    u = u / u.norm();
 #ifdef  debug
     for (auto pt : points){
         cout << 180/PI * this->_angleUV(pt) << "\t" << pt << endl;
@@ -66,6 +62,11 @@ void subCell::_translateBack() {
 }
 
 double subCell::_angleUV(simplePoint p1) {
+    v = points[0];
+    v = v / v.norm();
+    u = cross(v,normal);
+    u = u / u.norm();
+
     double u_component = p1 * u;
     double v_component = p1 * v;
     double n = p1.norm();
@@ -98,4 +99,19 @@ bool subCell::comparePt(simplePoint p1, simplePoint p2) {
 double subCell::getArea() {
     if (areaComputed) {return area;};
     return this->_computeArea();
+}
+
+void subCell::pushPoint(simplePoint pt) {
+    points.push_back(pt);
+}
+
+subCell::subCell(simplePoint center, simplePoint norm) : mid(center), normal(norm){
+    areaComputed = false;
+    uv_comp = false;
+}
+
+void subCell::printPoints() {
+    for(auto it : points){
+        cout << it << endl;
+    }
 }

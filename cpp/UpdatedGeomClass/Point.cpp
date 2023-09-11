@@ -21,6 +21,15 @@ std::ostream& operator<<(std::ostream &s, Point pt) {
     return s << "(x: " << pt.x << "\t y: " << pt.y << "\t z:" << pt.z<< ")";
 }
 
+bool operator==(Point p1, Point p2){
+    Point comp1 = p2 - p1;
+    Point comp2 = p1 + p2;
+
+    if (comp1.x == 0 && comp1.y == 0 && comp1.z == 0){return true;}
+    if (comp2.x == 0 && comp2.y == 0 && comp2.z == 0){return true;}
+    return false;
+}
+
 
 simplePoint operator+(simplePoint a, simplePoint b){
     return {a.x + b.x, a.y + b.y, a.z + b.z};

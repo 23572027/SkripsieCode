@@ -18,7 +18,10 @@ using namespace std;
 class subCell {
     public:
         subCell(vector<simplePoint> pts, simplePoint center, simplePoint norm);
+        subCell(simplePoint center, simplePoint norm);
         double getArea();
+        void pushPoint(simplePoint pt);
+        void printPoints();
     private:
         simplePoint mid;
         vector<simplePoint> points;
@@ -27,6 +30,7 @@ class subCell {
         simplePoint v; // perpendicular to first point and plane normal
         double area;
         bool areaComputed;
+        bool uv_comp;
 
         void _orderPts();
         void _translate();

@@ -26,7 +26,20 @@ typedef struct Point{
 } Point;
 
 
+// hashing function courtesy of chatgpt
+struct point_hash {
+    size_t operator()(const Point& p) const {
+        // You can use a combination of the hash values of x, y, and z as the key
+        size_t seed = 0;
+        seed ^= std::hash<double>()(p.x) + 0x9e3779b9 + (seed << 6) + (seed >> 2);
+        seed ^= std::hash<double>()(p.y) + 0x9e3779b9 + (seed << 6) + (seed >> 2);
+        seed ^= std::hash<double>()(p.z) + 0x9e3779b9 + (seed << 6) + (seed >> 2);
+        return seed;
+    }
+};
 
+
+bool operator==(Point p1, Point p2);
 Point cross(Point p1, Point p2);
 simplePoint cross(simplePoint p1, simplePoint p2);
 Point operator+(Point a, Point b);
