@@ -52,5 +52,8 @@ simplePoint operator-(simplePoint a, simplePoint b);
 double operator*(simplePoint a, simplePoint b);
 simplePoint operator/(simplePoint a, double b);
 std::ostream &operator<<(std::ostream &s, simplePoint pt);
+Point operator*(Point p1, double a);
+Point operator*(double a, Point p1);
+
 
 #endif //GLYPH3D_POINT_H

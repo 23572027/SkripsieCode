@@ -23,6 +23,7 @@ subCell::subCell(vector<simplePoint> pts, simplePoint center, simplePoint norm):
     }
 #endif
     cout << this->_computeArea();
+    this->_translateBack();
 }
 
 void subCell::_translate() {
@@ -30,9 +31,13 @@ void subCell::_translate() {
         mid = mid + p;
     }
     mid = mid / (double) points.size();
-    for(auto pt: points){
-        pt = pt - mid;
+    for(auto & point : points){
+        point = point - mid;
     }
+    v = points[0];
+    v = v / v.norm();
+    u = cross(v,normal);
+    u = u / u.norm();
 }
 
 void subCell::_orderPts() {
@@ -62,35 +67,33 @@ double subCell::_computeArea() {
 }
 
 void subCell::_translateBack() {
+    for(auto &pt: points){
+        pt = pt + mid;
+    }
 
+#ifdef debug
+    cout << "u " << u << endl;
+    cout << "v " << v << endl;
+#endif
 }
 
 double subCell::_angleUV(simplePoint p1) {
-    v = points[0];
-    v = v / v.norm();
-    u = cross(v,normal);
-    u = u / u.norm();
 
+#ifdef debug
+//    cout << "u " << u << endl;
+//    cout << "v " << v << endl;
+#endif
     double u_component = p1 * u;
     double v_component = p1 * v;
     double n = p1.norm();
     double angle = acos(v_component/n);
+    // fix when the angle is zero. For some reason acos here returns nan if v_component and n is close enough.
+    // CPP please explain?
+    if (isnan(angle)) angle = 0;
 
-    if(!signbit(v_component)){
-        // first or second quad (positive in the up direction)
-        if (signbit(u_component)) {
-            // second quadrant (negative in the right direction)
-            angle = 2*PI - angle;
-        }
-    } else {
-        // fourth or third quad
-        if (signbit(u_component)){
-            // negative in the right direction (third quadrant)
-            angle = PI/2 + angle;
-        } else {
-            // fourth quadrant
-            angle =  angle;
-        }
+    if (u_component < 0){
+        double diff = PI-angle;
+        angle = diff + PI;
     }
     return angle;
 }
@@ -101,10 +104,24 @@ bool subCell::comparePt(simplePoint p1, simplePoint p2) {
 }
 
 double subCell::getArea() {
-    if (areaComputed) {return area;};
+//    if (areaComputed) {return area;};
     this->_translate();
+#ifdef debug
+    for (auto pt : points){
+        cout << 180/PI * this->_angleUV(pt) << "\t" << pt << endl;
+    }
+    cout << "------" << endl;
+#endif
     this->_orderPts();
-    return this->_computeArea();
+#ifdef debug
+    for (auto pt : points){
+        cout << 180/PI * this->_angleUV(pt) << "\t" << pt << endl;
+    }
+#endif
+
+    double A =  this->_computeArea();
+    this->_translateBack();
+    return A;
 }
 
 void subCell::pushPoint(simplePoint pt) {
@@ -120,4 +137,17 @@ void subCell::printPoints() {
     for(auto it : points){
         cout << it << endl;
     }
+}
+
+int subCell::getNumPoints() {
+    return (int) points.size();
+}
+
+Point subCell::getPoint(int index) {
+    simplePoint s1 = points[index];
+    return (Point) {s1.x,s1.y,s1.z};
+}
+
+const vector<simplePoint> &subCell::getPoints() const {
+    return points;
 }

@@ -59,7 +59,7 @@ void Geommetry::run() {
     if(!isInit){
         throw std::runtime_error("Object has not been initialized");
     }
-    for (int i = 0; i < num; i++ ){
+    for (int i = 21; i < 22; i++ ){
         // This gets each cell connected to this point (each triangle)
         //reused variables
         vtkIdType ncells;
@@ -139,8 +139,8 @@ void Geommetry::debugDraw() {
         }
         polygon->InsertCellPoint(increment);
         increment += (int) c->getNumPts();
-        double p[3] = {0+inc/n*255,0+inc/n*255,0+inc/n*255};
-        col->InsertNextTuple(p);
+//        double p[3] = {0+inc/n*255,0+inc/n*255,0+inc/n*255};
+//        col->InsertNextTuple(p);
         inc++;
     }
 
@@ -189,6 +189,14 @@ void Geommetry::debugDraw() {
     iren->SetRenderWindow(renwin);
     renwin->Render();
     iren->Start();
+}
+
+double Geommetry::getArea() {
+    double sum = 0;
+    for( auto c : Cells){
+        sum += c->getArea();
+    }
+    return sum;
 }
 
 

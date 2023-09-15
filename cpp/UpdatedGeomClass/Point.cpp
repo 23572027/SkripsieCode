@@ -59,3 +59,10 @@ Point cross(Point p1, Point p2){
 simplePoint cross(simplePoint p1, simplePoint p2){
     return (simplePoint) {p1.y * p2.z - p1.z * p2.y, p1.z * p2.x - p1.x * p2.z, p1.x * p2.y - p1.y * p2.x};
 }
+
+Point operator*(Point p1, double a){
+    return (Point) {a*p1.x, a*p1.y, a*p1.z};
+}
+Point operator*(double a, Point p1){
+    return (Point) {a*p1.x, a*p1.y, a*p1.z};
+}

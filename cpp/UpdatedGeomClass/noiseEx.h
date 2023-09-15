@@ -1,12 +1,12 @@
 /*
  * Author: Paul Rossouw
  * Date Created: 02/09/2023
- * Class description: Higher level abstraction to simplify the interface with the
- * cell class in geom.h
+ * Class description: Higher level abstraction to simplify the interface
  */
 
-#ifndef GLYPH3D_GEOMMETRY_H
-#define GLYPH3D_GEOMMETRY_H
+#ifndef GLYPH3D_NOISEEX_H
+#define GLYPH3D_NOISEEX_H
+
 
 #define B_PT(v) {v[0], v[1], v[3]}
 // Temporary current data for loop
@@ -14,7 +14,8 @@
 
 
 // general includes
-#include "geom.hh"
+#include "cell.h"
+#include "Point.h"
 #include <cmath>
 #include <string>
 #include <vector>
@@ -40,19 +41,18 @@
 #include <vtkStructuredGrid.h>
 //
 
-
 using namespace std;
 
-class Geommetry {
+class noiseEx {
     public:
         /**
          * Class constructor
          * @param fileName: String, the file path to the desired vtk file.
          */
 
-        Geommetry(string fileName, bool init_now = true, bool run_now = true);
+        noiseEx(string fileName, bool init_now = true, bool run_now = true);
 
-        ~Geommetry();
+        ~noiseEx();
 
         /**
          * Get file name of vtk file
@@ -67,13 +67,6 @@ class Geommetry {
          */
         void setFileName(const string &name);
 
-        /**
-         * Get Cell objects
-         * @warning: Do not modify return value
-         * @return Cell object VECTOR
-         */
-
-        [[nodiscard]] const vector<Cell *> &getCells() const;
 
         void init();
 
@@ -83,14 +76,30 @@ class Geommetry {
          */
         void run();
 
+
+        /**
+         * @brief Draws the object to a window. It only really works with 2D structures so the flat surfaces will look
+         * fine but be warned: Anything on the edges look very funky. At least this is the theory at the time of writing
+         * adding a TODO for further investigation at a later stage. It could be that the actual algorithm is messed up
+         * and not just the way i am drawing the points. I need a clever way to test this.
+         */
         void debugDraw();
+
+
+        /**
+         * @brief So this is currently the only way to call the lower level methods to perform point ordering. Consider
+         * a cleaner implementation or just renaming this to something like computeAreas or something. Adding
+         * TODO read brief future Paul!
+         * @return surface area of the object
+         */
         double getArea();
+
     private:
         void _init();
         string fileName;
-        vector<Cell*> Cells;
+        vector<shared_ptr<cell>> Cells;
 
-
+        static Point vtkPtsToPoint(vtkPoints *PointArray, int pid);
         vtkNew<vtkGenericDataObjectReader> reader;
         vtkUnstructuredGrid *output;
         bool isInit = false;
@@ -102,4 +111,4 @@ class Geommetry {
 };
 
 
-#endif //GLYPH3D_GEOMMETRY_H
+#endif //GLYPH3D_NOISEEX_H

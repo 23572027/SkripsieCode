@@ -30,7 +30,9 @@ add_executable(Glyph3D MACOSX_BUNDLE Glyph3D.cxx
         cell.cpp
         cell.h
         subCell.cpp
-        subCell.h)
+        subCell.h
+        noiseEx.cpp
+        noiseEx.h)
   target_link_libraries(Glyph3D PRIVATE ${VTK_LIBRARIES}
 )
 # vtk_module_autoinit is needed

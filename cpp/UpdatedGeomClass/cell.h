@@ -18,10 +18,46 @@ using namespace std;
 class cell {
     public:
         cell();
+        /**
+         *
+         * @param p The point you wish to push
+         * @param norm The normal of the plain the point belongs to (for point grouping)
+         */
         void pushPoints(Point p, Point norm);
+
+        /**
+         *
+         * @return surface area of cell
+         */
+        double getArea();
+
+        /**
+         * @brief Prints points (and normals) to console
+         */
         void printPoints();
+        /**
+         * @warning Not implemented
+         * @param p1
+         * @param p2
+         * @return nothing bro
+         */
+        Point isPlaneInMap(Point p1, Point p2);
+        int getNumPoints();
+        /**
+         * @return number of subcells (and thus unique planes) belonging to the current cell
+         */
+        int getNumSubCell();
+        /**
+         * @bug Not working 100%. Don't use
+         * TODO: Fix or remove
+         * @param index
+         * @return
+         */
+        Point getPoint(int index);
     private:
-        unordered_map<Point, shared_ptr<subCell>, point_hash> ptMap;
+        vector<pair<Point, shared_ptr<subCell>>> ptsMap;
+    public:
+        [[nodiscard]] const vector<pair<Point, shared_ptr<subCell>>> &getPtsMap() const;
 };
 
 

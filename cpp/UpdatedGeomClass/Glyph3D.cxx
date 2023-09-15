@@ -2,34 +2,37 @@
 
 //#include "Geommetry.h"
 //#include "geom.hh"
-#include "subCell.h"
+//#include "subCell.h"
 #include "cell.h"
+#include "noiseEx.h"
+
+
+
+
 
 using namespace std;
 
 int main(int argc, char* argv[])
 {
-//
-//    vector<simplePoint> pts = {{0,2,0},
-//                               {2,2,0},
-//                               {-2,-2,0},
-//                               {2,-2,0},
-//                               {-2,2,0}};
-//    simplePoint mid = {0,0,0};
-//    simplePoint normal = {0, 0, 1};
-//
-//    subCell sub(pts,mid,normal);
+    noiseEx g("B_washer2.vtk");
 
-    // Example usage
-    Point p1 = {1.0, 2.0, 3.0};
-    Point p2 = {4.0, 5.0, 6.0};
-    Point p3 = {1.0, 2.0, 3.0};
+    cout << g.getArea();
 
-    cell c;
-    c.pushPoints(p2,p1);
-    c.pushPoints(p3,p3);
-    c.pushPoints(p2,p2);
-//    c.pushPoints(p2);
-    c.printPoints();
+    g.debugDraw();
+
+//    Point p1 = {-1, 0, 0};
+//    Point p2 = {0, 2, 0};
+//    Point p3 = {1, 0, 0};
+//
+//    Point bottom = cross(p1-p2,p2-p3);
+//    double bot = (bottom*bottom)*2;
+//    double alpha = ((p2 - p3)*(p2 - p3))*((p1-p2)*(p1-p3))/bot;
+//    double beta = ((p1 - p3)*(p1 - p3))*((p2-p1)*(p2-p3))/bot;
+//    double gamma = ((p1 - p2)*(p1 - p2))*((p3-p1)*(p3-p2))/bot;
+//    Point pc = alpha *p1 + beta*p2 + gamma*p3;
+//
+//    cout << pc;
+
+
     return EXIT_SUCCESS;
 }
