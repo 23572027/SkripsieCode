@@ -1,4 +1,6 @@
-
+/**
+ * old geometry class
+ */
 
 #include "Geommetry.h"
 #include "geom.hh"

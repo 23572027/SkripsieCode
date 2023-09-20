@@ -59,7 +59,7 @@ void Geommetry::run() {
     if(!isInit){
         throw std::runtime_error("Object has not been initialized");
     }
-    for (int i = 21; i < 22; i++ ){
+    for (int i = 0; i < num; i++ ){
         // This gets each cell connected to this point (each triangle)
         //reused variables
         vtkIdType ncells;

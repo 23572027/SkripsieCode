@@ -18,5 +18,6 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(argparse)
 
-add_executable(GMSHEx main.cpp)
+add_executable(GMSHEx main.cpp
+        gmshEX.h)
 target_link_libraries(GMSHEx PRIVATE nlohmann_json::nlohmann_json gmsh argparse)

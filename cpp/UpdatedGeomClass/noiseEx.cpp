@@ -68,9 +68,9 @@ void noiseEx::run() {
         throw std::runtime_error("Object has not been initialized");
     }
     int n = 2445;
-//    for (int i = 0; i < num; i++ ){
+    for (int i = 0; i < num; i++ ){
 //        make new cell for each point
-        for(int i = n; i < n+1; i++){
+//        for(int i = n; i < n+1; i++){
         Cells.emplace_back(make_shared<cell>());
         // This gets each cell connected to this point (each triangle)
         //reused variables
