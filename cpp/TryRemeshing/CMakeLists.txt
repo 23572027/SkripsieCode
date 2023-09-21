@@ -24,7 +24,9 @@ endif()
 
 # Prevent a "command line is too long" failure in Windows.
 set(CMAKE_NINJA_FORCE_RESPONSE_FILE "ON" CACHE BOOL "Force Ninja to use response files.")
-add_executable(Glyph3D MACOSX_BUNDLE Glyph3D.cxx geom.cpp gmsh.h)
+add_executable(Glyph3D MACOSX_BUNDLE Glyph3D.cxx
+        remesh.h
+        Point.cpp)
   target_link_libraries(Glyph3D PRIVATE ${VTK_LIBRARIES}
 )
 # vtk_module_autoinit is needed
