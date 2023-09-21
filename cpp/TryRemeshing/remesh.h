@@ -1,6 +1,7 @@
 //
 // Created by paul on 9/20/23.
-//
+// input: the field file and the .geo file of the structure
+// outputs: the remeshed structure
 
 #ifndef GLYPH3D_REMESH_H
 #define GLYPH3D_REMESH_H
@@ -19,20 +20,26 @@
 #include <fstream>
 #include "Point.h"
 #include <functional>
-#include <cmath>
+#include <regex>
+#include <utility>
+#include <filesystem>
+
+namespace fs = std::filesystem;
 
 #define B_PT(v) {v[0], v[1], v[3]}
 
 namespace remesh {
-    using namespace std;
-    void generateBgMesh(const std::string& fileName){
+    std::string meshFileName;
+    void generateBgMesh(const std::string& fileName, const std::string& geoFileName = "washerFIELD.geo", std::string mFileName = "post"){
+        using namespace std;
+        meshFileName = std::move(mFileName);
         //read in file
         vtkNew<vtkGenericDataObjectReader> reader;
         reader->SetFileName(fileName.c_str());
         reader->Update();
 
         if (reader->IsFileUnstructuredGrid()){
-            ofstream POS("post.geo");
+            ofstream POS(meshFileName+".geo");
             std::cout << "Reading file" << std::endl;
             auto output = reader->GetUnstructuredGridOutput();
             vtkPoints *PointArray = output->GetPoints();
@@ -92,18 +99,45 @@ namespace remesh {
             POS << "Background Mesh View[0];" << endl;
             POS << "Mesh.MeshSizeExtendFromBoundary = 0;" << endl << "Mesh.MeshSizeFromPoints = 0;" << endl << "Mesh.MeshSizeFromCurvature = 0;" << endl;
             //open the geometry file
-            ifstream GEO("washerFIELD.geo");
+            ifstream GEO(geoFileName);
+            regex pattern("(Save +\").+(\";)");
             string line;
             while(std::getline(GEO,line)){
+                if(line.find("Save") != string::npos){
+                    string replaced = regex_replace(line, pattern, "$1"+meshFileName+".msh"+"$2");
+                    line = replaced;
+                }
                 POS << line << endl;
             }
             GEO.close();
             POS.close();
-
+            cout << "Finished writing file with background mesh" << endl;
         } else {
             cout << "Only unstructured grids are supported" << endl;
         }
 
+    }
+    void cleanUp(){
+//        remove((meshFileName+".msh").c_str());
+        remove((meshFileName+".geo").c_str());
+        try {
+            fs::path currentDir = fs::current_path();
+
+            for (const auto& entry : fs::directory_iterator(currentDir)) {
+                if (entry.path().extension() == ".geo_unrolled") {
+                    fs::remove(entry.path());
+                }
+            }
+        } catch (const fs::filesystem_error& e) {
+            std::cerr << "Error: " << e.what() << std::endl;
+        }
+    }
+    void runGMSH(){
+        using namespace std;
+        cout << "starting gmsh" << endl;
+        string run = "gmsh "+meshFileName+".geo -0 -v 1";
+        system(run.c_str());
+        cout << "gmsh finished" << endl;
     }
 }
 
