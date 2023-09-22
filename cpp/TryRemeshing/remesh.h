@@ -14,6 +14,7 @@
 #include <vtkDoubleArray.h>
 #include <vtkGenericDataObjectReader.h>
 #include <vtkUnstructuredGrid.h>
+#include <vtkInformation.h>
 #include <cmath>
 #include <string>
 #include <iostream>
@@ -23,6 +24,9 @@
 #include <regex>
 #include <utility>
 #include <filesystem>
+#include <vtkIndent.h>
+#include <vtkInformationIterator.h>
+#include <vtkInformationKey.h>
 
 namespace fs = std::filesystem;
 
@@ -50,6 +54,7 @@ namespace remesh {
             POS << "View \"background mesh\" {" << endl;
             const double max_norm =  D_array->GetMaxNorm() * 0.2;
             const double min_norm = D_array->GetMaxNorm() * 0.01;
+
             // loop through each cell
             auto num = output->GetNumberOfCells();
             for(vtkIdType i = 0; i < num; i++){
@@ -135,7 +140,8 @@ namespace remesh {
     void runGMSH(){
         using namespace std;
         cout << "starting gmsh" << endl;
-        string run = "gmsh "+meshFileName+".geo -0 -v 1";
+//        string run = "gmsh "+meshFileName+".geo -0 -v 1";
+        string run = "gmsh "+meshFileName+".geo ";
         system(run.c_str());
         cout << "gmsh finished" << endl;
     }
