@@ -2,6 +2,20 @@
 // Created by paul on 9/14/23.
 //
 
+
+// spin density in units m^-2
+#define SPIN_DENS 5e17
+
+// Bohr magneton in units JT^-1
+#define MU_B 9.2740100783e-24
+
+//flux quantumn
+#define PHI_0 2.067833848e-15
+
+#define m2toum2 1e12
+
+#define B2toPHI2 3.35237503e-12
+
 #define B_PT(v) {v[0], v[1], v[3]}
 #define PT(pt) pt.x , pt.y, pt.z
 
@@ -22,9 +36,10 @@ fileName(std::move(fileName))
     }
 
 }
+
 double noiseEx::getArea(){
     double sum = 0;
-    for(auto c : Cells){
+    for(const auto& c : Cells){
         sum += c->getArea();
     }
     return sum;
@@ -67,7 +82,7 @@ void noiseEx::run() {
     if(!isInit){
         throw std::runtime_error("Object has not been initialized");
     }
-    int n = 2445;
+    int n = 300;
     for (int i = 0; i < num; i++ ){
 //        make new cell for each point
 //        for(int i = n; i < n+1; i++){
@@ -103,14 +118,10 @@ void noiseEx::run() {
             }
             point_vec.clear();
             // compute circumcenter
-            // TODO: This must be changed to work in 3D. see: https://en.wikipedia.org/wiki/Circumcircle
             Point p1 = noiseEx::vtkPtsToPoint(PointArray,(int)pts[0]);
             Point p2 = noiseEx::vtkPtsToPoint(PointArray,(int)pts[1]);
             Point p3 = noiseEx::vtkPtsToPoint(PointArray,(int)pts[2]);
-//            double X_sol =  (p1.x*p1.x*p2.y - p1.x*p1.x*p3.y - p2.x*p2.x*p1.y + p2.x*p2.x*p3.y + p3.x*p3.x*p1.y - p3.x*p3.x*p2.y + p1.y*p1.y*p2.y - p1.y*p1.y*p3.y - p1.y*p2.y*p2.y + p1.y*p3.y*p3.y + p2.y*p2.y*p3.y - p2.y*p3.y*p3.y)/(2*(p1.x*p2.y - p2.x*p1.y - p1.x*p3.y + p3.x*p1.y + p2.x*p3.y - p3.x*p2.y));
-//            double Y_sol = (-p1.x*p1.x*p2.x + p1.x*p1.x*p3.x + p1.x*p2.x*p2.x - p1.x*p3.x*p3.x + p1.x*p2.y*p2.y - p1.x*p3.y*p3.y - p2.x*p2.x*p3.x + p2.x*p3.x*p3.x - p2.x*p1.y*p1.y + p2.x*p3.y*p3.y + p3.x*p1.y*p1.y - p3.x*p2.y*p2.y)/(2*(p1.x*p2.y - p2.x*p1.y - p1.x*p3.y + p3.x*p1.y + p2.x*p3.y - p3.x*p2.y));
-//            double Z_sol = p1.z;
-//            Point center = {X_sol,Y_sol,Z_sol};
+
             Point bottom = cross(p1-p2,p2-p3);
             double bot = (bottom*bottom)*2;
             double alpha = ((p2 - p3)*(p2 - p3))*((p1-p2)*(p1-p3))/bot;
@@ -125,16 +136,12 @@ void noiseEx::run() {
         // loop through all cells here and determine if more than 1 plane exists. If this is the case add the charpt to each plane
         if (Cells.back()->getNumSubCell() > 1) {
             // more than 1 face push charPt
-//            cout << "Here" << endl;
             for (const auto& c : Cells.back()->getPtsMap()){
                 Cells.back()->pushPoints(noiseEx::vtkPtsToPoint(PointArray, i),c.first);
             }
         }
 
     }
-#ifdef debug
-        cout << "sub cells: " << Cells.back()->getNumSubCell() << endl;
-#endif
     hasRun = true;
 }
 
@@ -148,27 +155,21 @@ void noiseEx::debugDraw() {
     vtkSmartPointer<vtkCellArray> polygon = vtkSmartPointer<vtkCellArray>::New();
     int increment = 0;
     auto n = (double) Cells.size();
+    int count = 0;
     double inc = 0.f;
     for (auto &c : Cells){
         for( auto sb : c->getPtsMap()){
             for (auto pt : sb.second->getPoints()){
                 points->InsertNextPoint(PT(pt));
             }
+            polygon->InsertNextCell((int)sb.second->getNumPoints()+1);
+            for (int j = 0; j < sb.second->getNumPoints(); j++){
+                polygon->InsertCellPoint(j+increment);
+            }
+            polygon->InsertCellPoint(increment);
+            increment += (int) sb.second->getNumPoints();
+            inc++;
         }
-
-
-//        for (int i = 0; i < c->getNumPoints(); i++){
-//            points->InsertNextPoint(PT(c->getPoint(i)));
-//        }
-        polygon->InsertNextCell((int)c->getNumPoints()+1);
-        for (int j = 0; j < c->getNumPoints(); j++){
-            polygon->InsertCellPoint(j+increment);
-        }
-        polygon->InsertCellPoint(increment);
-        increment += (int) c->getNumPoints();
-//        double p[3] = {0+inc/n*255,0+inc/n*255,0+inc/n*255};
-//        col->InsertNextTuple(p);
-        inc++;
     }
 
     polyData->SetPoints(points);
@@ -221,6 +222,24 @@ void noiseEx::debugDraw() {
 Point noiseEx :: vtkPtsToPoint(vtkPoints *PointArray, int pid){
     double *ps = PointArray->GetPoint(pid);
     return {1E6*ps[0],1E6*ps[1],1E6*ps[2],pid};
+}
+
+
+//frmla: sigma * area * mu_b^2/(3*I^2) * <B(r)^2>
+//where <B(r)^2> = 1/A * ∫(Bx^2+By^2+Bz^2)dS
+//getB2A returns ∫(Bx^2+By^2+Bz^2)dS in the shape:  {Bx^2, By^2, Bz^2} * Area or <B(r)^2>*Area
+//so grouping terms sigma*mu_b/(3*I^2) * totB
+//where totB is sum(getB2a, all cells)
+//then convert to units of flux quantumn squared
+// T^2*um^2 (Tot B) * 5e17m^-2 (sigma) (bohr magneton)^2/ (3*A^2 (I) * flux quantumn^2)
+double noiseEx :: getMSFN(double current){
+    if(!hasRun) {throw runtime_error("Please call the run method of noiseEx first");}
+    Point totB= {0,0,0};
+    for (const auto& c : Cells){
+        totB = totB + c->getB2A();
+    }
+    totB = totB/m2toum2  * (SPIN_DENS * MU_B*MU_B / (3*current*current*PHI_0*PHI_0));
+    return totB.x + totB.y + totB.z;
 }
 
 noiseEx::~noiseEx() = default;

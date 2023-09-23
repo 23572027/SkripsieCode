@@ -1,0 +1,17 @@
+/home/paul/Skripsie/Code/SkripsieCode/cpp/noiseEX/cmake-build-debug/CMakeFiles/nex.dir
+/home/paul/Skripsie/Code/SkripsieCode/cpp/noiseEX/cmake-build-debug/CMakeFiles/package.dir
+/home/paul/Skripsie/Code/SkripsieCode/cpp/noiseEX/cmake-build-debug/CMakeFiles/package_source.dir
+/home/paul/Skripsie/Code/SkripsieCode/cpp/noiseEX/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/paul/Skripsie/Code/SkripsieCode/cpp/noiseEX/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/paul/Skripsie/Code/SkripsieCode/cpp/noiseEX/cmake-build-debug/CMakeFiles/list_install_components.dir
+/home/paul/Skripsie/Code/SkripsieCode/cpp/noiseEX/cmake-build-debug/CMakeFiles/install.dir
+/home/paul/Skripsie/Code/SkripsieCode/cpp/noiseEX/cmake-build-debug/CMakeFiles/install/local.dir
+/home/paul/Skripsie/Code/SkripsieCode/cpp/noiseEX/cmake-build-debug/CMakeFiles/install/strip.dir
+/home/paul/Skripsie/Code/SkripsieCode/cpp/noiseEX/cmake-build-debug/_deps/argparse-build/CMakeFiles/package.dir
+/home/paul/Skripsie/Code/SkripsieCode/cpp/noiseEX/cmake-build-debug/_deps/argparse-build/CMakeFiles/package_source.dir
+/home/paul/Skripsie/Code/SkripsieCode/cpp/noiseEX/cmake-build-debug/_deps/argparse-build/CMakeFiles/edit_cache.dir
+/home/paul/Skripsie/Code/SkripsieCode/cpp/noiseEX/cmake-build-debug/_deps/argparse-build/CMakeFiles/rebuild_cache.dir
+/home/paul/Skripsie/Code/SkripsieCode/cpp/noiseEX/cmake-build-debug/_deps/argparse-build/CMakeFiles/list_install_components.dir
+/home/paul/Skripsie/Code/SkripsieCode/cpp/noiseEX/cmake-build-debug/_deps/argparse-build/CMakeFiles/install.dir
+/home/paul/Skripsie/Code/SkripsieCode/cpp/noiseEX/cmake-build-debug/_deps/argparse-build/CMakeFiles/install/local.dir
+/home/paul/Skripsie/Code/SkripsieCode/cpp/noiseEX/cmake-build-debug/_deps/argparse-build/CMakeFiles/install/strip.dir

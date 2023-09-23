@@ -1,0 +1,41 @@
+$FPLANE
+  Rotate
+  (0,0,0)
+  Translate
+  (0,0,0.2*1E-6)
+  Coords
+  (-15E-6 , 15E-6)
+  (15E-6, -15E-6)
+$END
+
+$STRUCT
+  Name washer
+  $POLY
+    Layer ybco
+	XY
+    (  15 ,  -5 ) 
+    (  15 , -15 ) 
+    ( -15 , -15 ) 
+    ( -15 ,  15 ) 
+    (  15 ,  15 ) 
+    (  15 ,  -5 ) 
+    (   5 ,  -5 )
+    (   5 ,   5 ) 
+    (  -5 ,   5 )
+    (  -5 ,  -5 )
+    (  15 ,  -5 )
+  $END
+  $PATH
+    Layer term
+    Width 0 
+	XY
+    (  5 ,   0 ) 
+    ( 15 ,   0 ) 
+  $END
+  $TEXT
+    Text "Pone/ ybco +y"
+	XY
+    (  10 ,  0 )
+  $END
+$END
+

@@ -20,7 +20,7 @@ int main(int argc, char* argv[])
 
     cout << g.getArea();
 
-    g.debugDraw();
+//    g.debugDraw();
 
 //    Point p1 = {-1, 0, 0};
 //    Point p2 = {0, 2, 0};

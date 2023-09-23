@@ -1,8 +1,13 @@
 //
 // Created by paul on 9/11/23.
 //
-
+//#define debug
+#define DEBUG_SUB_CELL 3
 #include "cell.h"
+
+#ifdef debug
+//vector<pair<Point, shared_ptr<subCell>>> c;
+#endif
 
 cell::cell() {
 
@@ -38,6 +43,9 @@ double cell::getArea() {
     for (const auto& entry: ptsMap){
         area += entry.second->getArea();
     }
+#ifdef debug
+    area = ptsMap[DEBUG_SUB_CELL].second->getArea();
+#endif
     return area;
 }
 
@@ -83,6 +91,10 @@ Point cell::getPoint(int index) {
 }
 
 const vector<pair<Point, shared_ptr<subCell>>> &cell::getPtsMap() const {
+#ifdef debug
+    c.push_back(ptsMap[DEBUG_SUB_CELL]);
+    return c;
+#endif
     return ptsMap;
 }
 

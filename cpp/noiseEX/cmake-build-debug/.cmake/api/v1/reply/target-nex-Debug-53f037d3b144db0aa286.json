@@ -1,0 +1,864 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "nex"
+		}
+	],
+	"backtrace" : 2,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"_add_executable",
+			"add_executable",
+			"target_link_libraries",
+			"set_target_properties",
+			"include",
+			"_find_package",
+			"find_package",
+			"target_compile_definitions",
+			"vtk_module_autoinit"
+		],
+		"files" : 
+		[
+			"/home/paul/.vcpkg-clion/vcpkg/scripts/buildsystems/vcpkg.cmake",
+			"CMakeLists.txt",
+			"/home/paul/VTK-Build/lib64/cmake/vtk-9.3/VTK-targets.cmake",
+			"/home/paul/VTK-Build/lib64/cmake/vtk-9.3/vtk-config.cmake",
+			"/home/paul/VTK-Build/vtk-config.cmake",
+			"/home/paul/VTK-Build/lib64/cmake/vtk-9.3/vtkModule.cmake"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 44,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 598,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 56,
+				"parent" : 0
+			},
+			{
+				"command" : 6,
+				"file" : 1,
+				"line" : 5,
+				"parent" : 0
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 859,
+				"parent" : 4
+			},
+			{
+				"file" : 4,
+				"parent" : 5
+			},
+			{
+				"command" : 4,
+				"file" : 4,
+				"line" : 1,
+				"parent" : 6
+			},
+			{
+				"file" : 3,
+				"parent" : 7
+			},
+			{
+				"command" : 4,
+				"file" : 3,
+				"line" : 145,
+				"parent" : 8
+			},
+			{
+				"file" : 2,
+				"parent" : 9
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 516,
+				"parent" : 10
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 784,
+				"parent" : 10
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 634,
+				"parent" : 10
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 448,
+				"parent" : 10
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 611,
+				"parent" : 10
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 339,
+				"parent" : 10
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 331,
+				"parent" : 10
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 219,
+				"parent" : 10
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 244,
+				"parent" : 10
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 165,
+				"parent" : 10
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 141,
+				"parent" : 10
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 112,
+				"parent" : 10
+			},
+			{
+				"command" : 8,
+				"file" : 1,
+				"line" : 59,
+				"parent" : 0
+			},
+			{
+				"command" : 7,
+				"file" : 5,
+				"line" : 3371,
+				"parent" : 23
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g -fdiagnostics-color=always"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 3,
+					"define" : "kiss_fft_scalar=double"
+				},
+				{
+					"backtrace" : 24,
+					"define" : "vtkRenderingContext2D_AUTOINIT_INCLUDE=\"/home/paul/Skripsie/Code/SkripsieCode/cpp/noiseEX/cmake-build-debug/CMakeFiles/vtkModuleAutoInit_04d683062bbc5774e34e8c62b13e1a5a.h\""
+				},
+				{
+					"backtrace" : 24,
+					"define" : "vtkRenderingCore_AUTOINIT_INCLUDE=\"/home/paul/Skripsie/Code/SkripsieCode/cpp/noiseEX/cmake-build-debug/CMakeFiles/vtkModuleAutoInit_04d683062bbc5774e34e8c62b13e1a5a.h\""
+				},
+				{
+					"backtrace" : 24,
+					"define" : "vtkRenderingOpenGL2_AUTOINIT_INCLUDE=\"/home/paul/Skripsie/Code/SkripsieCode/cpp/noiseEX/cmake-build-debug/CMakeFiles/vtkModuleAutoInit_04d683062bbc5774e34e8c62b13e1a5a.h\""
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 3,
+					"path" : "/home/paul/Skripsie/Code/SkripsieCode/cpp/noiseEX/cmake-build-debug/_deps/argparse-src/include"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/home/paul/VTK-Build/Common/Core"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/home/paul/VTK-9.3.0.rc1/Common/Core"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/home/paul/VTK-Build/Utilities/KWIML"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/home/paul/VTK-9.3.0.rc1/Utilities/KWIML"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/home/paul/VTK-Build/Utilities/KWSys"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/home/paul/VTK-9.3.0.rc1/Utilities/KWSys"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/home/paul/VTK-Build/Common/DataModel"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/home/paul/VTK-9.3.0.rc1/Common/DataModel"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/home/paul/VTK-Build/Common/Math"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/home/paul/VTK-9.3.0.rc1/Common/Math"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/home/paul/VTK-Build/ThirdParty/kissfft/vtkkissfft"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/home/paul/VTK-9.3.0.rc1/ThirdParty/kissfft/vtkkissfft"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/home/paul/VTK-Build/ThirdParty/kissfft"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/home/paul/VTK-9.3.0.rc1/ThirdParty/kissfft"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/home/paul/VTK-Build/Common/Transforms"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/home/paul/VTK-9.3.0.rc1/Common/Transforms"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/home/paul/VTK-Build/IO/Legacy"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/home/paul/VTK-9.3.0.rc1/IO/Legacy"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/home/paul/VTK-Build/Common/ExecutionModel"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/home/paul/VTK-9.3.0.rc1/Common/ExecutionModel"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/home/paul/VTK-Build/IO/Core"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/home/paul/VTK-9.3.0.rc1/IO/Core"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/home/paul/VTK-Build/Common/Color"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/home/paul/VTK-9.3.0.rc1/Common/Color"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/home/paul/VTK-Build/Filters/Core"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/home/paul/VTK-9.3.0.rc1/Filters/Core"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/home/paul/VTK-Build/Common/Misc"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/home/paul/VTK-9.3.0.rc1/Common/Misc"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/home/paul/VTK-Build/Filters/Sources"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/home/paul/VTK-9.3.0.rc1/Filters/Sources"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/home/paul/VTK-Build/Interaction/Style"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/home/paul/VTK-9.3.0.rc1/Interaction/Style"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/home/paul/VTK-Build/Rendering/Core"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/home/paul/VTK-9.3.0.rc1/Rendering/Core"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/home/paul/VTK-Build/Rendering/ContextOpenGL2"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/home/paul/VTK-9.3.0.rc1/Rendering/ContextOpenGL2"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/home/paul/VTK-Build/Rendering/Context2D"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/home/paul/VTK-9.3.0.rc1/Rendering/Context2D"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/home/paul/VTK-Build/Rendering/FreeType"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/home/paul/VTK-9.3.0.rc1/Rendering/FreeType"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/home/paul/VTK-Build/ThirdParty/freetype/vtkfreetype"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/home/paul/VTK-9.3.0.rc1/ThirdParty/freetype/vtkfreetype"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/home/paul/VTK-9.3.0.rc1/ThirdParty/freetype/vtkfreetype/include"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/home/paul/VTK-Build/ThirdParty/freetype/vtkfreetype/include"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/home/paul/VTK-Build/ThirdParty/freetype"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/home/paul/VTK-9.3.0.rc1/ThirdParty/freetype"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/home/paul/VTK-Build/ThirdParty/zlib/vtkzlib"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/home/paul/VTK-9.3.0.rc1/ThirdParty/zlib/vtkzlib"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/home/paul/VTK-Build/ThirdParty/zlib"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/home/paul/VTK-9.3.0.rc1/ThirdParty/zlib"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/home/paul/VTK-Build/Rendering/OpenGL2"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/home/paul/VTK-9.3.0.rc1/Rendering/OpenGL2"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/home/paul/VTK-Build/Filters/General"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/home/paul/VTK-9.3.0.rc1/Filters/General"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/home/paul/VTK-Build/IO/Image"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/home/paul/VTK-9.3.0.rc1/IO/Image"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/home/paul/VTK-Build/Imaging/Core"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/home/paul/VTK-9.3.0.rc1/Imaging/Core"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/home/paul/VTK-Build/Rendering/HyperTreeGrid"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/home/paul/VTK-9.3.0.rc1/Rendering/HyperTreeGrid"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/home/paul/VTK-Build/Rendering/UI"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/home/paul/VTK-9.3.0.rc1/Rendering/UI"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/home/paul/VTK-Build/ThirdParty/glew/vtkglew"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/home/paul/VTK-9.3.0.rc1/ThirdParty/glew/vtkglew"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/home/paul/VTK-Build/ThirdParty/glew"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/home/paul/VTK-9.3.0.rc1/ThirdParty/glew"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/home/paul/VTK-Build/Rendering/GL2PSOpenGL2"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/home/paul/VTK-9.3.0.rc1/Rendering/GL2PSOpenGL2"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/home/paul/VTK-Build/Rendering/Label"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/home/paul/VTK-9.3.0.rc1/Rendering/Label"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/home/paul/.vcpkg-clion/vcpkg/installed/x64-linux/include"
+				}
+			],
+			"language" : "CXX",
+			"sourceIndexes" : 
+			[
+				0,
+				7,
+				8,
+				9,
+				10
+			]
+		}
+	],
+	"id" : "nex::@6890427a1f51a3e7e1df",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "-g",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "-Wl,-rpath,/home/paul/VTK-Build/lib64",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "/home/paul/VTK-Build/lib64/libvtkInteractionStyle-9.3.so.9.3",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "/home/paul/VTK-Build/lib64/libvtkRenderingContextOpenGL2-9.3.so.9.3",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "/home/paul/VTK-Build/lib64/libvtkRenderingGL2PSOpenGL2-9.3.so.9.3",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "/home/paul/VTK-Build/lib64/libvtkRenderingOpenGL2-9.3.so.9.3",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "/home/paul/VTK-Build/lib64/libvtkRenderingLabel-9.3.so.9.3",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "/home/paul/VTK-Build/lib64/libvtkIOLegacy-9.3.so.9.3",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 11,
+				"fragment" : "/home/paul/VTK-Build/lib64/libvtkIOCore-9.3.so.9.3",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 12,
+				"fragment" : "/home/paul/VTK-Build/lib64/libvtkRenderingContext2D-9.3.so.9.3",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 13,
+				"fragment" : "/home/paul/VTK-Build/lib64/libvtkIOImage-9.3.so.9.3",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 13,
+				"fragment" : "/home/paul/VTK-Build/lib64/libvtkRenderingHyperTreeGrid-9.3.so.9.3",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 14,
+				"fragment" : "/home/paul/VTK-Build/lib64/libvtkImagingCore-9.3.so.9.3",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 13,
+				"fragment" : "/home/paul/VTK-Build/lib64/libvtkRenderingUI-9.3.so.9.3",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 13,
+				"fragment" : "/home/paul/VTK-Build/lib64/libvtkglew-9.3.so.9.3",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 15,
+				"fragment" : "/usr/lib64/libGLX.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 15,
+				"fragment" : "/usr/lib64/libOpenGL.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 13,
+				"fragment" : "/usr/lib64/libX11.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "/home/paul/VTK-Build/lib64/libvtkRenderingFreeType-9.3.so.9.3",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "/home/paul/VTK-Build/lib64/libvtkRenderingCore-9.3.so.9.3",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "/home/paul/VTK-Build/lib64/libvtkCommonColor-9.3.so.9.3",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "/home/paul/VTK-Build/lib64/libvtkFiltersSources-9.3.so.9.3",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 16,
+				"fragment" : "/home/paul/VTK-Build/lib64/libvtkfreetype-9.3.so.9.3",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 17,
+				"fragment" : "/home/paul/VTK-Build/lib64/libvtkzlib-9.3.so.9.3",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 13,
+				"fragment" : "/home/paul/VTK-Build/lib64/libvtkFiltersGeneral-9.3.so.9.3",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "/home/paul/VTK-Build/lib64/libvtkFiltersCore-9.3.so.9.3",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 11,
+				"fragment" : "/home/paul/VTK-Build/lib64/libvtkCommonExecutionModel-9.3.so.9.3",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "/home/paul/VTK-Build/lib64/libvtkCommonDataModel-9.3.so.9.3",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 18,
+				"fragment" : "/home/paul/VTK-Build/lib64/libvtkCommonTransforms-9.3.so.9.3",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 19,
+				"fragment" : "/home/paul/VTK-Build/lib64/libvtkCommonMisc-9.3.so.9.3",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 18,
+				"fragment" : "/home/paul/VTK-Build/lib64/libvtkCommonMath-9.3.so.9.3",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 20,
+				"fragment" : "/home/paul/VTK-Build/lib64/libvtkkissfft-9.3.so.9.3",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "/home/paul/VTK-Build/lib64/libvtkCommonCore-9.3.so.9.3",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 21,
+				"fragment" : "/home/paul/VTK-Build/lib64/libvtksys-9.3.so.9.3",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 22,
+				"fragment" : "-ldl",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-Wl,-rpath-link,/home/paul/VTK-Build/lib64",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "nex",
+	"nameOnDisk" : "nex",
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				7,
+				8,
+				9,
+				10
+			]
+		},
+		{
+			"name" : "Header Files",
+			"sourceIndexes" : 
+			[
+				1,
+				2,
+				3,
+				4,
+				5,
+				6
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "nex.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"path" : "depend/cell.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "depend/gmshEX.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "depend/noiseEx.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "depend/Point.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "depend/remesh.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "depend/subCell.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "depend/noiseEx.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "depend/Point.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "depend/subCell.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "depend/cell.cpp",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "EXECUTABLE"
+}

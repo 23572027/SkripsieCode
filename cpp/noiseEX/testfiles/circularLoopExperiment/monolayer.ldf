@@ -1,0 +1,27 @@
+*Layer Definition File for InductEx manual and examples
+* ------------------
+* PARAMETERS
+* ------------------
+$Parameters
+  Units             =  1e-6
+  SegmentSize       =  0.5
+  AbsMin            =  0.1
+  ProcessHasGroundPlane = FALSE
+  TermLayer         =  19
+  TextLayer         =  18
+  TerminalInRange   =  1.0
+  VirtualGap        =  0.25
+  FieldMeshSize = 1.0
+$End
+* ------------------
+* LAYERS
+* ---- YBCO --------
+$Layer
+  Number     =     1
+  Name       =     YBCO
+  Thickness  =     0.2
+  Lambda     =     0.24
+  Order      =     0
+  Mask       =     1
+  Filmtype   =     S
+$End
