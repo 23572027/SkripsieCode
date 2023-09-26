@@ -10,7 +10,7 @@
 
 #define B_PT(v) {v[0], v[1], v[3]}
 // Temporary current data for loop
-#define curr 0.79190019755 Amps
+//#define curr 0.79190019755 Amps
 
 
 // general includes

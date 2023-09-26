@@ -62,7 +62,7 @@ void noiseEx::init() {
 }
 
 void noiseEx::_init() {
-    std::cout << "Reading file" << std::endl;
+//    std::cout << "Reading file" << std::endl;
     output = reader->GetUnstructuredGridOutput();
     PointArray = output->GetPoints();
     // get data array

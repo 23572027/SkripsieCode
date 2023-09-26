@@ -1,0 +1,8 @@
+InductEx v7.0.03 (5 March 2023). Copyright 2003-2022 Coenrad Fourie
+Licenced to:
+  Paul Rossouw, Stellenbosch University, until 31 Dec 2023. [Super]
+
+Execution start time stamp: 9/23/23 6:51:04 PM
+Parameter string: settings_washer.json 
+
+(1) Cannot find a valid layout input file (GDS or IXI).

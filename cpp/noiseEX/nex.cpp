@@ -22,10 +22,13 @@ using namespace std;
 
 int main(int argc, char **argv){
 
-    noiseEx n("/home/paul/Skripsie/Code/SkripsieCode/cpp/noiseEX/testfiles/circularLoopExperiment/output/B_washer.vtk");
-    cout << n.getMSFN(9.9499233558e-02) << endl;
-//    n.debugDraw();
-//    cout << n.getArea() << endl;
+    // for testing the algorithm:
+    string fileLoc = argv[1];
+    double curr = stod(argv[2]);
+    noiseEx n(fileLoc);
+
+
+    cout << n.getMSFN(curr) << endl;
 
     return EXIT_SUCCESS;
 }
