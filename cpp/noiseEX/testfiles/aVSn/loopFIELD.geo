@@ -26,3 +26,4 @@ Mesh 2;
 
 Save "loopFIELD.msh";
 
+Print.PostGamma = 1;

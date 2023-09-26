@@ -22,13 +22,17 @@ using namespace std;
 
 int main(int argc, char **argv){
 
-    // for testing the algorithm:
+    // for testing the algorithm without mesh quality:
     string fileLoc = argv[1];
     double curr = stod(argv[2]);
     noiseEx n(fileLoc);
 
 
     cout << n.getMSFN(curr) << endl;
+
+    cout << n.getArea() << endl;
+//    n.debugDraw();
+//    cout << n.getArea();
 
     return EXIT_SUCCESS;
 }
