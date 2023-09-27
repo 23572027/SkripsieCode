@@ -131,11 +131,11 @@ def runSim(folderPath,r1,r2):
 
 
 if __name__ == "__main__":
-    r1s = np.linspace(10e-6, 30e-6, 50)
-    r2s = np.linspace(2e-6,0.2e-6,50)
+    r1s = np.linspace(8e-6, 45e-6, 200)
+    r2s = np.linspace(2.5e-6,0.2e-6,200)
     pl = []
     count = 0
-    for r1 in r1s:
+    for r1,r2 in zip(r1s,r2s):
         count = count + 1
         path = f"./sim{count}"
         pl.append(Process(target=runSim,args=(path,r1,r2,)))
