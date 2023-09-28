@@ -82,7 +82,7 @@ void noiseEx::run() {
     if(!isInit){
         throw std::runtime_error("Object has not been initialized");
     }
-    int n = 300;
+    int n = 400;
     for (int i = 0; i < num; i++ ){
 //        make new cell for each point
 //        for(int i = n; i < n+1; i++){

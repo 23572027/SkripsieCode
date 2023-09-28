@@ -1,0 +1,18 @@
+//+
+Surface Loop(2) = {4, 2, 1, 3};
+//+
+Volume(2) = {2};
+
+Point(17) = {0, 0, -1E-5, 1.5};
+Point(18) = {0, 0, 1E-5, 1.5};
+Line(25) = {17, 18};
+
+//physical groups
+Physical Volume("T0_ybco") = {2};
+Physical Line("fone") = {25};
+
+Coherence;
+Mesh 3;
+
+Save "washer.msh";
+

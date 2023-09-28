@@ -25,5 +25,3 @@ Physical Surface("Fieldplane0") = {1};
 Mesh 2;
 
 Save "loopFIELD.msh";
-
-Print.PostGamma = 1;

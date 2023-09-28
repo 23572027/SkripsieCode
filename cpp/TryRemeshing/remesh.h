@@ -34,7 +34,13 @@ namespace fs = std::filesystem;
 
 namespace remesh {
     std::string meshFileName;
-    void generateBgMesh(const std::string& fileName, const std::string& geoFileName = "washerFIELD.geo", std::string mFileName = "post"){
+    void generateBgMesh(const std::string& fileName,
+                        const std::string& geoFileName = "washerFIELD.geo",
+                        const long  double min_len = 0.9E-7f,
+                        const long double max_len = 8E-6f,
+                        const double frac_min_norm = 0.01,
+                        const double frac_max_norm = 0.2,
+                        std::string mFileName = "post"){
         using namespace std;
         meshFileName = std::move(mFileName);
         //read in file
@@ -43,7 +49,7 @@ namespace remesh {
         reader->Update();
 
         if (reader->IsFileUnstructuredGrid()){
-            ofstream POS(meshFileName+".geo");
+            ofstream POS(meshFileName+"RM.geo");
             std::cout << "Reading file" << std::endl;
             auto output = reader->GetUnstructuredGridOutput();
             vtkPoints *PointArray = output->GetPoints();
@@ -52,8 +58,8 @@ namespace remesh {
 
 
             POS << "View \"background mesh\" {" << endl;
-            const double max_norm =  D_array->GetMaxNorm() * 0.2;
-            const double min_norm = D_array->GetMaxNorm() * 0.01;
+            const double max_norm =  D_array->GetMaxNorm() * frac_max_norm;
+            const double min_norm = D_array->GetMaxNorm() * frac_min_norm;
 
             // loop through each cell
             auto num = output->GetNumberOfCells();
@@ -78,11 +84,6 @@ namespace remesh {
                 double p1 = ((Point) B_PT(D_array->GetTuple3(pts[0]))).norm();
                 double p2 = ((Point) B_PT(D_array->GetTuple3(pts[1]))).norm();
                 double p3 = ((Point) B_PT(D_array->GetTuple3(pts[2]))).norm();
-
-                // TODO make this not hard code. Perhaps the user must specify?
-                const long  double min_len = 0.9E-7f;
-                const long double max_len = 8E-6f;
-
 
                 function<long double(double)> map = [&max_norm, &min_norm, &max_len, &min_len](double x) ->long  double {
                     if (x < min_norm) {
@@ -139,9 +140,9 @@ namespace remesh {
     }
     void runGMSH(){
         using namespace std;
-        cout << "starting gmsh" << endl;
+        cout << "starting gmsh: "<< "gmsh "+meshFileName+"RM.geo -0 -v 0" << endl;
 //        string run = "gmsh "+meshFileName+".geo -0 -v 1";
-        string run = "gmsh "+meshFileName+".geo ";
+        string run = "gmsh "+meshFileName+"RM.geo";
         system(run.c_str());
         cout << "gmsh finished" << endl;
     }
