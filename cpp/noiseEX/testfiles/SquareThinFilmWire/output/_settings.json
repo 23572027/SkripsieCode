@@ -6,7 +6,7 @@
     },
     "MATERIALS": {
         "T0_ybcoCOND": {
-            "LAMBDA": 2.4e-08,
+            "LAMBDA": 2.4e-07,
             "SIGMA": 0
         }
     },
@@ -23,14 +23,14 @@
                     "HOLE": true
                 }
             },
-            "FILE": "washer.msh",
+            "FILE": "test.msh",
             "FORMAT": "GMSH"
         },
         "IXMeshField0": {
             "ENTITIES": [
                 "FieldPlane0"
             ],
-            "FILE": "washerFIELD.msh",
+            "FILE": "testFIELD.msh",
             "FORMAT": "GMSH"
         }
     },
