@@ -49,4 +49,25 @@ A.~A. Golubov, M.~Y. Kupriyanov, and E.~Il'ichev, ``The current-phase relation
   in josephson junctions,'' \emph{Reviews of Modern Physics}, vol.~76, no.~2,
   pp. 411--469, 2004.
 
+\bibitem{DCSQUIDoriginalPaper}
+\BIBentryALTinterwordspacing
+R.~C. Jaklevic, J.~Lambe, A.~H. Silver, and J.~E. Mercereau, ``Quantum
+  interference effects in josephson tunneling,'' \emph{Phys. Rev. Lett.},
+  vol.~12, pp. 159--160, Feb 1964. [Online]. Available:
+  \url{https://link.aps.org/doi/10.1103/PhysRevLett.12.159}
+\BIBentrySTDinterwordspacing
+
+\bibitem{Drung2016NBSQUIDS}
+D.~Drung, C.~Abmann, J.~Beyer, A.~Kirste, M.~Peters, F.~Ruede, and T.~Schurig,
+  ``Highly sensitive and easy-to-use squid sensors,'' \emph{IEEE Transactions
+  on Applied Superconductivity}, vol.~17, no.~2, pp. 699--704, 2007.
+
+\bibitem{JOSEPHSONJUNCTION}
+\BIBentryALTinterwordspacing
+B.~Josephson, ``Possible new effects in superconductive tunnelling,''
+  \emph{Physics Letters}, vol.~1, no.~7, pp. 251--253, 1962. [Online].
+  Available:
+  \url{https://www.sciencedirect.com/science/article/pii/0031916362913690}
+\BIBentrySTDinterwordspacing
+
 \end{thebibliography}

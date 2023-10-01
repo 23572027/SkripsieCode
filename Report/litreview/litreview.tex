@@ -76,7 +76,7 @@ It is important to note that \ref{eq:joseph} is only valid for a limited number 
 
 
 \subsection{SQUID's}
-An application of the Josephson effect is the superconducting quantum interference device (SQUID). In essence a SQUID refers to a superconducting ring that contains one or more Josephson junction. The interference of the wave functions of super currents in such a loop has many useful applications. One such application and the focus of this project is the DC SQUID.
+An application of the Josephson effect is the superconducting quantum interference device (SQUID). In essence a SQUID refers to a superconducting ring that contains one or more Josephson junction. This interference effect is analogous to interference one might encounter in the field of optics \cite{DCSQUIDoriginalPaper}. The SQUID is a highly sensitive device that can in some cases measure fields as weak as $5\times 10^{-14} T$ \cite{Drung2016NBSQUIDS}.
 
 \subsubsection*{Flux quantisation}
 To understand the basic operation of a SQUID, one must first understand the concept of flux quantisation. To do so we consider a superconducting ring in the presence of a uniform magnetic field. The ring is superconducting, so it exhibits the Meissner effect and thus the current density inside the ring is zero. Recall that the flux through a ring is:
@@ -106,4 +106,68 @@ Recognizing $\nabla\theta$ as vector field with potential function $\theta$, we 
 Clearly equation \ref{eq:fluxQuant} implies that the flux through the superconducting loop must be quantized as $n$ can only take on integer values.
 
 \subsubsection*{The DC SQUID}
-The most simple 
+Spurred on by developments in reliable manufacturing processes of Josephson junctions the DC SQUID has become the dominant device in the field of niobium based sensors \cite{Drung2016NBSQUIDS}. The initial discovery of the DC SQUID by \cite{DCSQUIDoriginalPaper} in 1964 came shortly after the discovery of the Josephson junction in 1962 \cite{JOSEPHSONJUNCTION}. The simplest realisation of the DC SQUID consists of two Josephson junctions connected in parallel as depicted in figure \ref{fig:squidFig}.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.3\linewidth]{SQUID}
+
+    \caption{A circuit schematic depicting the configuration of a simple DC SQUID. The current $I$ is the bias current and the current $I_s$ is the screening current developed by an external magnetic field}
+    \label{fig:squidFig}
+\end{figure}
+
+A relationship between the current and the flux through the loop of the SQUID would like to be derived. The current through each Josephson junction is denoted as $I_1$ and $I_2$ for junction 1 and 2 respectively. From figure \ref{fig:squidFig} one can easily see that there are 2 possible paths through the SQUID. Following the derivation of \cite{Feynman_Leighton_Sands_2013} one can write the change in phase through each branch of the squid using equations \ref{eq:PhaseChange1} and \ref{eq:PhaseChange2} \cite{Feynman_Leighton_Sands_2013}.
+
+\begin{equation}
+    \Delta\theta_{1} = \theta_1 + \frac{2q_e}{\hbar}\int_{\text{left branch}} \Vec{A}\cdot d\Vec{s}
+    \label{eq:PhaseChange1}
+\end{equation}
+
+\begin{equation}
+    \Delta\theta_{2} = \theta_2 + \frac{2q_e}{\hbar}\int_{\text{right branch}} \Vec{A}\cdot d\Vec{s}
+    \label{eq:PhaseChange2}
+\end{equation}
+Where $\theta_1$ and $\theta_2$ is the change in phase across their respective junctions. Similarly, $\Delta\theta_1$ and $\Delta\theta_2$ refer to the change in phase through the left and right branch respectively. As previously discussed, the integral of the phase gradient around a closed loop must be an integer multiple of $2\pi$. As a consequence, subtracting equation \ref{eq:PhaseChange2} from \ref{eq:PhaseChange1} must yield $2\pi n$. Using equation \ref{eq:intCurrent} we derive equation \ref{eq:loopInt}.
+
+\begin{equation}
+    \theta_2  = \theta_1 - 2\pi n + \frac{2q_e}{\hbar}\Phi
+    \label{eq:loopInt}
+\end{equation}
+
+Using equation \ref{eq:joseph}, \ref{eq:loopInt} and a KCL at the top or bottom node, the relation between the current going into the loop and the flux through the loop is derived and equation is found. Here the $2\pi n$ term can be neglected as a $2\pi n$ shift in phase does not change the value of the function. 
+
+\begin{equation}
+    I = I_2sin(\theta_2) + I_1sin(\theta_2 - \frac{2q_e}{\hbar}\Phi)
+    \label{eq:squidI}
+\end{equation}
+
+Equation \ref{eq:squidI} describes the general behaviour of the DC SQUID. The current voltage characteristics are shown in the figure below \textcolor{red}{Get figure}
+
+% if i have enough space i will add this
+% \section{SQUID practical applications}
+%  put here the basic components a squid is made of
+% \subsection{The SQUID gradiometer}
+% some nice pictures from a SCEM
+% \subsection{The qubit}
+
+% \subsection{Transition-edge sensors}
+% Blab about the research being done in this field
+\section{Noise in SQUIDS}
+
+List connection between Noise and squid sensitivity here aka - Why it is useful to know the noise figure ie the low frequency performance also list the characteristics of 1/f noise also why is low frequency performance important
+
+\subsection{Origin of noise in SQUIDS}
+proposed model for noise specifically 1/f noise
+
+\subsection{Models for noise in SQUIDS}
+this is basically steven antons work as well as some other people he links to
+observations made through measurements
+dependance on temp
+dependance on geometry 
+some work on improving low frequency performance
+
+\subsection{Techniques for predicting mean square flux noise}
+go through methods previously used and explain Steven Antons work and discuss results for his noise modelling
+
+\section{InductEx and tetrahenry}
+Should this even be here?
