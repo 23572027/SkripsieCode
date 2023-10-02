@@ -1148,6 +1148,10 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/rm-lmss10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/rm-lmtt10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT ./litreview/fig//UncoupledSQUID.png
+INPUT litreview/fig//UncoupledSQUID.png
+INPUT ./litreview/fig//UncoupledSQUID.png
+INPUT ./litreview/fig//UncoupledSQUID.png
 INPUT ./solutiondevelopment/sol.tex
 INPUT ./solutiondevelopment/sol.tex
 INPUT ./solutiondevelopment/sol.tex
@@ -1192,10 +1196,12 @@ INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbx8.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmex10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi12.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi6.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi8.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr12.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr17.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr6.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr8.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmri12.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmssbo10.pfb

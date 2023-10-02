@@ -73,7 +73,33 @@ It is important to note that \ref{eq:joseph} is only valid for a limited number 
     \label{fig:JJ}
     \caption{The circuit symbol for a Josephson junction}
 \end{figure}
-
+\subsubsection*{The RCSJ model}
+\textcolor{red}{The math in this section needs review}
+The phase-current and phase-voltage relation makes the assumption of a perfect Junction. This assumption is inaccurate and as such the RCSJ model is used to more accurately model the behaviour of a junction \cite{Tinkham_2015}. The resistively and capacitively shunted junction is a simple model used to describe the dynamics of a junction. As the name implies it consists of a resistor ($R$), capacitance ($C$) and a Josephson current ($I_s$). In a non-ideal junction a displacement current flows between the two superconductors. This displacement current is modelled by the capacitor. The resistive element models the effect of quasi-particle tunnelling across the boundary \cite{Duzer_1999_Princip_Super}. Figure \textcolor{red}{Insert fig} depicts the RCSJ model. To derive the current-voltage relation of an RCSJ model one can express the voltage across the parallel components as a function of the current flowing into the junction: 
+\begin{equation}
+    I = I_csin(\delta)+C\frac{dV}{dt}+\frac{V}{R}
+    \label{eq:RCSJ}
+\end{equation}
+Equation \ref{eq:RCSJ} can be re-written using equation \ref{eq:phaseVoltage}. The resulting equation is a second-order non-linear, inhomogeneous differential equation for which analytical solutions are not available. For the simple case when $C=0$ a differential equation of the form of equation \ref{eq:C0} can be obtained.
+\begin{equation}
+    K = \frac{d\varphi }{d\tau} + sin(\varphi)
+    \label{eq:C0}
+\end{equation}
+This equation can be integrated directly using separation of variables and a Weierstrass substitution \cite{Duzer_1999_Princip_Super}. A detailed derivation is listed in appendix \textcolor{red}{List appendix}. The resulting equation describes the dynamics of the phase shift for a constant input current. The frequency of the current through the junction is determined by the dynamics of the phase. The period of the phase-dynamics is the Josephson frequency. Using the Josephson frequency relation \cite{Duzer_1999_Princip_Super},
+\begin{equation}
+    \omega = \frac{q}{\hbar}V
+    \label{eq:JosephsonFreq}
+\end{equation}
+as well as the period of the equation for the phase, we find the time average voltage of the junction to be \cite{Duzer_1999_Princip_Super}:
+\begin{equation}
+    V = 
+    \begin{cases}
+        0 & \quad\text{for } I \le I_c\\
+        I_cR[(\frac{I}{I_c})^2-1]^\frac{1}{2} & \quad\text{for } I > I_c\\
+    \end{cases}
+    \label{eq:IVCHAR}
+\end{equation}
+Graphing equation \ref{eq:IVCHAR} yields the figure below: \textcolor{red}{Insert fig}
 
 \subsection{SQUID's}
 An application of the Josephson effect is the superconducting quantum interference device (SQUID). In essence a SQUID refers to a superconducting ring that contains one or more Josephson junction. This interference effect is analogous to interference one might encounter in the field of optics \cite{DCSQUIDoriginalPaper}. The SQUID is a highly sensitive device that can in some cases measure fields as weak as $5\times 10^{-14} T$ \cite{Drung2016NBSQUIDS}.
@@ -143,15 +169,32 @@ Using equation \ref{eq:joseph}, \ref{eq:loopInt} and a KCL at the top or bottom 
 
 Equation \ref{eq:squidI} describes the general behaviour of the DC SQUID. The current voltage characteristics are shown in the figure below \textcolor{red}{Get figure}
 
-% if i have enough space i will add this
-% \section{SQUID practical applications}
-%  put here the basic components a squid is made of
-% \subsection{The SQUID gradiometer}
-% some nice pictures from a SCEM
-% \subsection{The qubit}
+\subsection{Practical DC SQUIDS and design considerations}
 
-% \subsection{Transition-edge sensors}
-% Blab about the research being done in this field
+\subsubsection*{The resistively shunted junction}
+Practical realisation of a DC SQUID requires that the designer connect shunt resistors to each junction \cite{Drung2016NBSQUIDS}. This is done such that the system is strongly over damped \cite{SQUIDhandbook}. In the context of the discussion on the I-V characteristics  of the Josephson junction the addition of the shunt resistors correspond to the effect of the junction capacitance becoming negligible. In the absence of a shunt resistor the I-V characteristics of a Josephson junction has hysteresis \cite{Drung2016NBSQUIDS}. 
+
+\subsubsection*{The uncoupled SQUID}
+Below is an example of an uncoupled DC SQUID structure. 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.4\linewidth]{UncoupledSQUID}
+    \caption{A diagram of a practical uncoupled DC SQUID structure \cite{DCSQUIDdesignImage}}
+    \label{fig:UncoupledSQUID}
+\end{figure}
+The uncoupled SQUID is the simplest of designs as it only consists of a single superconducting loop with 2 resistively shunted Junctions. The SQUID characteristics are determined by the loop inductance, critical current, shunt resistance and parasitic junction capacitance \cite{Drung2016NBSQUIDS}. Design involves choosing the optimal set of these parameters to satisfy the design requirements. This is often not a trivial task due to the non-linear nature of the equations describing the behaviour of the Josephson junction and by extension the DC SQUID. Through extensive simulation a number of key design parameters have been identified \cite{Drung2016NBSQUIDS}. The first of which is described by equation \ref{eq:NoisePar} and is referred to as the noise parameter \cite{SQUIDhandbook}. 
+\begin{equation}
+    \Gamma = \frac{2\pi k_bT}{\Phi_0I_c}
+    \label{eq:NoisePar}
+\end{equation} 
+The noise parameter is the quotient of the thermal energy and the Josephson coupling energy \cite{SQUIDhandbook}. It has the effect of an apparent reduction in the critical current of a junction at low voltages \cite{Drung2016NBSQUIDS}. \newline
+The second design consideration is the quality or "Q" factor. For currents the phase shift induced by the Josephson junction can be interpreted as an inductor \cite{SQUIDhandbook}. Under this approximation it is clear to see how the combination of the shunt capacitance and junction create an RC resonator. As pointed out by \cite{Drung2016NBSQUIDS} it is often desirable to keep the quality factor of resonating circuits in non-linear systems close to unity. 
+
+\begin{equation}
+    Q
+    \label{eq:QFACT}
+\end{equation}
+
 \section{Noise in SQUIDS}
 
 List connection between Noise and squid sensitivity here aka - Why it is useful to know the noise figure ie the low frequency performance also list the characteristics of 1/f noise also why is low frequency performance important
