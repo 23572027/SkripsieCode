@@ -81,4 +81,37 @@ J.~Clarke and A.~I. A.~I. Braginski, \emph{\BIBforeignlanguage{eng}{The SQUID
   handbook}}.\hskip 1em plus 0.5em minus 0.4em\relax Weinheim, [Cambridge:
   Wiley-VCH, 2004 - 2006.
 
+\bibitem{LowNoiseGrad}
+M.~Faley, U.~Poppe, K.~Urban, D.~Paulson, T.~Starr, and R.~Fagaly, ``Low noise
+  hts dc-squid flip-chip magnetometers and gradiometers,'' \emph{IEEE
+  Transactions on Applied Superconductivity}, vol.~11, no.~1, pp. 1383--1386,
+  2001.
+
+\bibitem{QubitPerf}
+J.~Braumüller, L.~Ding, A.~P. Vepsäläinen, Y.~Sung, M.~Kjaergaard, T.~Menke,
+  R.~Winik, D.~Kim, B.~M. Niedzielski, A.~Melville, J.~L. Yoder, C.~F.
+  Hirjibehedin, T.~P. Orlando, S.~Gustavsson, and W.~D. Oliver,
+  ``\BIBforeignlanguage{eng}{Characterizing and optimizing qubit coherence
+  based on squid geometry},'' \emph{\BIBforeignlanguage{eng}{Physical review
+  applied}}, vol.~13, no.~5, 2020.
+
+\bibitem{FluxNoiseCol}
+F.~C. Wellstood, C.~Urbina, and J.~Clarke, ``\BIBforeignlanguage{eng}{Role of
+  geometry on the color of flux noise in dc squids},''
+  \emph{\BIBforeignlanguage{eng}{IEEE transactions on applied
+  superconductivity}}, vol.~21, no.~3, pp. 856--859, 2011.
+
+\bibitem{SurfaceSpinOrig}
+H.~Wang, C.~Shi, J.~Hu, S.~Han, C.~C. Yu, and R.~Wu,
+  ``\BIBforeignlanguage{eng}{Candidate source of flux noise in squids: Adsorbed
+  oxygen molecules},'' \emph{\BIBforeignlanguage{eng}{Physical review
+  letters}}, vol. 115, no.~7, pp. 077\,002--077\,002, 2015.
+
+\bibitem{OriginAndReductionOf1/fNoise}
+P.~Kumar, S.~Sendelbach, M.~Beck, J.~Freeland, Z.~Wang, H.~Wang, C.~C. Yu,
+  R.~Wu, D.~Pappas, and R.~McDermott, ``\BIBforeignlanguage{eng}{Origin and
+  reduction of 1 / f magnetic flux noise in superconducting devices},''
+  \emph{\BIBforeignlanguage{eng}{Physical review applied}}, vol.~6, no.~4,
+  2016.
+
 \end{thebibliography}
