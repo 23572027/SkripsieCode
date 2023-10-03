@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2023.9.30)  2 OCT 2023 22:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2023.9.30)  3 OCT 2023 13:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -786,23 +786,27 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[6]
-<litreview/fig//UncoupledSQUID.png, id=351, 281.05pt x 298.11375pt>
+[6] [7 <./litreview/fig//SQUID.png>]
+<litreview/fig//UncoupledSQUID.png, id=366, 281.05pt x 298.11375pt>
 File: litreview/fig//UncoupledSQUID.png Graphic file (type png)
 <use litreview/fig//UncoupledSQUID.png>
-Package pdftex.def Info: litreview/fig//UncoupledSQUID.png  used on input line 181.
+Package pdftex.def Info: litreview/fig//UncoupledSQUID.png  used on input line 191.
 (pdftex.def)             Requested size: 182.09486pt x 193.14845pt.
- [7 <./litreview/fig//SQUID.png>] [8 <./litreview/fig//UncoupledSQUID.png>]) (./solutiondevelopment/sol.tex [9]
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[8] [9 <./litreview/fig//UncoupledSQUID.png>]) (./solutiondevelopment/sol.tex [10]
 Chapter 3.
-) (./results/results.tex [10
+) (./results/results.tex [11
 
 ]
 Chapter 4.
-) (./conclusion/conclusion.tex [11
+) (./conclusion/conclusion.tex [12
 
 ]
 Chapter 5.
-) (./stellenbosch_ee_report.bbl [12
+) (./stellenbosch_ee_report.bbl [13
 
 ]
 ** WARNING: IEEEtran.bst: No hyphenation pattern has been
@@ -814,11 +818,11 @@ Chapter 5.
 ** WARNING: IEEEtran.bst: No hyphenation pattern has been
 ** loaded for the language `eng'. Using the pattern for
 ** the default language instead.
-) (./appendices/appendices.tex [13
+) (./appendices/appendices.tex [14
 
 ]
 Appendix A.
-[14
+[15
 
 ]
 Appendix B.
@@ -827,7 +831,7 @@ Appendix B.
 Package caption Warning: Unused \captionsetup[algorithm] on input line 94.
 See the caption package documentation for explanation.
 
-[15
+[16
 
 ] (./stellenbosch_ee_report.aux)
 
@@ -837,18 +841,18 @@ Package rerunfilecheck Info: File `stellenbosch_ee_report.out' has not changed.
 (rerunfilecheck)             Checksum: F7EF7722B7DFE9A34D0D1C24B65DCDEB;3621.
  ) 
 Here is how much of TeX's memory you used:
- 19418 strings out of 480852
- 332736 string characters out of 5906873
- 669310 words of memory out of 6000000
- 36113 multiletter control sequences out of 15000+600000
- 486154 words of font info for 163 fonts, out of 8000000 for 9000
+ 19431 strings out of 480852
+ 332887 string characters out of 5906873
+ 669375 words of memory out of 6000000
+ 36115 multiletter control sequences out of 15000+600000
+ 486502 words of font info for 167 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 61i,13n,75p,1364b,773s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 61i,13n,75p,1600b,771s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmssbo10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on stellenbosch_ee_report.pdf (24 pages, 348733 bytes).
+Output written on stellenbosch_ee_report.pdf (25 pages, 355590 bytes).
 PDF statistics:
- 495 PDF objects out of 1000 (max. 8388607)
- 437 compressed objects within 5 object streams
- 92 named destinations out of 1000 (max. 500000)
+ 512 PDF objects out of 1000 (max. 8388607)
+ 453 compressed objects within 5 object streams
+ 95 named destinations out of 1000 (max. 500000)
  49357 words of extra memory for PDF output out of 51595 (max. 10000000)
 
