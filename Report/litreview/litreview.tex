@@ -228,6 +228,7 @@ Although there is no consensus on the exact origin of $1/f$ noise many agree tha
 The parameter A is insensitive to the geometry and materials of the substrate \cite{fluxNoiseSquidsStevenAnton}. The parameter $\alpha$ is the slope of the noise on a log-log plot. In \cite{SurfaceSpinOrig} the authors propose that the origin of magnetic moments on the surface of the superconductor can be attributed to $O_2$ molecules absorbed on the surface. In \cite{OriginAndReductionOf1/fNoise} the authors provide further supporting evidence to the claims of \cite{SurfaceSpinOrig} by investigating the effect of surface treatments on low frequency flux noise. They found that surface treatments as well as a better sample vacuum environment led to significant improvement in low frequency flux noise. Experimental results suggest the spin density on the surface of the superconductor to be $5\times10^{17}m^{-2}$. According to \cite{fluxNoiseSquidsStevenAnton} various authors have characterized the noise due to surface spins by calculating the mean square flux noise ($\langle \Phi^2\rangle $). The authors make use of a model where spins are independently and identically distributed with each spin having a magnetic moment equal to the Bohr magneton ($\mu_B$). The results correlated with experimental evidence as it conformed to the properties of the power spectral density one expects from the low frequency flux noise \cite{fluxNoiseSquidsStevenAnton}. Specifically, the models conformed to the property that the magnitude of the flux noise is a weak function of the geometry of the SQUID.
 
 \subsection{Techniques for predicting mean square flux noise}
+\label{subsec:PredictFluxNoise}
 The importance of being able to predict the low frequency flux noise in SQUID's has led many to attempt to predict it using the mostly agreed upon model of magnetic defects on the surface of the super conductor.
 
 \textcolor{red}{Change title}
@@ -320,6 +321,11 @@ The author noted that the time complexity of FastHenry at the time was roughly $
     \Vec{B(\Vec{r})} = \frac{\mu_0}{4\pi}\sum_{\text{sll segments}}[J_n\times\int_{V_n}\frac{\Vec{s}\cdot d\Vec{V}}{|\Vec{s}|^3}]
     \label{eq:BiotSavart}
 \end{equation}
-The current is assumed to be constant throughout each individual segment so $J_n$ is taken out of the integral in equation \ref{eq:BiotSavart}. This allows the integral to be solved analytically as it only depends on the geometry of a segment and not the current distribution \cite{fluxNoiseSquidsStevenAnton}. \textcolor{red}{Left off here. Connect koch and stevens work here}
-\section{InductEx and tetrahenry}
-Should this even be here?
+The current is assumed to be constant throughout each individual segment so $J_n$ is taken out of the integral in equation \ref{eq:BiotSavart}. This allows the integral to be solved analytically as it only depends on the geometry of a segment and not the current distribution \cite{fluxNoiseSquidsStevenAnton}. Once the magnetic flux density on the surface of the conductor is found, the principle of reciprocity can be used to calculate the mean square flux noise. In \cite{fluxNoiseSquidsStevenAnton} equation \ref{eq:MSFNfromBfield} is listed.
+\begin{equation}
+    \langle \Phi^2 \rangle = \frac{N\mu_B^2}{3I^2}\langle \Vec{B}^2(\Vec{r}) \rangle
+    \label{eq:MSFNfromBfield}
+\end{equation}
+In conclusion, the author reduces the problem of calculating the mean square flux noise to finding the average magnetic flux density on the surface of the conductor. A detail that is worth mentioning is that the number of spin densities $N$ in equation \ref{eq:MSFNfromBfield} is considered large enough such that one can make a continuum approximation \cite{fluxNoiseSquidsStevenAnton}.
+\section{Electromagnetic computational methods}
+In section \ref{subsec:PredictFluxNoise} the various methods for calculating the mean square flux noise was reviewed. In this section the importance of being able to solve electromagnetic problems numerically is brought to light. Another important consideration is control over the discretization of the geometry in the problem as pointed out in \cite{fluxNoiseSquidsStevenAnton}. As such the success of this project will heavily depend on the approach to solving the necessary electromagnetic problems numerically. As this projects supervisor is directly involved with the software package InductEx this will be the approach I will take. 
