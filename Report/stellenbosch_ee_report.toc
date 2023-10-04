@@ -16,10 +16,10 @@
 \contentsline {section}{\numberline {2.2}Noise in SQUIDS}{10}{section.2.2}%
 \contentsline {subsection}{\numberline {2.2.1}1/f flux noise}{10}{subsection.2.2.1}%
 \contentsline {subsection}{\numberline {2.2.2}Techniques for predicting mean square flux noise}{11}{subsection.2.2.2}%
-\contentsline {section}{\numberline {2.3}InductEx and tetrahenry}{11}{section.2.3}%
-\contentsline {chapter}{\numberline {3}Solution development}{12}{chapter.3}%
-\contentsline {chapter}{\numberline {4}Results}{13}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Summary and Conclusion}{14}{chapter.5}%
-\contentsline {chapter}{Bibliography}{15}{chapter*.10}%
-\contentsline {chapter}{\numberline {A}Project Planning Schedule}{17}{appendix.A}%
-\contentsline {chapter}{\numberline {B}Outcomes Compliance}{18}{appendix.B}%
+\contentsline {section}{\numberline {2.3}InductEx and tetrahenry}{12}{section.2.3}%
+\contentsline {chapter}{\numberline {3}Solution development}{13}{chapter.3}%
+\contentsline {chapter}{\numberline {4}Results}{14}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Summary and Conclusion}{15}{chapter.5}%
+\contentsline {chapter}{Bibliography}{16}{chapter*.10}%
+\contentsline {chapter}{\numberline {A}Project Planning Schedule}{18}{appendix.A}%
+\contentsline {chapter}{\numberline {B}Outcomes Compliance}{19}{appendix.B}%

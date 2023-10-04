@@ -114,4 +114,11 @@ P.~Kumar, S.~Sendelbach, M.~Beck, J.~Freeland, Z.~Wang, H.~Wang, C.~C. Yu,
   \emph{\BIBforeignlanguage{eng}{Physical review applied}}, vol.~6, no.~4,
   2016.
 
+\bibitem{BialczakTestLoop}
+R.~C. Bialczak, R.~McDermott, M.~Ansmann, M.~Hofheinz, N.~Katz, E.~Lucero,
+  M.~Neeley, A.~D. O'Connell, H.~Wang, A.~N. Cleland, and J.~M. Martinis,
+  ``\BIBforeignlanguage{eng}{1/f flux noise in josephson phase qubits},''
+  \emph{\BIBforeignlanguage{eng}{Physical review letters}}, vol.~99, no.~18,
+  pp. 187\,006--187\,006, 2007.
+
 \end{thebibliography}
