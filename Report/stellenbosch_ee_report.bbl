@@ -121,4 +121,17 @@ R.~C. Bialczak, R.~McDermott, M.~Ansmann, M.~Hofheinz, N.~Katz, E.~Lucero,
   \emph{\BIBforeignlanguage{eng}{Physical review letters}}, vol.~99, no.~18,
   pp. 187\,006--187\,006, 2007.
 
+\bibitem{KochModel}
+R.~H. Koch, D.~P. Divincenzo, and J.~Clarke, ``\BIBforeignlanguage{eng}{Model
+  for 1/f flux noise in squids and qubits},''
+  \emph{\BIBforeignlanguage{eng}{Physical review letters}}, vol.~98, no.~26,
+  pp. 267\,003--267\,003, 2007.
+
+\bibitem{TLSDefectExplanation}
+L.~V. Abdurakhimov, I.~Mahboob, H.~Toida, K.~Kakuyanagi, Y.~Matsuzaki, and
+  S.~Saito, ``\BIBforeignlanguage{eng}{Identification of different types of
+  high-frequency defects in superconducting qubits},''
+  \emph{\BIBforeignlanguage{eng}{PRX quantum}}, vol.~3, no.~4, pp. 040\,332--,
+  2022.
+
 \end{thebibliography}
