@@ -134,4 +134,11 @@ L.~V. Abdurakhimov, I.~Mahboob, H.~Toida, K.~Kakuyanagi, Y.~Matsuzaki, and
   \emph{\BIBforeignlanguage{eng}{PRX quantum}}, vol.~3, no.~4, pp. 040\,332--,
   2022.
 
+\bibitem{GMSH}
+C.~Geuzaine and J.-F. Remacle, ``\BIBforeignlanguage{eng}{Gmsh: a
+  three-dimensional finite element mesh generator with built-in pre- and
+  post-processing facilities},'' \emph{\BIBforeignlanguage{eng}{International
+  journal for numerical methods in engineering}}, vol.~79, no.~11, pp.
+  1309--1331, 2009.
+
 \end{thebibliography}

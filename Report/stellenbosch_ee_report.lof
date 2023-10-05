@@ -8,6 +8,8 @@
 \contentsline {figure}{\numberline {2.3}{\ignorespaces A diagram of a practical uncoupled DC SQUID structure \cite {DCSQUIDdesignImage}\relax }}{9}{figure.caption.9}%
 \contentsline {figure}{\numberline {2.4}{\ignorespaces A figure produced by \cite {fluxNoiseSquidsStevenAnton} showing the use of a test port on the SQUID washer\relax }}{14}{figure.caption.10}%
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces A process showing how the average user might interact with InductEx and TetraHenry. The figure also shows typical input and output files at each entity in the process.\relax }}{17}{figure.caption.11}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces A process chart showing how the user interacts with InductEx as well as how each module will interact with this process.\relax }}{17}{figure.caption.12}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

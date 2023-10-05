@@ -1176,6 +1176,14 @@ INPUT solutiondevelopment/sol.tex
 INPUT ./solutiondevelopment/sol.tex
 INPUT ./solutiondevelopment/sol.tex
 INPUT solutiondevelopment/sol.tex
+INPUT ./solutiondevelopment/fig//Inductexproc.jpg
+INPUT solutiondevelopment/fig//Inductexproc.jpg
+INPUT ./solutiondevelopment/fig//Inductexproc.jpg
+INPUT ./solutiondevelopment/fig//Inductexproc.jpg
+INPUT ./solutiondevelopment/fig/ProcessFLow.jpg
+INPUT solutiondevelopment/fig/ProcessFLow.jpg
+INPUT ./solutiondevelopment/fig/ProcessFLow.jpg
+INPUT ./solutiondevelopment/fig/ProcessFLow.jpg
 INPUT ./results/results.tex
 INPUT ./results/results.tex
 INPUT ./results/results.tex
