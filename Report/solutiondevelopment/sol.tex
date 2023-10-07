@@ -30,14 +30,65 @@ To understand the role the tool will play one must first understand the basic in
 InductEx has gone through major changes since the publication of \cite{fluxNoiseSquidsStevenAnton}. InductEx is a powerful tool that supports a large feature set. Most of these features are not relevant to this project. I only require magnetic field calculations for the surface of the conductor, so these features will mostly be ignored.
 
 \subsection{GMSH}
-GMSH is an open-source tool that is used to discretize geometry \cite{GMSH}. GMSH supports a scripting language to specify geometry before discretization. InductEx generates a file in this scripting language to be run through GMSH to generate a finite element mesh for use in TetraHenry. GMSH typically accepts a ".geo" file and outputs a ".msh" file. In GMSH you specify the geometry in a hierarchical fashion. You start by defining the lowest dimension elements and build up the geometry from there. In GMSH the lowest dimension entity is the point and is referred to as a "0 dimensional" entity. Higher dimensional entities are bounded by lower dimensional entities for example: A volume is bounded by a set of 2 dimensional surfaces. A surface is defined by a closed loop of 1 dimensional curves. A curve is defined by the 0 dimensional points. This fact will become useful in the design of the GMSH extraction module. GMSH entities are added to physical groups specified by the user. Physical groups are essentially just names for collections of mesh entities. The most common use of physical groups is to use them to define material properties. The implementation and use of physical groups depend on the context GMSH is used in. In TetraHenry physical groups are used to specify a number of things but most relevant to this project, it is used to specify the mesh entities to be used for field calculations. 
+GMSH is an open-source tool that is used to discretize geometry \cite{GMSH}. GMSH supports a scripting language to specify geometry before discretization. InductEx generates a file in this scripting language to be run through GMSH to generate a finite element mesh for use in TetraHenry. GMSH typically accepts a ".geo" file and outputs a ".msh" file. In GMSH you specify the geometry in a hierarchical fashion. You start by defining the lowest dimension elements and build up the geometry from there. In GMSH the lowest dimension entity is the point and is referred to as a "0 dimensional" entity. Higher dimensional entities are bounded by lower dimensional entities for example: A volume is bounded by a set of 2 dimensional surfaces. A surface is defined by a closed loop of 1 dimensional curves. A curve is defined by the 0 dimensional points. This fact will become useful in the design of the GMSH extraction module. GMSH entities are added to physical groups specified by the user. Physical groups are essentially just names for collections of mesh entities. The most common use of physical groups is to use them to define material properties. The implementation and use of physical groups depend on the context GMSH is used in. In TetraHenry physical groups are used to specify a number of things but most relevant to this project, it is used to specify the mesh entities to be used for field calculations. \par
 
 \subsection{TetraHenry (TTH)}
-TetraHenry is the numerical field solver that will be used to calculate the surface magnetic flux density. This project will interact directly with TetraHenry. Refer to appendix \textcolor{red}{Insert sample json file in appendix} for the template ".json" input file used. Depending on the setup of the simulation, TetraHenry will write the results to a folder titled output. When specified, TetraHenry will write the magnetic flux density to a "vtk" file as an unstructured grid. 
+TetraHenry is the numerical field solver that will be used to calculate the surface magnetic flux density. This project will interact directly with TetraHenry. Refer to appendix \textcolor{red}{Insert sample json file in appendix} for the template ".json" input file used. Depending on the setup of the simulation, TetraHenry will write the results to a folder titled output. When specified, TetraHenry will write the magnetic flux density to a "vtk" file as an unstructured grid. TetraHenry also supports a feature where a loop can be excited by specifying a "hole" port. This eliminates the problems \cite{fluxNoiseSquidsStevenAnton} had where the current distribution was distorted around the port where the test current is injected. 
 
 \section{Detailed Design}
 \subsection{Choice of programming language}
 The visualisation tool kit (VTK) is an open-source modelling and visualisation tool kit. As TetraHenry reports simulation results in the VTK file format it is necessary that the language of choice supports the VTK library. Of the rich variety of programming and scripting languages available, few match the design requirements. The VTK library is only supported by python and C++. Python is a high level interpreted language and is often used for scientific computing. Python is very flexible but suffers from performance issues due to it being interpreted. C++ is a lower level compiled programming language that is generally regarded as a "fast" programming language. This is largely due to the fact that it does not have the overhead that comes with an interpreted language. In order to meet performance goals C++ will be used.
+
+\subsection{The GMSH extraction module}
+The first challenge to finding the mean square flux noise figure is calculating the magnetic flux density on the surface of the SQUID washer. To do this TetraHenry requires a 2D mesh of the surface. The flux density is then calculated at each node in the mesh. Telling TetraHenry which mesh to use to calculate the magnetic flux density requires specifying the physical group of the surface mesh as well as the ".msh" file in the settings file passed to TetraHenry. The input to this module is the geometry file for the SQUID washer and the output is a new geometry file describing the geometry of only the surface of the washer. When the output geometry file is meshed with GMSH it should generate a 2D mesh of the surface. \par
+As previously discussed, in GMSH geometry is described by a hierarchical structure. We are ignoring the use of the openCASCADE kernal as this introduces top down constructive geometry which abstracts the hierarchical structure of the typical built-in kernal representation in GMSH. As such this module will not support geometry described by openCASCADE representation. With this limitation on the structure of the input geometry file we can assume that all volumes are bounded by a set of surfaces. With this assumption the design of this module reduces to parsing and editing the geometry file in the correct manner to produce the desired output. \par
+A surface is created in GMSH using the following command "\textit{Plane Surface(surface tag) = $\{$ curveTags $\}$};". The surface tag is a unique numerical identifier assigned to each surface. Curve tags is the comma separated list of curve identifiers that define the boundary of the surface. A volume is defined in the same way with the only difference being the volume is defined by a list of surfaces that bound the volume. The algorithm begins by simply removing all volumes and physical groups from the model. It then finds and records the tags that correspond to a surface in the geometry file. For each surface discovered it creates a new physical group and adds the surface to it. The geometry file can be user created or generated by GMSH and must therefore be flexible to things like extra spaces or new line characters in the input. To account for this regular expressions are used in conjunction with the syntax expected from a geometry file without any errors. The regular expressions and their respective use is described in table \ref{tab:REGEXgmshex}.
+
+\begin{table}[H]
+    \begin{tabular}{p{5cm} p{9cm}}
+    \hline
+    \textbf{Regular expression}        & \textbf{Description}                                                                                        \\ \hline
+    /Plane.*Surface.*\((.*)\)/gmsU     & Match the definition of a plane in the geometry file and store the tag in a capture group                   \\
+    /Physical/gmsU                     & Match any string that contains the word Physical. Run line by line to find physical groups and remove them. \\
+    /Volume.*\(.*\).*;/gmsU            & Find all volumes to delete                                                                                  \\
+    /Mesh*.({[}{[}:digit:{]}{]});/gmsU & Find the mesh command to replace whatever is captured in the capture group by 2                             \\
+    /Save.*"(.*)".*;/gmsU              & Find the name of the output mesh for replacement                                                            \\ \hline
+    \end{tabular}
+    \caption{A table with the regular expressions used in the GMSH extraction module along with their respective function.}
+    \label{tab:REGEXgmshex}
+\end{table}
+With the use of these regular expressions one can follow the steps below to extract the surface mesh: 
+\begin{enumerate}
+    \item Delete all physical groups
+    \item Delete all volumes
+    \item Find all planes
+    \item For each plane find the tag and add that tag to a new physical group
+    \item Find the mesh command and ensure that it is set to make a 2D mesh
+    \item Find the save command and change the output file name
+    \item Run the file through GMSH to generate the surface mesh
+\end{enumerate}
+
+\subsection{The mesh optimisation module}
+The idea behind mesh optimisation in this context is to reduce the number of mesh elements in the resulting mesh without compromising on the accuracy of the field calculations. In the work done by Anton et al. \cite{fluxNoiseSquidsStevenAnton} an older version of InductEx was used. This version of InductEx used filaments as mesh elements. In many optimisation problems the challenge is to find a solution to said problem under some constraint. The challenge in mesh optimisation is finding this constraint. The methods employed by the authors in \cite{fluxNoiseSquidsStevenAnton} involved finding the spline interpolation of currents between adjacent nodes. The constraint was then set such that the change in current between nodes cannot exceed a user specified threshold. If adjacent mesh elements are found where this is the case the mesh elements are divided using the spline interpolation to adhere to this constraint. The new mesh is then used to solve for the current distribution and the same process is repeated until it reaches the iteration limit or the solution converges on a stable mesh (no subdivisions are made). \par
+The version of InductEx this project is designed to work with supports tetrahedral meshing which allows for more freedom in the geometry one can mesh (\textcolor{red}{is this true}). As previously mentioned, all meshing is done with GMSH and as such mesh optimisation of this nature will require some form of integration with GMSH. \par
+In GMSH the longest side of a mesh element (triangle) is referred to as the characteristic length. The characteristic length essentially defines how finely a geometric model is meshed. The characteristic length is therefore closely related to the number of mesh elements in the resulting mesh. Clearly this is how the mesh must be optimized. The characteristic length of each mesh element must be chosen such that a finer mesh is generated where the current varies rapidly across mesh elements. GMSH does not allow for the direct specification of mesh element characteristic lengths. The characteristic length of each element is instead specified through the following methods: 
+
+\begin{enumerate}
+    \item By specifying the characteristic lengths at each point in the geometric model. If the "\textit{Mesh.MeshSizeExtendFromBoundary}" option is set to true, the characteristic length will be interpolated between defining points, curves and surfaces.
+    \item By specifying the number of mesh elements per rotation.
+    \item By specifying mesh size fields.
+    \item By specifying structured meshing constraints.
+\end{enumerate}
+Option 3 was chosen because it provides the most control over mesh sizes and is the closest to being able to specify individual mesh element sizes. \par
+A field in GMSH refers to a post-processing view. A post-processing view can be used as a mesh size field by setting it as a background mesh. The problem reduces to finding an appropriate background mesh. There are 2 quantities that can be used to generate the background mesh. The two options are using the magnetic flux density or using the current density. I opted for using the magnetic flux density as it is associated with a 2D mesh. The 2D background mesh generated can also be used to generate a 3D mesh where the mesh sizes are automatically interpolated by GMSH. \par
+To convert the magnitude of the magnetic flux density to a characteristic length at each node a non-linear mapping is used. A linear approximation of a sigmoid function was chosen. The motivation for choosing a sigmoid function is it allows for the user to specify minimum and maximum mesh size while still interpolating between both boundaries. The approximation is used for performance reasons. Figure \ref{fig:sigmoid} shows the sigmoid and its linear approximation.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\linewidth]{sigmoid}
+    \caption{A graph showing the sigmoid function with its linear approximation}
+    \label{fig:sigmoid}
+\end{figure}
+The values that define the properties of the mapping are specified by the user. The user must specify the min cut-off, max cut-off, maximum magnetic flux density, minimum magnetic flux density, maximum characteristic length and minimum characteristic length. The module then loops through each point in the mesh and calculates the desired characteristic length from the mapping function. The background mesh is specified as a collection of triangles. Each triangle consists of three points where the characteristic length is set for each point. The background mesh is appended to the geometry file and GMSH is run to mesh the structure. 
 
 \subsection{The noise extraction module}
 This module is based on the work done by \cite{fluxNoiseSquidsStevenAnton}. This module will be implemented as a command line tool. The module receives the path to a VTK file which defines an unstructured grid and the total current circulating in the SQUID washer as command line arguments. The unstructured grid specifies the individual mesh elements (triangles)  that the surface of the SQUID washer in question consists of. Additionally, each node of each mesh element has a vector associated with it representing the magnetic flux density at the location of said node. \par
@@ -71,4 +122,57 @@ In equation \ref{eq:MSFNdiscrete} $A_n$ refers to the area associated with the $
 \caption{The algorithm for evaluating the discretized integral}
 \end{algorithm}
 
+\subsection{Calculating the node areas}
+
+\subsubsection*{Choice of $\Vec{A_n}$}
+Equation \ref{eq:MSFNdiscrete} shows that the calculation requires the weighted summation of the flux density over the surface. The resulting unstructured grid generated by TetraHenry associates each flux density vector with a node in the surface mesh. Figure \ref{fig:washerCloseUp} shows and example of what this looks like in practice. The challenge then is finding a scheme for choosing $A_n$.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\linewidth]{washerCloseUp}
+    \caption{A close up of a square washer showing the field calculations at each node in the triangular mesh.}
+    \label{fig:washerCloseUp}
+\end{figure}
+To get some idea of what $A_n$ should look like we can investigate some of its properties. The first property of $A_n$ is expressed in equation \ref{eq:surfaceArea}.
+
+\begin{equation}
+    \text{Surface Area} = \sum_{n=0}^{N}A_n
+    \label{eq:surfaceArea}
+\end{equation}
+
+The second property we would like from $A_n$ is that it minimizes the error caused by discretization. 
+
+\begin{equation}
+    ||\Vec{B_n} A_n - \iint\limits_{r \in A_n}\Vec{B}(\Vec{r})ds || = E
+    \label{eq:surfaceError}
+\end{equation}
+
+It is evident from equation \ref{eq:surfaceError} that the error is $0$ when $\Vec{B}(\Vec{r}) = \Vec{B_n}$. This is not usually the case. If we assume that the mesh is fine enough such that $\Vec{B}(\Vec{r})$ varies slowly across adjacent mesh elements, we can say that the error is roughly proportional to the distance of a point in the region defined by $A_n$ to the mesh node to which $A_n$ belongs to. With this in mind we construct a new optimisation problem. Let $\Vec{X}$ be a metric space representing the surface area of the structure. \par
+We define a set of points $\Vec{P} \in \Vec{X}$ such that $\Vec{P_k}$ refers to the coordinates of the $k_{th} \in K$ node in the mesh. We would like to divide the metric space $\Vec{X}$ into $K$ regions such that each region is assigned the points closest to it thereby minimizing the error due to discretization. The $k_{th}$ region is denoted as $A_k$. Based on these arguments we can write down an objective function for this problem. The objective function quantifies the total error due to our choice of region at point $\Vec{x}$ defined by the function $t_k(\Vec{x})$.
+
+\begin{equation}
+    J = \iint \limits_{\Vec{x}\in\Vec{X}}\sum_{k}^{K}t_k(\Vec{x})||\Vec{x}- \Vec{P_k}||^2ds
+    \label{eq:objFunc}
+\end{equation}
+\textcolor{red}{check the def of k-means}
+The problem reduces to finding the choice of $t_k(\Vec{x})$ that minimizes $J$. $J$ is the objective function for a k-means classifier where the class means are known. Just as in the case of a k-means classifier we choose $t_k(\Vec{x})$ to be defined as follows:
+
+\begin{equation}
+    t_k(\Vec{x}) = 
+    \begin{cases}
+        1 & \quad \Vec{x} \in A_k \\
+        0 & \quad \Vec{x} \notin  A_k \\
+    \end{cases}
+    \label{eq:tk}
+\end{equation}
+Recalling the definition of the Voronoi region defined in the metric space $\Vec{X}$ with the distance function $d$ and sites defined by the points $(\Vec{P_k})_{k \in K} $: 
+\begin{equation}
+    \Vec{A_k} = \{\Vec{x} \in \Vec{X} \quad | \quad d(\Vec{x},\Vec{P_k}) \leq d(\Vec{x},\Vec{P_j})\forall  j \neq k \}
+    \label{eq:voronoi}
+\end{equation}
+If we choose the distance function in equation \ref{eq:voronoi} to be the euclidean distance we see that the regions that minimize the objective function is the Voronoi regions. \par
+Choosing $A_n$ to be the Voronoi regions is a good choice not only because under the assumptions made, it minimizes the objective function but also because the triangular mesh is a Delaunay triangulation. The Delaunay triangulation is the geometric dual of the Voronoi tessellation meaning if you have the Delaunay triangulation, you have the Voronoi tessellation. This choice for $A_n$ is therefore computationally efficient. This choice also adheres to the first property we expected of $A_n$ as the Voronoi regions partition the metric space $\Vec{X}$.
+
+\subsubsection*{Point ordering}
+\subsubsection*{The shoelace algorithm}
 
