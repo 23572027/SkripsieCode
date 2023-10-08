@@ -10,7 +10,7 @@ In order to understand and apply the methods described in \cite{fluxNoiseSquidsS
 \subsection{Superconductivity}
 \textcolor{red}{REVIEW NEEDED}
 
-Since the first discovery of superconductivity a couple of successfully theories have been put forth to explain the phenomenon. The London theory is a framework that describes the qualitative behaviour of superconductors and correctly describes perfect diamagnetic and zero resistance but fails to explain the effect on a microscopic level \cite{Golubov_1998}. The London equations (equation \ref{eq:london1} and equation \ref{eq:london2}) \cite{Tinkham_2015} is an addition to Maxwell's equations.
+Since the first discovery of superconductivity a couple of successfully theories have been put forth to explain the phenomenon. The London theory is a framework that describes the qualitative behaviour of superconductors and correctly describes perfect diamagnetism and zero resistance but fails to explain the effect on a microscopic level \cite{Golubov_1998}. The London equations (equation \ref{eq:london1} and equation \ref{eq:london2}) \cite{Tinkham_2015} is an addition to Maxwell's equations.
 \begin{equation}
     E = \frac{\partial}{\partial t}(\Lambda J_s)
     \label{eq:london1}
@@ -36,7 +36,7 @@ This is due to the fact that it is energetically favourable for cooper pairs in 
     i\hbar \frac{\partial\Psi_2}{\partial t} = U_2\Psi_2 +K\Psi_1
     \label{eq:shrod2}
 \end{equation}
-Here $U_1 = qV/2$ and $U_2 = -qV/2$ \cite{Feynman_Leighton_Sands_2013} refer to the energy of the two wave functions and $K$ refers to the coupling energy between each wave function. By taking \ref{eq:ensembleWave} and setting $|\Psi(\Vec{r})|$ to $\sqrt{\rho}$ where $\rho$ refers to the cooper pair density in the super conductor one can substitute the result into equations \ref{eq:shrod1} and \ref{eq:shrod2}. From this substitution one can find that the rate of change of electron density on either side of the junction to be described by the following equation \cite{Feynman_Leighton_Sands_2013}:
+Here $U_1 = qV/2$ and $U_2 = -qV/2$ \cite{Feynman_Leighton_Sands_2013} refer to the energy of the two wave functions and $K$ refers to the coupling energy between each wave function. By taking \ref{eq:ensembleWave} and setting $|\Psi(\Vec{r})|$ equal to $\sqrt{\rho}e^{i\theta}$, where $\rho$ refers to the cooper pair density in the super conductor. One can substitute the result into equations \ref{eq:shrod1} and \ref{eq:shrod2}. From this substitution one can find that the rate of change of electron density on either side of the junction to be described by the following equation \cite{Feynman_Leighton_Sands_2013}:
 
 \begin{equation}
     \dot\rho_1 = \frac{2}{\hbar}K\sqrt{\rho_1\rho_2}sin(\delta)

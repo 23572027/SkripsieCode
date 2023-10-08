@@ -243,8 +243,35 @@ The points are read in using the VTK library triangle by triangle. Each triangul
     \caption{The figure shows two examples of a cube. The surfaces have been meshed into triangles. The red lines indicate the boundaries of the Voronoi cell and the shaded region shows the Voronoi cell region. The yellow dot indicates the current reference point.}
     \label{fig:voroComp}
 \end{figure}
-The shoelace algorithm can then be performed on each individual sub cell to calculate the total area. Figure \ref{fig:voroComp} also shows why it is necessary to add the midpoint of each side to the Voronoi cell.
+The shoelace algorithm can then be performed on each individual sub cell to calculate the total area associated with a node. Figure \ref{fig:voroComp} also shows why it is necessary to add the midpoint of each side to the Voronoi cell.
 \subsubsection*{Point ordering}
-The points obtained through the VTK library are not ordered. The 
+The points available through the "getPointCells" method in the VTK library does not have any connectivity information. That is the points are unordered. As such an algorithm needs to be developed that can generate the connectivity information after the vertex data is retrieved. The algorithm starts by defining an orthogonal basis in the plane associated with the Voronoi cell. To do this we start by taking the mean of the points and subtracting it from every point in the list. This is done so that the plane of the points runs through the origin. The next step takes the first point in the list and normalises it. This is the first vector in the orthogonal basis. The second vector is created by taking the cross product of the first vector and the normal vector of the plane. The new vector is once again normalised. By the definition of a plane the new vector has to lie in the plane. \par
+Now that an orthogonal basis is established we can begin to order the points. The basic idea behind the algorithm is to take the zero mean list of points and calculate the angle between the position vectors of each point and one of the vectors in the basis set. Points are then sorted in ascending order with points with the smallest angles appearing first in the sorted list. It should be noted that this process assumes the points are co-planar, so it must be performed on a per sub cell basis. 
+\begin{equation}
+    \theta_i = cos^{-1}(\frac{v_i\cdot a_1}{|v_i|})
+    \label{eq:angle}
+\end{equation}
+Equation \ref{eq:angle} calculates the angle between the $i_{\text{th}}$ point and first basis vector $a_1$. Because reflections of vectors across the axis of $a_1$ will give the same angle, there is ambiguity introduced. The sign of the dot product between each point and the second basis vector is used to resolve the ambiguity. With the help of an example the convention used is shown below in figure \ref{fig:planeVoro} and table \ref{tab:angles}.
 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\linewidth]{plane}
+    \caption{A figure showing an example Voronoi cell. Each point is labelled, and the position vectors are shown.}
+    \label{fig:planeVoro}
+\end{figure}
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{llll}
+    \hline
+    Point & Angle & sign($a_2 \cdot P_i$) & Final angle \\ \hline
+    p1             & 0              & +                 & 0                               \\
+    p2             & 60             & +                 & 60                              \\
+    p3             & 95             & +                 & 95                              \\
+    p4             & 175            & -                 & 185                             \\
+    p5             & 80             & -                 & 280                             \\ \hline
+    \end{tabular}
+    \caption{The first column refers to the point label and is a reference to figure \ref{fig:planeVoro}. The second column is the result of applying equation \ref{eq:angle}. The third column shows the sign of the projection of vector $P_i$ onto the second basis vector. The fourth column shows the angle after adjustment. The fourth column is calculated as: $360 - Angle$.}
+    \label{tab:angles}
+\end{table}
 
