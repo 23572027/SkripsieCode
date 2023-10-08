@@ -12,6 +12,8 @@
 \contentsline {figure}{\numberline {3.2}{\ignorespaces A process chart showing how the user interacts with InductEx as well as how each module will interact with this process.\relax }}{17}{figure.caption.12}%
 \contentsline {figure}{\numberline {3.3}{\ignorespaces A graph showing the sigmoid function with its linear approximation\relax }}{22}{figure.caption.14}%
 \contentsline {figure}{\numberline {3.4}{\ignorespaces A close up of a square washer showing the field calculations at each node in the triangular mesh.\relax }}{23}{figure.caption.15}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces The Delaunay triangulation is shown. The triangular mesh is the solid lines. The Voronoi cells are constructed out of the dashed lines. This figure was generated with GMSH \cite {GMSH}\relax }}{25}{figure.caption.16}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces The figure shows two examples of a cube. The surfaces have been meshed into triangles. The red lines indicate the boundaries of the Voronoi cell and the shaded region shows the Voronoi cell region. The yellow dot indicates the current reference point.\relax }}{27}{figure.caption.18}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

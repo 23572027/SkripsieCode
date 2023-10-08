@@ -27,9 +27,8 @@
 \contentsline {subsection}{\numberline {3.3.2}The GMSH extraction module}{19}{subsection.3.3.2}%
 \contentsline {subsection}{\numberline {3.3.3}The mesh optimisation module}{20}{subsection.3.3.3}%
 \contentsline {subsection}{\numberline {3.3.4}The noise extraction module}{22}{subsection.3.3.4}%
-\contentsline {subsection}{\numberline {3.3.5}Calculating the node areas}{23}{subsection.3.3.5}%
-\contentsline {chapter}{\numberline {4}Results}{26}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Summary and Conclusion}{27}{chapter.5}%
-\contentsline {chapter}{Bibliography}{28}{chapter*.16}%
-\contentsline {chapter}{\numberline {A}Project Planning Schedule}{30}{appendix.A}%
-\contentsline {chapter}{\numberline {B}Outcomes Compliance}{31}{appendix.B}%
+\contentsline {chapter}{\numberline {4}Results}{28}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Summary and Conclusion}{29}{chapter.5}%
+\contentsline {chapter}{Bibliography}{30}{chapter*.19}%
+\contentsline {chapter}{\numberline {A}Project Planning Schedule}{32}{appendix.A}%
+\contentsline {chapter}{\numberline {B}Outcomes Compliance}{33}{appendix.B}%

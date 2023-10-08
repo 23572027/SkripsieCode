@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2023.9.30)  8 OCT 2023 00:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2023.9.30)  8 OCT 2023 15:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -722,7 +722,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
  (./frontmatter/skripsie_title_page.tex
-<USlogo-top.pdf, id=132, 560.0925pt x 183.68625pt>
+<USlogo-top.pdf, id=128, 560.0925pt x 183.68625pt>
 File: USlogo-top.pdf Graphic file (type pdf)
 <use USlogo-top.pdf>
 Package pdftex.def Info: USlogo-top.pdf  used on input line 7.
@@ -769,13 +769,13 @@ Chapter 2.
 [2
 
 ] [3]
-<litreview/fig//JJ.jpg, id=355, 80.39023pt x 80.39023pt>
+<litreview/fig//JJ.jpg, id=362, 80.39023pt x 80.39023pt>
 File: litreview/fig//JJ.jpg Graphic file (type jpg)
 <use litreview/fig//JJ.jpg>
 Package pdftex.def Info: litreview/fig//JJ.jpg  used on input line 72.
 (pdftex.def)             Requested size: 45.52718pt x 45.52849pt.
  [4 <./litreview/fig//JJ.jpg>] [5]
-<litreview/fig//SQUID.png, id=406, 494.52168pt x 480.7173pt>
+<litreview/fig//SQUID.png, id=413, 494.52168pt x 480.7173pt>
 File: litreview/fig//SQUID.png Graphic file (type png)
 <use litreview/fig//SQUID.png>
 Package pdftex.def Info: litreview/fig//SQUID.png  used on input line 139.
@@ -787,7 +787,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [6] [7 <./litreview/fig//SQUID.png>]
-<litreview/fig//UncoupledSQUID.png, id=449, 281.05pt x 298.11375pt>
+<litreview/fig//UncoupledSQUID.png, id=456, 281.05pt x 298.11375pt>
 File: litreview/fig//UncoupledSQUID.png Graphic file (type png)
 <use litreview/fig//UncoupledSQUID.png>
 Package pdftex.def Info: litreview/fig//UncoupledSQUID.png  used on input line 191.
@@ -801,7 +801,7 @@ LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 24
  (/usr/share/texlive/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [12]
-<litreview/fig//Washer.png, id=545, 475.7775pt x 354.32375pt>
+<litreview/fig//Washer.png, id=553, 475.7775pt x 354.32375pt>
 File: litreview/fig//Washer.png Graphic file (type png)
 <use litreview/fig//Washer.png>
 Package pdftex.def Info: litreview/fig//Washer.png  used on input line 315.
@@ -811,18 +811,18 @@ Chapter 3.
 [16
 
 ]
-<solutiondevelopment/fig//Inductexproc.jpg, id=592, 703.62875pt x 352.31625pt>
+<solutiondevelopment/fig//Inductexproc.jpg, id=599, 703.62875pt x 352.31625pt>
 File: solutiondevelopment/fig//Inductexproc.jpg Graphic file (type jpg)
 <use solutiondevelopment/fig//Inductexproc.jpg>
 Package pdftex.def Info: solutiondevelopment/fig//Inductexproc.jpg  used on input line 18.
 (pdftex.def)             Requested size: 364.19667pt x 182.35611pt.
-<solutiondevelopment/fig//ProcessFlow.jpg, id=593, 844.15375pt x 489.83pt>
+<solutiondevelopment/fig//ProcessFlow.jpg, id=600, 844.15375pt x 489.83pt>
 File: solutiondevelopment/fig//ProcessFlow.jpg Graphic file (type jpg)
 <use solutiondevelopment/fig//ProcessFlow.jpg>
 Package pdftex.def Info: solutiondevelopment/fig//ProcessFlow.jpg  used on input line 24.
 (pdftex.def)             Requested size: 364.19667pt x 211.33284pt.
  [17 <./solutiondevelopment/fig//Inductexproc.jpg> <./solutiondevelopment/fig/ProcessFLow.jpg>] [18] [19] [20]
-<solutiondevelopment/fig//sigmoid.png, id=625, 415.5525pt x 328.8285pt>
+<solutiondevelopment/fig//sigmoid.png, id=631, 415.5525pt x 328.8285pt>
 File: solutiondevelopment/fig//sigmoid.png Graphic file (type png)
 <use solutiondevelopment/fig//sigmoid.png>
 Package pdftex.def Info: solutiondevelopment/fig//sigmoid.png  used on input line 87.
@@ -834,18 +834,39 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [21]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 122.
  [22 <./solutiondevelopment/fig//sigmoid.png>]
-<solutiondevelopment/fig//washerCloseUp.png, id=651, 800.9925pt x 602.25pt>
+<solutiondevelopment/fig//washerCloseUp.png, id=657, 800.9925pt x 602.25pt>
 File: solutiondevelopment/fig//washerCloseUp.png Graphic file (type png)
 <use solutiondevelopment/fig//washerCloseUp.png>
 Package pdftex.def Info: solutiondevelopment/fig//washerCloseUp.png  used on input line 132.
 (pdftex.def)             Requested size: 227.62206pt x 171.1376pt.
- [23 <./solutiondevelopment/fig//washerCloseUp.png>] [24]) (./results/results.tex [25]
+ [23 <./solutiondevelopment/fig//washerCloseUp.png>] [24]
+<solutiondevelopment/fig//voro.png, id=678, 741.77126pt x 732.7375pt>
+File: solutiondevelopment/fig//voro.png Graphic file (type png)
+<use solutiondevelopment/fig//voro.png>
+Package pdftex.def Info: solutiondevelopment/fig//voro.png  used on input line 179.
+(pdftex.def)             Requested size: 182.09486pt x 179.87445pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[25 <./solutiondevelopment/fig//voro.png>] [26]
+<solutiondevelopment/fig//vorocube.png, id=697, 189.70876pt x 199.49532pt>
+File: solutiondevelopment/fig//vorocube.png Graphic file (type png)
+<use solutiondevelopment/fig//vorocube.png>
+Package pdftex.def Info: solutiondevelopment/fig//vorocube.png  used on input line 234.
+(pdftex.def)             Requested size: 102.42923pt x 107.71367pt.
+<solutiondevelopment/fig//vorocubeWrong.png, id=698, 189.70876pt x 199.49532pt>
+File: solutiondevelopment/fig//vorocubeWrong.png Graphic file (type png)
+<use solutiondevelopment/fig//vorocubeWrong.png>
+Package pdftex.def Info: solutiondevelopment/fig//vorocubeWrong.png  used on input line 240.
+(pdftex.def)             Requested size: 102.42923pt x 107.71367pt.
+) (./results/results.tex [27 <./solutiondevelopment/fig//vorocube.png> <./solutiondevelopment/fig/vorocubewrong.png>]
 Chapter 4.
-) (./conclusion/conclusion.tex [26
+) (./conclusion/conclusion.tex [28
 
 ]
 Chapter 5.
-) (./stellenbosch_ee_report.bbl [27
+) (./stellenbosch_ee_report.bbl [29
 
 ]
 ** WARNING: IEEEtran.bst: No hyphenation pattern has been
@@ -863,79 +884,79 @@ Chapter 5.
 ** WARNING: IEEEtran.bst: No hyphenation pattern has been
 ** loaded for the language `eng'. Using the pattern for
 ** the default language instead.
-[28
-
-]
-** WARNING: IEEEtran.bst: No hyphenation pattern has been
-** loaded for the language `eng'. Using the pattern for
-** the default language instead.
-** WARNING: IEEEtran.bst: No hyphenation pattern has been
-** loaded for the language `eng'. Using the pattern for
-** the default language instead.
-** WARNING: IEEEtran.bst: No hyphenation pattern has been
-** loaded for the language `eng'. Using the pattern for
-** the default language instead.
-** WARNING: IEEEtran.bst: No hyphenation pattern has been
-** loaded for the language `eng'. Using the pattern for
-** the default language instead.
-** WARNING: IEEEtran.bst: No hyphenation pattern has been
-** loaded for the language `eng'. Using the pattern for
-** the default language instead.
-** WARNING: IEEEtran.bst: No hyphenation pattern has been
-** loaded for the language `eng'. Using the pattern for
-** the default language instead.
-** WARNING: IEEEtran.bst: No hyphenation pattern has been
-** loaded for the language `eng'. Using the pattern for
-** the default language instead.
-** WARNING: IEEEtran.bst: No hyphenation pattern has been
-** loaded for the language `eng'. Using the pattern for
-** the default language instead.
-** WARNING: IEEEtran.bst: No hyphenation pattern has been
-** loaded for the language `eng'. Using the pattern for
-** the default language instead.
-** WARNING: IEEEtran.bst: No hyphenation pattern has been
-** loaded for the language `eng'. Using the pattern for
-** the default language instead.
-** WARNING: IEEEtran.bst: No hyphenation pattern has been
-** loaded for the language `eng'. Using the pattern for
-** the default language instead.
-** WARNING: IEEEtran.bst: No hyphenation pattern has been
-** loaded for the language `eng'. Using the pattern for
-** the default language instead.
-** WARNING: IEEEtran.bst: No hyphenation pattern has been
-** loaded for the language `eng'. Using the pattern for
-** the default language instead.
-** WARNING: IEEEtran.bst: No hyphenation pattern has been
-** loaded for the language `eng'. Using the pattern for
-** the default language instead.
-) (./appendices/appendices.tex [29]
-Appendix A.
 [30
 
 ]
+** WARNING: IEEEtran.bst: No hyphenation pattern has been
+** loaded for the language `eng'. Using the pattern for
+** the default language instead.
+** WARNING: IEEEtran.bst: No hyphenation pattern has been
+** loaded for the language `eng'. Using the pattern for
+** the default language instead.
+** WARNING: IEEEtran.bst: No hyphenation pattern has been
+** loaded for the language `eng'. Using the pattern for
+** the default language instead.
+** WARNING: IEEEtran.bst: No hyphenation pattern has been
+** loaded for the language `eng'. Using the pattern for
+** the default language instead.
+** WARNING: IEEEtran.bst: No hyphenation pattern has been
+** loaded for the language `eng'. Using the pattern for
+** the default language instead.
+** WARNING: IEEEtran.bst: No hyphenation pattern has been
+** loaded for the language `eng'. Using the pattern for
+** the default language instead.
+** WARNING: IEEEtran.bst: No hyphenation pattern has been
+** loaded for the language `eng'. Using the pattern for
+** the default language instead.
+** WARNING: IEEEtran.bst: No hyphenation pattern has been
+** loaded for the language `eng'. Using the pattern for
+** the default language instead.
+** WARNING: IEEEtran.bst: No hyphenation pattern has been
+** loaded for the language `eng'. Using the pattern for
+** the default language instead.
+** WARNING: IEEEtran.bst: No hyphenation pattern has been
+** loaded for the language `eng'. Using the pattern for
+** the default language instead.
+** WARNING: IEEEtran.bst: No hyphenation pattern has been
+** loaded for the language `eng'. Using the pattern for
+** the default language instead.
+** WARNING: IEEEtran.bst: No hyphenation pattern has been
+** loaded for the language `eng'. Using the pattern for
+** the default language instead.
+** WARNING: IEEEtran.bst: No hyphenation pattern has been
+** loaded for the language `eng'. Using the pattern for
+** the default language instead.
+** WARNING: IEEEtran.bst: No hyphenation pattern has been
+** loaded for the language `eng'. Using the pattern for
+** the default language instead.
+) (./appendices/appendices.tex [31]
+Appendix A.
+[32
+
+]
 Appendix B.
-) [31
+) [33
 
 ] (./stellenbosch_ee_report.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `stellenbosch_ee_report.out' has not changed.
-(rerunfilecheck)             Checksum: 08A3F2E66DBAEC30864011F8D66B7AA5;4990.
+(rerunfilecheck)             Checksum: DB4737A16C50290B566C950ABEEB9A90;4789.
  ) 
 Here is how much of TeX's memory you used:
- 19731 strings out of 480852
- 338446 string characters out of 5906873
- 673349 words of memory out of 6000000
- 36290 multiletter control sequences out of 15000+600000
- 498763 words of font info for 197 fonts, out of 8000000 for 9000
+ 19823 strings out of 480852
+ 340335 string characters out of 5906873
+ 674911 words of memory out of 6000000
+ 36347 multiletter control sequences out of 15000+600000
+ 508613 words of font info for 214 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  61i,13n,75p,1637b,915s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmssbo10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on stellenbosch_ee_report.pdf (41 pages, 773701 bytes).
+Output written on stellenbosch_ee_report.pdf (43 pages, 827135 bytes).
 PDF statistics:
- 808 PDF objects out of 1000 (max. 8388607)
- 720 compressed objects within 8 object streams
- 166 named destinations out of 1000 (max. 500000)
- 58158 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 842 PDF objects out of 1000 (max. 8388607)
+ 745 compressed objects within 8 object streams
+ 173 named destinations out of 1000 (max. 500000)
+ 64309 words of extra memory for PDF output out of 74296 (max. 10000000)
 

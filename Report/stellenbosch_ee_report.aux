@@ -26,6 +26,7 @@
 \babel@aux{english}{}
 \citation{DCSQUIDdesignImage}
 \citation{fluxNoiseSquidsStevenAnton}
+\citation{GMSH}
 \@writefile{toc}{\contentsline {chapter}{List of Figures}{vi}{chapter*.4}\protected@file@percent }
 \@writefile{toc}{\contentsline {chapter}{List of Tables}{vii}{chapter*.5}\protected@file@percent }
 \@writefile{toc}{\contentsline {chapter}{Nomenclature}{viii}{chapter*.6}\protected@file@percent }
@@ -223,7 +224,6 @@
 \newlabel{eq:MSFNexpanded}{{3.1}{22}{The noise extraction module}{equation.3.3.1}{}}
 \newlabel{eq:MSFNdiscrete}{{3.2}{22}{The noise extraction module}{equation.3.3.2}{}}
 \@writefile{loa}{\contentsline {algorithm}{\numberline {3.1}{\ignorespaces The algorithm for evaluating the discretized integral\relax }}{23}{algorithm.3.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.5}Calculating the node areas}{23}{subsection.3.3.5}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces A close up of a square washer showing the field calculations at each node in the triangular mesh.\relax }}{23}{figure.caption.15}\protected@file@percent }
 \newlabel{fig:washerCloseUp}{{3.4}{23}{A close up of a square washer showing the field calculations at each node in the triangular mesh.\relax }{figure.caption.15}{}}
 \newlabel{eq:surfaceArea}{{3.3}{23}{}{equation.3.3.3}{}}
@@ -231,42 +231,51 @@
 \newlabel{eq:objFunc}{{3.5}{24}{}{equation.3.3.5}{}}
 \newlabel{eq:tk}{{3.6}{24}{}{equation.3.3.6}{}}
 \newlabel{eq:voronoi}{{3.7}{24}{}{equation.3.3.7}{}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {4}Results}{26}{chapter.4}\protected@file@percent }
+\citation{GMSH}
+\citation{GMSH}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.5}{\ignorespaces The Delaunay triangulation is shown. The triangular mesh is the solid lines. The Voronoi cells are constructed out of the dashed lines. This figure was generated with GMSH \cite  {GMSH}\relax }}{25}{figure.caption.16}\protected@file@percent }
+\newlabel{fig:voronoi}{{3.5}{25}{The Delaunay triangulation is shown. The triangular mesh is the solid lines. The Voronoi cells are constructed out of the dashed lines. This figure was generated with GMSH \cite {GMSH}\relax }{figure.caption.16}{}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {3.2}{\ignorespaces The algorithm for evaluating the discretized integral\relax }}{25}{algorithm.3.2}\protected@file@percent }
+\newlabel{eq:BaryCenter}{{3.8}{25}{}{equation.3.3.8}{}}
+\newlabel{eq:Shoe}{{3.9}{26}{}{equation.3.3.9}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.6}{\ignorespaces The figure shows two examples of a cube. The surfaces have been meshed into triangles. The red lines indicate the boundaries of the Voronoi cell and the shaded region shows the Voronoi cell region. The yellow dot indicates the current reference point.\relax }}{27}{figure.caption.18}\protected@file@percent }
+\newlabel{fig:voroComp}{{3.6}{27}{The figure shows two examples of a cube. The surfaces have been meshed into triangles. The red lines indicate the boundaries of the Voronoi cell and the shaded region shows the Voronoi cell region. The yellow dot indicates the current reference point.\relax }{figure.caption.18}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {4}Results}{28}{chapter.4}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{chap:results}{{4}{26}{Results}{chapter.4}{}}
+\newlabel{chap:results}{{4}{28}{Results}{chapter.4}{}}
 \bibdata{mybib}
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}Summary and Conclusion}{27}{chapter.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Summary and Conclusion}{29}{chapter.5}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{chap:conclusion}{{5}{27}{Summary and Conclusion}{chapter.5}{}}
+\newlabel{chap:conclusion}{{5}{29}{Summary and Conclusion}{chapter.5}{}}
 \bibcite{DCSQUIDdesignImage}{1}
 \bibcite{fluxNoiseSquidsStevenAnton}{2}
-\bibcite{Golubov_1998}{3}
-\bibcite{Tinkham_2015}{4}
-\bibcite{Feynman_Leighton_Sands_2013}{5}
-\bibcite{Duzer_1999_Princip_Super}{6}
-\bibcite{CPRJJ}{7}
-\bibcite{DCSQUIDoriginalPaper}{8}
-\bibcite{Drung2016NBSQUIDS}{9}
-\bibcite{JOSEPHSONJUNCTION}{10}
-\bibcite{SQUIDhandbook}{11}
-\bibcite{LowNoiseGrad}{12}
-\bibcite{QubitPerf}{13}
-\@writefile{toc}{\contentsline {chapter}{Bibliography}{28}{chapter*.16}\protected@file@percent }
-\bibcite{FluxNoiseCol}{14}
-\bibcite{SurfaceSpinOrig}{15}
-\bibcite{OriginAndReductionOf1/fNoise}{16}
-\bibcite{BialczakTestLoop}{17}
-\bibcite{KochModel}{18}
-\bibcite{TLSDefectExplanation}{19}
-\bibcite{GMSH}{20}
-\@writefile{toc}{\contentsline {chapter}{\numberline {A}Project Planning Schedule}{30}{appendix.A}\protected@file@percent }
+\bibcite{GMSH}{3}
+\bibcite{Golubov_1998}{4}
+\bibcite{Tinkham_2015}{5}
+\bibcite{Feynman_Leighton_Sands_2013}{6}
+\bibcite{Duzer_1999_Princip_Super}{7}
+\bibcite{CPRJJ}{8}
+\bibcite{DCSQUIDoriginalPaper}{9}
+\bibcite{Drung2016NBSQUIDS}{10}
+\bibcite{JOSEPHSONJUNCTION}{11}
+\bibcite{SQUIDhandbook}{12}
+\bibcite{LowNoiseGrad}{13}
+\@writefile{toc}{\contentsline {chapter}{Bibliography}{30}{chapter*.19}\protected@file@percent }
+\bibcite{QubitPerf}{14}
+\bibcite{FluxNoiseCol}{15}
+\bibcite{SurfaceSpinOrig}{16}
+\bibcite{OriginAndReductionOf1/fNoise}{17}
+\bibcite{BialczakTestLoop}{18}
+\bibcite{KochModel}{19}
+\bibcite{TLSDefectExplanation}{20}
+\@writefile{toc}{\contentsline {chapter}{\numberline {A}Project Planning Schedule}{32}{appendix.A}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{appen:derivations_bigramseg}{{A}{30}{Project Planning Schedule}{appendix.A}{}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {B}Outcomes Compliance}{31}{appendix.B}\protected@file@percent }
+\newlabel{appen:derivations_bigramseg}{{A}{32}{Project Planning Schedule}{appendix.A}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {B}Outcomes Compliance}{33}{appendix.B}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{appen:derivations_bigramseg}{{B}{31}{Outcomes Compliance}{appendix.B}{}}
-\gdef \@abspage@last{41}
+\newlabel{appen:derivations_bigramseg}{{B}{33}{Outcomes Compliance}{appendix.B}{}}
+\gdef \@abspage@last{43}
