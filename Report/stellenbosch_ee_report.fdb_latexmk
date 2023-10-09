@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex stellenbosch_ee_report"] 1696787085 "stellenbosch_ee_report.aux" "stellenbosch_ee_report.bbl" "stellenbosch_ee_report" 1696787911 0
+["bibtex stellenbosch_ee_report"] 1696788416 "stellenbosch_ee_report.aux" "stellenbosch_ee_report.bbl" "stellenbosch_ee_report" 1696788994 0
   "./mybib.bib" 1696529359 14449 0ea39df75059585a86a3f170456e7b5c ""
   "/usr/share/texlive/texmf-dist/bibtex/bst/IEEEtran/IEEEtran.bst" 1440712899 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
-  "stellenbosch_ee_report.aux" 1696787911 19342 d38a67117f94f09250a155db3db526eb "pdflatex"
+  "stellenbosch_ee_report.aux" 1696788994 20452 97803ef7cd43772fdf8cb6e4f4fb1257 "pdflatex"
   (generated)
   "stellenbosch_ee_report.bbl"
   "stellenbosch_ee_report.blg"
   (rewritten before read)
-["pdflatex"] 1696787909 "/home/paul/Skripsie/Code/SkripsieCode/Report/stellenbosch_ee_report.tex" "stellenbosch_ee_report.pdf" "stellenbosch_ee_report" 1696787911 0
+["pdflatex"] 1696788992 "/home/paul/Skripsie/Code/SkripsieCode/Report/stellenbosch_ee_report.tex" "stellenbosch_ee_report.pdf" "stellenbosch_ee_report" 1696788994 0
   "/home/paul/.texlive2021/texmf-var/web2c/pdftex/pdflatex.fmt" 1696069302 1343368 e2fc8ced325faf9c8561bee365bd3241 ""
   "/home/paul/Skripsie/Code/SkripsieCode/Report/stellenbosch_ee_report.tex" 1696186802 3974 0ebdc6bd2d800e5a764f16ba1bc47a53 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc" 1202520719 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
@@ -201,8 +201,8 @@
   "litreview/fig//SQUID.png" 1696169205 15023 500d36293b8ef8dd14b8f1fe8f4ba67b ""
   "litreview/fig//UncoupledSQUID.png" 1696259016 5521 3126a6dcd9e5f01e7f1cc42403e3ffcb ""
   "litreview/fig//Washer.png" 1696430771 82814 5c1ec4ce2046a70b80bab69bf1399b5e ""
-  "litreview/litreview.tex" 1696787909 35348 a6f118f269a805b7b86084b658fea3fa ""
-  "results/results.tex" 1696186771 69 b62cdf3ab6616eb9a7c587e1ba48718b ""
+  "litreview/litreview.tex" 1696787927 35348 a6f118f269a805b7b86084b658fea3fa ""
+  "results/results.tex" 1696788992 727 e65beed12ac1faa5e3b9a5a7c4f7e5d7 ""
   "solutiondevelopment/fig//Inductexproc.jpg" 1696527121 29094 9a2fea13d6a09dbaa556223aec0594b4 ""
   "solutiondevelopment/fig//plane.png" 1696785711 33958 f3c70a3e00ff70d516e8b8b77046a834 ""
   "solutiondevelopment/fig//sigmoid.png" 1696702639 32678 39b3ad9e89740968b93b0d81a78e41a0 ""
@@ -212,13 +212,13 @@
   "solutiondevelopment/fig/ProcessFLow.jpg" 1696527006 50247 376436fc9b74440e77b80a832ea9572d ""
   "solutiondevelopment/fig/vorocubewrong.png" 1696769872 21900 c95cf2542cdd39aaa1452f6c59ffa32e ""
   "solutiondevelopment/sol.tex" 1696787464 31346 82d41de09ba0af1656de12a076dee8e6 ""
-  "stellenbosch_ee_report.aux" 1696787911 19342 d38a67117f94f09250a155db3db526eb "pdflatex"
-  "stellenbosch_ee_report.bbl" 1696787085 6370 a973801721483a9951b926ad3b417d43 "bibtex stellenbosch_ee_report"
-  "stellenbosch_ee_report.lof" 1696787911 2591 bb2713659a27209a0753348e942a98e3 "pdflatex"
-  "stellenbosch_ee_report.lot" 1696787911 856 f4f9a7846b02f9c590fe2187b1b636e6 "pdflatex"
-  "stellenbosch_ee_report.out" 1696787911 4789 65fd2a1c11ea9db8515a12969a313d8c "pdflatex"
+  "stellenbosch_ee_report.aux" 1696788994 20452 97803ef7cd43772fdf8cb6e4f4fb1257 "pdflatex"
+  "stellenbosch_ee_report.bbl" 1696788416 6370 a973801721483a9951b926ad3b417d43 "bibtex stellenbosch_ee_report"
+  "stellenbosch_ee_report.lof" 1696788994 2591 bb2713659a27209a0753348e942a98e3 "pdflatex"
+  "stellenbosch_ee_report.lot" 1696788994 856 f4f9a7846b02f9c590fe2187b1b636e6 "pdflatex"
+  "stellenbosch_ee_report.out" 1696788994 6022 9d04ff456c352463d86ac302b1a713f5 "pdflatex"
   "stellenbosch_ee_report.tex" 1696186802 3974 0ebdc6bd2d800e5a764f16ba1bc47a53 ""
-  "stellenbosch_ee_report.toc" 1696787911 2552 92a5c2638bf431e8137dd5de711a7d4a "pdflatex"
+  "stellenbosch_ee_report.toc" 1696788994 3293 df360e83a61d39837189677de9e0c76d "pdflatex"
   (generated)
   "stellenbosch_ee_report.aux"
   "stellenbosch_ee_report.lof"
