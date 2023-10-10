@@ -1,0 +1,194 @@
+TTH v1.0.50 (30 Aug 2022)
+JSON input file was set to settings_washer.json.
+Parse settings:
+ - Parsing JSON schema...
+ - Parsing default settings...
+ - Validating default settings...
+ - Parsing input settings...
+ - Validating input settings...
+ - Merging input settings...
+ - Parse path settings...
+-------------------------------------------------------------
+  License path: /usr/local/share/inductex/licenses/ix_license.txt
+  Paul Rossouw, Stellenbosch University
+  License: Super + Compact Models
+-------------------------------------------------------------
+ - Parse mode settings...
+ - Parse frequency settings...
+ - Parse transient settings...
+ - Parse FMM settings...
+ - Parse solver settings...
+ - Parse quadrature settings...
+ - Parse preconditioner settings...
+ - Parse junction settings...
+ - Parse material settings...
+ - Parse mesh settings...
+ - Parse field settings...
+ - Parse component and conductor settings...
+ - Parse component settings...
+ - Parse output settings...
+Writing final settings to file: output/_settings.json
+Extracting meshes:
+ - Extract mesh: IXMesh0
+ - Parsing Gmsh file: loop.msh
+ - Parsed mesh entities: 
+   - T0_ybco
+   - fone
+ - Imported mesh entities: 
+   - IXMesh0::T0_ybco
+   - IXMesh0::fone
+ - Extract mesh: IXMeshField0
+ - Parsing Gmsh file: loopFIELD.msh
+ - Parsed mesh entities: 
+   - Fieldplane0
+ - Imported mesh entities: 
+   - IXMeshField0::Fieldplane0
+Update mesh properties:
+ - Update material properties...
+ - Update physical properties...
+ - Update node properties...
+ - Update line properties...
+ - Update surface properties...
+ - Update volume properties...
+Connecting mesh elements:
+ - Checking for prism triangles...
+ - Connecting lines...
+ - Connecting surface...
+ - Connecting volumes...
+Update mesh properties:
+ - Update material properties...
+ - Update physical properties...
+ - Update node properties...
+ - Update line properties...
+ - Update surface properties...
+ - Update volume properties...
+Converting mesh to circuit:
+ - Add ground terminal...
+ - Extract charge scalars...
+ - Extract charge vectors...
+ - Extract circuit components...
+ - Extract mutual couplings...
+Adding components...
+Updating circuit indices and parameters...
+ - Merge internal shorts...
+ - Update branch indices...
+ - Updating parameters...
+ - Constructing netlist...
+Constructing circuit mesh cycles:
+ - Construct graph...
+ - Extracting graph cycles...
+ - Graph cycles finished
+ - Number of mesh cycles: 34116
+ - Checking for hole terminals...
+ - Checking for hole terminals...
+ - Time: 2.051701e+00
+Constructing circuit mesh cycles:
+ - Construct graph...
+ - Extracting graph cycles...
+ - Graph cycles finished
+ - Number of mesh cycles: 0
+ - Checking for hole terminals...
+ - Checking for hole terminals...
+ - Time: 1.347065e-03
+ - Constructing netlist...
+circuit : {
+    type:              Electric,
+    components:        204691,
+    branches:          204691,
+    meshes:            34116,
+    dielectric panels: 0,
+    junctions:         0,
+    graph components:  2
+}
+circuit : {
+    type:              Magnetc,
+    components:        0,
+    branches:          0,
+    meshes:            0,
+    dielectric panels: 0,
+    junctions:         0,
+    graph components:  1
+}
+Constructing mesh cycles...
+ - Mesh matrix (size, nnz, density): 34116 x 204691, 991481, 1.419801e-02 %
+Constructing MLFMM...
+FMM settings:
+ - Expansion order: 2
+ - Expansion terms: 9
+ - Maximum cube depth: 8
+ - Number of threads: 1
+ - Number of nearest neighbors: 2
+Constructing up matrices...
+Constructing down matrices...
+Constructing eval matrices...
+Find direct matrices...
+Constructing direct matrices...
+Total direct interactions: 17251191
+[>                                                                     ] 0 %[=>                                                                    ] 1 %[==>                                                                   ] 3 %[====>                                                                 ] 5 %[=====>                                                                ] 7 %[======>                                                               ] 9 %[========>                                                             ] 11 %[=========>                                                            ] 13 %[===========>                                                          ] 15 %[============>                                                         ] 17 %[=============>                                                        ] 19 %[===============>                                                      ] 21 %[================>                                                     ] 23 %[==================>                                                   ] 25 %[===================>                                                  ] 27 %[====================>                                                 ] 29 %[======================>                                               ] 31 %[=======================>                                              ] 33 %[=========================>                                            ] 35 %[==========================>                                           ] 37 %[===========================>                                          ] 39 %[=============================>                                        ] 41 %[==============================>                                       ] 43 %[================================>                                     ] 45 %[=================================>                                    ] 47 %[==================================>                                   ] 49 %[====================================>                                 ] 51 %[=====================================>                                ] 53 %[=======================================>                              ] 55 %[========================================>                             ] 57 %[=========================================>                            ] 59 %[===========================================>                          ] 61 %[============================================>                         ] 63 %[==============================================>                       ] 65 %[===============================================>                      ] 67 %[================================================>                     ] 69 %[==================================================>                   ] 71 %[===================================================>                  ] 73 %[=====================================================>                ] 75 %[======================================================>               ] 77 %[=======================================================>              ] 79 %[=========================================================>            ] 81 %[==========================================================>           ] 83 %[============================================================>         ] 85 %[=============================================================>        ] 87 %[==============================================================>       ] 89 %[================================================================>     ] 91 %[=================================================================>    ] 93 %[==================================================================>   ] 95 %[====================================================================> ] 97 %[=====================================================================>] 99 %[======================================================================] 100 %
+MLFMM time: 8.172501e+00
+Solve...
+-------------------------------------------------------------
+   Frequency (1/1): 1.000000e+10
+-------------------------------------------------------------
+Solve frequency: 10.000GHz
+Construct preconditioner:
+ - Constructing diagonal Z matrix...
+ - Constructing ZMt matrix...
+ - Constructing MZMt matrix...
+ - Adding MZMt to preconditioner matrix...
+ - Adding dielectrics to preconditioner matrix...
+ - Adding current sources to preconditioner matrix...
+ - Preconditioner matrix (size, nnz, density): 34116 x 34116, 988114, 8.489671e-02 %
+ - Column permutation: MMD_AT_PLUS_A
+ - ILU factorization...
+ - ILU info:
+   - Recip. pivot growth = 1.000000e+00
+   - Recip. condition number = 5.405032e-07
+   - n(A) = 34116, nnz(A) = 988114
+   - No of nonzeros in factor L = 950736
+   - No of nonzeros in factor U = 788637
+   - No of nonzeros in L+U = 1705257
+   - Fill ratio: nnz(F)/nnz(A) = 1.725769e+00
+   - L\U MB 2.340930e+01	total MB needed 4.333304e+01
+   - ILU time: 8.388939e-01
+Preconditioner LU total time: 1.690704e+00
+GMRES solve: 
+                fone:        0     6.15e-02
+                fone:        1     2.39e-03
+                fone:        2     4.40e-05
+                fone:        3     1.14e-06
+                fone:        4     3.12e-08
+                fone:        5     8.15e-10
+Printing output...
+ - Printing current output...
+[Frequency] 1.000000e+10
+fone fone (0.000000e+00,3.297619e-02)
+Solve total time: 5.019542e+00
+Free preconditioner memory...
+Free solver memory...
+Extract currents field solutions...
+Free unused memory...
+Export VTK files:
+ - Write VTK geometry...
+FMM settings:
+ - Expansion order: 4
+ - Expansion terms: 25
+ - Maximum cube depth: 8
+ - Number of threads: 1
+ - Number of nearest neighbors: 2
+Constructing up matrices...
+Constructing down matrices...
+Constructing eval matrices...
+Find direct matrices...
+Constructing direct matrices...
+Total direct interactions: 39443854
+[>                                                                     ] 0 %[=>                                                                    ] 1 %[==>                                                                   ] 3 %[====>                                                                 ] 5 %[=====>                                                                ] 7 %[======>                                                               ] 9 %[========>                                                             ] 11 %[=========>                                                            ] 13 %[===========>                                                          ] 15 %[============>                                                         ] 17 %[=============>                                                        ] 19 %[===============>                                                      ] 21 %[================>                                                     ] 23 %[==================>                                                   ] 25 %[===================>                                                  ] 27 %[====================>                                                 ] 29 %[======================>                                               ] 31 %[=======================>                                              ] 33 %[=========================>                                            ] 35 %[==========================>                                           ] 37 %[===========================>                                          ] 39 %[=============================>                                        ] 41 %[==============================>                                       ] 43 %[================================>                                     ] 45 %[=================================>                                    ] 47 %[==================================>                                   ] 49 %[====================================>                                 ] 51 %[=====================================>                                ] 53 %[=======================================>                              ] 55 %[========================================>                             ] 57 %[=========================================>                            ] 59 %[===========================================>                          ] 61 %[============================================>                         ] 63 %[==============================================>                       ] 65 %[===============================================>                      ] 67 %[================================================>                     ] 69 %[==================================================>                   ] 71 %[===================================================>                  ] 73 %[====================================================>                 ] 75 %[======================================================>               ] 77 %[=======================================================>              ] 79 %[=========================================================>            ] 81 %[==========================================================>           ] 83 %[===========================================================>          ] 85 %[=============================================================>        ] 87 %[==============================================================>       ] 89 %[================================================================>     ] 91 %[=================================================================>    ] 93 %[==================================================================>   ] 95 %[====================================================================> ] 97 %[=====================================================================>] 99 %[======================================================================] 100 %
+Total direct gradient interactions: 39443854
+[>                                                                     ] 0 %[=>                                                                    ] 1 %[==>                                                                   ] 3 %[====>                                                                 ] 5 %[=====>                                                                ] 7 %[======>                                                               ] 9 %[========>                                                             ] 11 %[=========>                                                            ] 13 %[===========>                                                          ] 15 %[============>                                                         ] 17 %[=============>                                                        ] 19 %[===============>                                                      ] 21 %[================>                                                     ] 23 %[==================>                                                   ] 25 %[===================>                                                  ] 27 %[====================>                                                 ] 29 %[======================>                                               ] 31 %[=======================>                                              ] 33 %[=========================>                                            ] 35 %[==========================>                                           ] 37 %[===========================>                                          ] 39 %[=============================>                                        ] 41 %[==============================>                                       ] 43 %[================================>                                     ] 45 %[=================================>                                    ] 47 %[==================================>                                   ] 49 %[====================================>                                 ] 51 %[=====================================>                                ] 53 %[=======================================>                              ] 55 %[========================================>                             ] 57 %[=========================================>                            ] 59 %[===========================================>                          ] 61 %[============================================>                         ] 63 %[==============================================>                       ] 65 %[===============================================>                      ] 67 %[================================================>                     ] 69 %[==================================================>                   ] 71 %[===================================================>                  ] 73 %[====================================================>                 ] 75 %[======================================================>               ] 77 %[=======================================================>              ] 79 %[=========================================================>            ] 81 %[==========================================================>           ] 83 %[===========================================================>          ] 85 %[=============================================================>        ] 87 %[==============================================================>       ] 89 %[================================================================>     ] 91 %[=================================================================>    ] 93 %[==================================================================>   ] 95 %[====================================================================> ] 97 %[=====================================================================>] 99 %[======================================================================] 100 %
+ - Export electric current density: output/J_washer.vtk
+ - Write VTK geometry...
+ - Write VTK field: 10.000GHz_fone
+Time: 3.455458e+01
+Time:  34.624646s wall, 83.770000s user + 3.750000s system = 87.520000s CPU (252.8%)
+
+Done!

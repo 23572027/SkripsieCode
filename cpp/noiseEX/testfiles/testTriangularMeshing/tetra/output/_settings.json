@@ -14,10 +14,7 @@
         "IXMesh0": {
             "ENTITIES": {
                 "T0_ybco": {
-                    "MATERIAL": "T0_ybcoCOND",
-                    "SHEET_THICKNESS": [
-                        2e-07
-                    ]
+                    "MATERIAL": "T0_ybcoCOND"
                 },
                 "fone": {
                     "HOLE": true

@@ -11,8 +11,7 @@
             "FORMAT": "GMSH",
             "ENTITIES": {
                 "T0_ybco": {
-                    "MATERIAL": "T0_ybcoCOND",
-                    "SHEET_THICKNESS": [2E-7]
+                    "MATERIAL": "T0_ybcoCOND"
                 },
                 "fone": { "HOLE": true }
             }

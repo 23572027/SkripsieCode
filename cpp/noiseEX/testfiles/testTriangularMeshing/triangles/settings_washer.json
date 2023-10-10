@@ -12,7 +12,8 @@
             "ENTITIES": {
                 "T0_ybco": {
                     "MATERIAL": "T0_ybcoCOND",
-                    "SHEET_THICKNESS": [2E-7]
+                    "SHEET_THICKNESS" : 1e-8,
+                    "SHEET_MODEL" : "THIN"
                 },
                 "fone": { "HOLE": true }
             }
