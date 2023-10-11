@@ -1,0 +1,71 @@
+{
+    "COMPONENTS": {
+        "fone": {
+            "HOLE": "IXMesh0::fone"
+        }
+    },
+    "MATERIALS": {
+        "T0_ybcoCOND": {
+            "LAMBDA": 0.24e-6,
+            "SIGMA": 0
+        }
+    },
+    "MESHES": {
+        "IXMesh0": {
+            "ENTITIES": {
+                "T0_ybco": {
+                    "MATERIAL": "T0_ybcoCOND",
+                    "SHEET_THICKNESS": [
+                        2e-07
+                    ]
+                },
+                "fone": {
+                    "HOLE": true
+                }
+            },
+            "FILE": "test.msh",
+            "FORMAT": "GMSH"
+        },
+        "IXMeshField0": {
+            "ENTITIES": [
+                "FieldPlane0"
+            ],
+            "FILE": "testFIELD.msh",
+            "FORMAT": "GMSH"
+        }
+    },
+    "OUTPUT": {
+        "PLOT": {
+            "B": {
+                "ENTITIES": [
+                    "IXMeshField0::FieldPlane0"
+                ],
+                "FILE": "B_loop_test.vtk"
+            },
+            "J": {
+                "FILE": "J_loop_test.vtk"
+            }
+        },
+        "PRINT": {
+            "CURRENT": {
+                "COMPONENTS": [
+                    "fone"
+                ],
+                "FILE": "i.txt"
+            }
+        }
+    },
+    "SETTINGS": {
+        "FREQUENCY": 10000000000.0,
+        "MODE": {
+            "ANALYSIS": "AC",
+            "TYPE": "MQS"
+        },
+        "SOLVER": {
+            "ABSTOL": 0.0001,
+            "MAXITER": 400,
+            "THREADS": "MAX",
+            "TOL": 0.0001
+        }
+    }
+}
