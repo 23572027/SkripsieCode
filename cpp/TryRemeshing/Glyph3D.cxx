@@ -86,6 +86,6 @@ int main(int argc, char *argv[]) {
     }
 #endif
     remesh::runGMSH();
-    remesh::cleanUp();
+//    remesh::cleanUp();
     return EXIT_SUCCESS;
 }

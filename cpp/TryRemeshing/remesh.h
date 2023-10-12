@@ -111,7 +111,7 @@ namespace remesh {
                         const std::string &geoFileName = "washerFIELD.geo",
                         std::string mFileName = "washer",
                         double mindj = 0.1,
-                        double minChar = 4e-8,
+                        double minChar = 1e-8,
                         int debug = 0
     ) {
 #endif

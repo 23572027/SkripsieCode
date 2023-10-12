@@ -2,6 +2,7 @@ import os
 import re
 import numpy as np
 from time import time
+from tqdm import tqdm
 
 
 def writeGeo(name, **kwargs):
@@ -57,7 +58,7 @@ def runGMSH(names,*args) -> list:
     for k in args:
         options = options + " " + k 
     for name in names:
-        os.system(f"gmsh {name}"+ options)
+        os.system(f"gmsh {name}"+ options + " -v 0")
 
     return names
     
@@ -114,8 +115,8 @@ def seeMesh(names):
 if __name__ == "__main__":
 
     keys = "simiter,remiter,R,W,numerical,elementcount,nodecount,meshtime,tthtime,nextime\n"
-    Rs = np.linspace(10e-6,40e-6,50)
-    Ws = np.linspace(4e-6,0.6e-6,50)
+    Rs = np.linspace(10e-6,15e-6,50)
+    Ws = np.linspace(7e-6,3e-6,50)
 
     """ sim setup """
     # SPIN_DENS = 5e17
@@ -131,10 +132,10 @@ if __name__ == "__main__":
         pass
 
     res = open("ringloop.csv","w")
-
+    res.write(keys)
     iter = 0
     """ start simulation loop"""
-    for _R,_W in zip(Rs,Ws):
+    for _R,_W in tqdm(zip(Rs,Ws)):
         
         print(f"iteration {iter}")
         remiter = 0
@@ -157,7 +158,7 @@ if __name__ == "__main__":
         """ write result """
         res.write(f"{iter},{0},{_R},{_W},{numerical[0]},{elem[0][1]},{nodes[0][1]},{mesh_stop-mesh_start},{tth_end-tth_start},{nex_end-nex_start}\n")
 
-        for k in range(2):
+        for k in range(5):
             print(f"\t Remesh iteration: {k}\n-------------------------")
             names = writeGeo("loop",R=_R,W=_W)
 
@@ -183,7 +184,7 @@ if __name__ == "__main__":
 
         cleanGeo(names)
         cleanGeo(n)
-        
+        print(f"done with iteration {iter}")
         iter = iter + 1
     
     res.close()
