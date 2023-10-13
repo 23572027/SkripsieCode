@@ -9,8 +9,8 @@ Mesh.OptimizeNetgen = 1;
 
 //vars
 zoff=0.2e-6; //thickness
-R=%R; // loop radius
-W=%W; // track width
+R=15e-6; // loop radius
+W=3e-6; // track width
 
 //+
 SetFactory("OpenCASCADE");

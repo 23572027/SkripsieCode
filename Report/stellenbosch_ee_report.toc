@@ -4,8 +4,8 @@
 \babel@toc {afrikaans}{}
 \babel@toc {english}{}
 \contentsline {chapter}{List of Figures}{vi}{chapter*.4}%
-\contentsline {chapter}{List of Tables}{vii}{chapter*.5}%
-\contentsline {chapter}{Nomenclature}{viii}{chapter*.6}%
+\contentsline {chapter}{List of Tables}{viii}{chapter*.5}%
+\contentsline {chapter}{Nomenclature}{ix}{chapter*.6}%
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
 \contentsline {chapter}{\numberline {2}Literature Review}{2}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Theory and applications of superconductivity}{2}{section.2.1}%
@@ -24,17 +24,16 @@
 \contentsline {subsection}{\numberline {3.2.3}TetraHenry (TTH)}{18}{subsection.3.2.3}%
 \contentsline {section}{\numberline {3.3}Detailed Design}{18}{section.3.3}%
 \contentsline {subsection}{\numberline {3.3.1}Choice of programming language}{18}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}The GMSH extraction module}{19}{subsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.3.3}The mesh optimisation module}{20}{subsection.3.3.3}%
-\contentsline {subsection}{\numberline {3.3.4}The noise extraction module}{22}{subsection.3.3.4}%
+\contentsline {subsection}{\numberline {3.3.2}The mesh optimisation module}{19}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}The noise extraction module}{22}{subsection.3.3.3}%
 \contentsline {chapter}{\numberline {4}Results}{29}{chapter.4}%
 \contentsline {section}{\numberline {4.1}The noise extraction module}{29}{section.4.1}%
 \contentsline {subsection}{\numberline {4.1.1}Test setup}{29}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Results}{29}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.2}Results}{30}{subsection.4.1.2}%
 \contentsline {section}{\numberline {4.2}The mesh optimisation module}{30}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}Test setup}{30}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Results}{30}{subsection.4.2.2}%
-\contentsline {chapter}{\numberline {5}Summary and Conclusion}{31}{chapter.5}%
-\contentsline {chapter}{Bibliography}{32}{chapter*.23}%
-\contentsline {chapter}{\numberline {A}Project Planning Schedule}{34}{appendix.A}%
-\contentsline {chapter}{\numberline {B}Outcomes Compliance}{35}{appendix.B}%
+\contentsline {subsection}{\numberline {4.2.2}Results}{31}{subsection.4.2.2}%
+\contentsline {chapter}{\numberline {5}Summary and Conclusion}{33}{chapter.5}%
+\contentsline {chapter}{Bibliography}{34}{chapter*.25}%
+\contentsline {chapter}{\numberline {A}Project Planning Schedule}{36}{appendix.A}%
+\contentsline {chapter}{\numberline {B}Outcomes Compliance}{37}{appendix.B}%

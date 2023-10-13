@@ -7,8 +7,7 @@ An incremental approach to testing was done for this project. Each software comp
 \section{The noise extraction module}
 The accuracy of this module is tested by comparing its output to a numerical solution for the given geometry. This module is tested without mesh optimisation. It is tested before the mesh optimisation module because the test setup for the mesh optimisation module requires the use of the noise extraction module.
 \subsection{Test setup}
-
-Equation \ref{eq:MSFNfinal} describes the analytical solution for a thin wire loop. The assumption made in the derivation of this equation is that $R >> D$. The test is performed was a parameter sweep from $R = \si{8}{\mu m}$ and $D = \si{5}{\mu m}$ to $R = \si{45}{\mu m}$ and $D = \si{0.4}{\mu m}$ as shown figure \ref{fig:meshedTorus}. The parameter sweep was automated using a python script.
+The aim of this project is not to verify the numerical framework proposed in \cite{fluxNoiseSquidsStevenAnton}. The testing should reflect this. As such the test setup is designed to verify the functionality of the implementation allowing the geometry of such a setup to not be limited by realistic designs for SQUID washers. Equation \ref{eq:MSFNfinal} describes the analytical solution for a thin wire loop. The assumption made in the derivation of this equation is that $R >> D$. The test is performed was a parameter sweep from $R = \si{8}{\mu m}$ and $D = \si{5}{\mu m}$ to $R = \si{45}{\mu m}$ and $D = \si{0.4}{\mu m}$ as shown figure \ref{fig:meshedTorus}. The parameter sweep was automated using a python script.
 
 \begin{figure}[h]
     \centering
@@ -50,6 +49,48 @@ The results of the parameter sweep are summarized in figure \ref{fig:resTorus}.
 From figure \ref{fig:resTorus} it is clear to see that the relative percentage error compared to the analytic solution decreases as the ration of the loop radius to diameter increases. This behaviour can be attributed to the assumption: $R >> D$. The decrease in error clearly demonstrates that the noise extraction module works for this particular setup. In figure \ref{fig:MSFNvRD} the analytical and numerical results increase linearly with an increase in $\frac{R}{D}$ as expected.
 
 \section{The mesh optimisation module}
-
+The geometry used to test the noise extraction module is not ideal for testing the mesh optimisation algorithm. To understand why this is the case, one must consider the assumption made to derive the analytic solution. By assuming that $R >> D$ you can approximate the ring as an infinitely long wire. By extension this assumes that the magnetic flux density and current density is uniform across the surface of the ring. The testing of the noise extraction module showed that the approximation is quite good. As a consequence, the mesh optimisation algorithm does not do much because the consistent current distribution leads to the mesh being over refined everywhere or not refined at all.
 \subsection{Test setup}
+To test this module I instead opted for a thin film circular ring of loop radius $R$ and track width $W$. Essentially 3 questions must be answered. How many optimisation iterations is required, how much faster the problem is solved with the optimized mesh and if the subsequent extra executions of GMSH and TetraHenry needed to optimize the mesh is worth the trouble. \par
+The test setup once again consists of a parameter sweep of $R$ and $W$ over the ranges $10 \mu m \le R \le 15 \mu m $ and $  3 \mu m \le W \le7\mu m$. The two extremes of the parameter sweep is shown in figure \ref{fig:testloop}. Simulations are run at 50 linearly spaced points in these intervals. For each simulation iteration, 4 mesh optimisation iterations are run. The initial characteristic length is determined by GMSH. The average mesh element count was $1500$ elements. Testing is once again completely automated with python. At each iteration the script records a number of statistics. The script records the execution times of TetraHenry and GMSH. It keeps track of both the simulation iteration and the mesh optimisation iteration. The results are written to a CSV file to be analysed with the \textit{"pandas"} python package. 
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{thickloop}
+        \caption{The geometry of the test setup for the first iteration}
+        \label{fig:thickloop}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{thinloop}
+        \caption{The geometry of the test setup for the last iteration}
+        \label{fig:thinloop}
+    \end{subfigure}
+    \caption{The figure shows the 2 extremes in the parameter sweep for the thin film circular loop experiment. The track thickness is set to $0.1 \mu m$}
+    \label{fig:testloop}
+\end{figure}
+To assess the effectivity of the mesh optimisation algorithm it is necessary to make a baseline measurement. The baseline is set by forcing a minimum characteristic length in the optimized mesh and comparing the result to an unoptimized mesh with characteristic length equal to the minimum characteristic length in the optimized mesh.
+
 \subsection{Results}
+
+To determine the number of optimisation steps necessary for convergence, the average relative error between the mean square flux noise figure calculated at each optimisation iteration and the value obtained after the $4_{th}$ optimisation iteration is calculated. The result is summarized in table \ref{tab:relerr}.
+
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{lll}
+    \hline
+    Iteration number & Relative percentage error & Change in relative error \\ \hline
+    0                & 1.520356                  & N/A                      \\
+    1                & 0.47945                   & 1.040906                 \\
+    2                & 0.028596                  & 0.450854                 \\
+    3                & 0.001191                  & 0.027405                 \\
+    4                & 0.000065                  & 0.001126                 \\ \hline         
+    \end{tabular}
+    \caption{Table of relative errors for each mesh optimisation cycle}
+    \label{tab:relerr}
+\end{table}
+
+The relative does not give an indication of how fast the algorithm converges on the correct result for the MSFN. The change in relative error is the important quantity as it gives us some indication of how much the solution is changing between optimisation steps. This metric should be used in conjunction with

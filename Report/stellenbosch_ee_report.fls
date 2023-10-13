@@ -1184,6 +1184,10 @@ INPUT ./solutiondevelopment/fig/ProcessFLow.jpg
 INPUT solutiondevelopment/fig/ProcessFLow.jpg
 INPUT ./solutiondevelopment/fig/ProcessFLow.jpg
 INPUT ./solutiondevelopment/fig/ProcessFLow.jpg
+INPUT ./solutiondevelopment/fig//meshopt.png
+INPUT solutiondevelopment/fig//meshopt.png
+INPUT ./solutiondevelopment/fig//meshopt.png
+INPUT ./solutiondevelopment/fig//meshopt.png
 INPUT ./solutiondevelopment/fig//sigmoid.png
 INPUT solutiondevelopment/fig//sigmoid.png
 INPUT ./solutiondevelopment/fig//sigmoid.png
@@ -1234,6 +1238,14 @@ INPUT ./results/fig//torusEVRD.png
 INPUT results/fig//torusEVRD.png
 INPUT ./results/fig//torusEVRD.png
 INPUT ./results/fig//torusEVRD.png
+INPUT ./results/fig//thickloop.png
+INPUT results/fig//thickloop.png
+INPUT ./results/fig//thickloop.png
+INPUT ./results/fig//thickloop.png
+INPUT ./results/fig//thinloop.png
+INPUT results/fig//thinloop.png
+INPUT ./results/fig//thinloop.png
+INPUT ./results/fig//thinloop.png
 INPUT ./conclusion/conclusion.tex
 INPUT ./conclusion/conclusion.tex
 INPUT ./conclusion/conclusion.tex
