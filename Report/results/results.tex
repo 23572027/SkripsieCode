@@ -93,4 +93,13 @@ To determine the number of optimisation steps necessary for convergence, the ave
     \label{tab:relerr}
 \end{table}
 
-The relative does not give an indication of how fast the algorithm converges on the correct result for the MSFN. The change in relative error is the important quantity as it gives us some indication of how much the solution is changing between optimisation steps. This metric should be used in conjunction with
+Table \ref{tab:relerr} gives some indication that after 4 iterations the solution becomes relatively stable. If we accept the 4 mesh optimisation iteration as being the correct result we can normalise the relative error and plot it against the normalised, cumulative time GMSH and TetraHenry took after each iteration. Figure \ref{fig:errvtime} shows this relationship.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{errvtime}
+    \caption{The figure shows the relative normalised error and the cumulative total time that GMSH and TetraHenry took at each optimisation step. The green line is the total time and the red line is the error.}
+    \label{fig:errvtime}
+\end{figure}
+
+The optimal number of mesh optimisation steps to minimize the time taken, and the error is between 1 and 2 iterations. The choice ultimately comes down to how accurate the user would like the solution to be. To compare the optimized mesh performance to the baseline I will select 2 as the optimal number of iterations.

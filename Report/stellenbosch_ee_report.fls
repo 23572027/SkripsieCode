@@ -1246,6 +1246,10 @@ INPUT ./results/fig//thinloop.png
 INPUT results/fig//thinloop.png
 INPUT ./results/fig//thinloop.png
 INPUT ./results/fig//thinloop.png
+INPUT ./results/fig//errvtime.png
+INPUT results/fig//errvtime.png
+INPUT ./results/fig//errvtime.png
+INPUT ./results/fig//errvtime.png
 INPUT ./conclusion/conclusion.tex
 INPUT ./conclusion/conclusion.tex
 INPUT ./conclusion/conclusion.tex

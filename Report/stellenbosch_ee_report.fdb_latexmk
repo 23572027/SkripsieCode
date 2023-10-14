@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex stellenbosch_ee_report"] 1697181664 "stellenbosch_ee_report.aux" "stellenbosch_ee_report.bbl" "stellenbosch_ee_report" 1697181667 0
+["bibtex stellenbosch_ee_report"] 1697298884 "stellenbosch_ee_report.aux" "stellenbosch_ee_report.bbl" "stellenbosch_ee_report" 1697299205 0
   "./mybib.bib" 1696529359 14449 0ea39df75059585a86a3f170456e7b5c ""
   "/usr/share/texlive/texmf-dist/bibtex/bst/IEEEtran/IEEEtran.bst" 1440712899 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
-  "stellenbosch_ee_report.aux" 1697181666 23829 e931d8c6bbbcddef9de0a8509444613d "pdflatex"
+  "stellenbosch_ee_report.aux" 1697299204 24418 f57c4a20de5c584730652da5d75cf9e2 "pdflatex"
   (generated)
   "stellenbosch_ee_report.bbl"
   "stellenbosch_ee_report.blg"
   (rewritten before read)
-["pdflatex"] 1697181664 "/home/paul/Skripsie/Code/SkripsieCode/Report/stellenbosch_ee_report.tex" "stellenbosch_ee_report.pdf" "stellenbosch_ee_report" 1697181667 0
+["pdflatex"] 1697299202 "/home/paul/Skripsie/Code/SkripsieCode/Report/stellenbosch_ee_report.tex" "stellenbosch_ee_report.pdf" "stellenbosch_ee_report" 1697299205 0
   "/home/paul/.texlive2021/texmf-var/web2c/pdftex/pdflatex.fmt" 1696069302 1343368 e2fc8ced325faf9c8561bee365bd3241 ""
   "/home/paul/Skripsie/Code/SkripsieCode/Report/stellenbosch_ee_report.tex" 1696186802 3974 0ebdc6bd2d800e5a764f16ba1bc47a53 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc" 1202520719 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
@@ -202,13 +202,14 @@
   "litreview/fig//UncoupledSQUID.png" 1696259016 5521 3126a6dcd9e5f01e7f1cc42403e3ffcb ""
   "litreview/fig//Washer.png" 1696430771 82814 5c1ec4ce2046a70b80bab69bf1399b5e ""
   "litreview/litreview.tex" 1697029303 35524 6f96c16a3e9a6ceb623680da587b8d8d ""
+  "results/fig//errvtime.png" 1697298342 53433 f15e2ce27c929cd081b92d218eae4e97 ""
   "results/fig//thickloop.png" 1697120897 10965 e0e2a88396f2769d3b9d284475fbca2a ""
   "results/fig//thinloop.png" 1697121124 11709 890732b61d6ce48827bfd11b3a6ba68a ""
   "results/fig//torusAVN.png" 1696863895 37415 99132e651990ffec2a4d1d6df41388d1 ""
   "results/fig//torusEVRD.png" 1696863849 31369 7eb652608759037ef1d9b2f8c295d568 ""
   "results/fig//torusThick.png" 1696864661 187024 2dd06ee94de7ea3796804b586e529e6f ""
   "results/fig//torusThin.png" 1696864535 49244 62f94a275a6457dff04d1f150909665e ""
-  "results/results.tex" 1697181437 7896 94cf809ff7974b9c0cbfaf4277e7d937 ""
+  "results/results.tex" 1697299202 8610 1f7b23c475539db6878266897bdf2a7e ""
   "solutiondevelopment/fig//Inductexproc.jpg" 1696527121 29094 9a2fea13d6a09dbaa556223aec0594b4 ""
   "solutiondevelopment/fig//meshopt.png" 1697115110 22613 a4e7b865927a94b7867288893c140402 ""
   "solutiondevelopment/fig//plane.png" 1696785711 33958 f3c70a3e00ff70d516e8b8b77046a834 ""
@@ -219,13 +220,13 @@
   "solutiondevelopment/fig/ProcessFLow.jpg" 1697116205 44187 5f8b199c43df16fe3a2d6cce6cbacb70 ""
   "solutiondevelopment/fig/vorocubewrong.png" 1696769872 21900 c95cf2542cdd39aaa1452f6c59ffa32e ""
   "solutiondevelopment/sol.tex" 1697181662 30141 0ba22ab297c406c9856dd0a65ffa591e ""
-  "stellenbosch_ee_report.aux" 1697181666 23829 e931d8c6bbbcddef9de0a8509444613d "pdflatex"
-  "stellenbosch_ee_report.bbl" 1697181664 6370 a973801721483a9951b926ad3b417d43 "bibtex stellenbosch_ee_report"
-  "stellenbosch_ee_report.lof" 1697181666 4002 3dd6af96fa21b784b3e38c6a3aa82d52 "pdflatex"
-  "stellenbosch_ee_report.lot" 1697181666 804 06e361108ccdcaac7c297131ce28a4d3 "pdflatex"
-  "stellenbosch_ee_report.out" 1697181666 5415 26eb51dfc10adedae93297038a596e10 "pdflatex"
+  "stellenbosch_ee_report.aux" 1697299204 24418 f57c4a20de5c584730652da5d75cf9e2 "pdflatex"
+  "stellenbosch_ee_report.bbl" 1697298884 6370 a973801721483a9951b926ad3b417d43 "bibtex stellenbosch_ee_report"
+  "stellenbosch_ee_report.lof" 1697299204 4288 72bb4287be915a25c08ff93449cac470 "pdflatex"
+  "stellenbosch_ee_report.lot" 1697299204 804 06e361108ccdcaac7c297131ce28a4d3 "pdflatex"
+  "stellenbosch_ee_report.out" 1697299204 5415 d74aef01b692f3e6c34e2255c5e77386 "pdflatex"
   "stellenbosch_ee_report.tex" 1696186802 3974 0ebdc6bd2d800e5a764f16ba1bc47a53 ""
-  "stellenbosch_ee_report.toc" 1697181666 2949 26a1fc6f44862735f867d35541e9ce7f "pdflatex"
+  "stellenbosch_ee_report.toc" 1697299204 2949 94503ec685f2e5e2d580fbb003476513 "pdflatex"
   (generated)
   "stellenbosch_ee_report.aux"
   "stellenbosch_ee_report.lof"

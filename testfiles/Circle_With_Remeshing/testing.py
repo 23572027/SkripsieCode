@@ -115,9 +115,8 @@ def seeMesh(names):
 if __name__ == "__main__":
 
     keys = "simiter,remiter,R,W,numerical,elementcount,nodecount,meshtime,tthtime,nextime\n"
-    Rs = np.linspace(10e-6,15e-6,50)
-    Ws = np.linspace(7e-6,3e-6,50)
-
+    Rs = np.linspace(10e-6,15e-6,10)
+    Ws = np.linspace(7e-6,3e-6,10)
     """ sim setup """
     # SPIN_DENS = 5e17
     # MU_B = 9.2740100783e-24
@@ -127,11 +126,11 @@ if __name__ == "__main__":
 
 
     try:
-        os.remove("ringloop.csv")
+        os.remove("blrem.csv")
     except:
         pass
 
-    res = open("ringloop.csv","w")
+    res = open("blrem.csv","w")
     res.write(keys)
     iter = 0
     """ start simulation loop"""
@@ -158,7 +157,7 @@ if __name__ == "__main__":
         """ write result """
         res.write(f"{iter},{0},{_R},{_W},{numerical[0]},{elem[0][1]},{nodes[0][1]},{mesh_stop-mesh_start},{tth_end-tth_start},{nex_end-nex_start}\n")
 
-        for k in range(5):
+        for k in range(4):
             print(f"\t Remesh iteration: {k}\n-------------------------")
             names = writeGeo("loop",R=_R,W=_W)
 
