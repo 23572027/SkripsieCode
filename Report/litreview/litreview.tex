@@ -220,6 +220,14 @@ The importance of understanding, modelling and predicting the noise energy of a 
 
 
 \subsection{1/f flux noise}
+\subsubsection*{The random telegraph signal}
+A simple model that gives rise to a 1/f like spectrum is that of the random telegraph signal (RTS). A simple 2 state stochastic process with a mean time in each state of $\tau $ seconds has the following spectral density \cite{fluxNoiseSquidsStevenAnton}: 
+\begin{equation}
+    S_{\text{RTS}}(f) = \frac{1}{4\pi}\frac{2/\tau}{(2\pi f)^2+(2/\tau)^2}
+    \label{eq:RTSPSD}
+\end{equation}
+If we assume a number of IID random telegraph processes then the resulting distribution is the sum of each individual distribution. Furthermore, if the distribution of each $\tau$ for all processes varies with $1/\tau$ then you get a distribution that scales with $1/f$ \cite{fluxNoiseSquidsStevenAnton}. 
+\subsubsection*{The properties of flux noise in SQUID's}
 Although there is no consensus on the exact origin of $1/f$ noise many agree that the origin of the excess noise at low frequencies is due to randomly reversing of magnetic moments distributed thinly on the surface of a super conductor \cite{FluxNoiseCol}. As \cite{FluxNoiseCol} reports the noise has a power spectral density of the form of equation \ref{eq:PSDnoise}.
 \begin{equation}
     S_\Phi(f) = \frac{A}{f^\alpha}

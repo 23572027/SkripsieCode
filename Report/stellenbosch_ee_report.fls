@@ -1108,8 +1108,6 @@ INPUT frontmatter/nomenclature.tex
 INPUT ./frontmatter/nomenclature.tex
 INPUT ./frontmatter/nomenclature.tex
 INPUT frontmatter/nomenclature.tex
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/rm-lmbx8.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/rm-lmbx6.tfm
 INPUT ./introduction/introduction.tex
 INPUT ./introduction/introduction.tex
 INPUT ./introduction/introduction.tex
@@ -1125,6 +1123,8 @@ INPUT ./litreview/litreview.tex
 INPUT ./litreview/litreview.tex
 INPUT litreview/litreview.tex
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/rm-lmssbx10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/rm-lmbx8.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/rm-lmbx6.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/lmmib10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/lmmib10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/lmmib7.tfm
@@ -1155,7 +1155,6 @@ INPUT ./litreview/fig//UncoupledSQUID.png
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/rm-lmr5.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/lmmi5.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/lmsy5.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/rm-lmbx5.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/rm-lmss8.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/rm-lmtt8.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm
