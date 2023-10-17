@@ -31,9 +31,10 @@
 \contentsline {subsection}{\numberline {4.1.1}Test setup}{29}{subsection.4.1.1}%
 \contentsline {subsection}{\numberline {4.1.2}Results}{30}{subsection.4.1.2}%
 \contentsline {section}{\numberline {4.2}The mesh optimisation module}{30}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Test setup}{30}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Results}{31}{subsection.4.2.2}%
-\contentsline {chapter}{\numberline {5}Summary and Conclusion}{33}{chapter.5}%
-\contentsline {chapter}{Bibliography}{34}{chapter*.26}%
-\contentsline {chapter}{\numberline {A}Project Planning Schedule}{36}{appendix.A}%
-\contentsline {chapter}{\numberline {B}Outcomes Compliance}{37}{appendix.B}%
+\contentsline {subsection}{\numberline {4.2.1}Test setup}{31}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Results}{32}{subsection.4.2.2}%
+\contentsline {section}{\numberline {4.3}Comparison with actual SQUID designs}{33}{section.4.3}%
+\contentsline {chapter}{\numberline {5}Summary and Conclusion}{34}{chapter.5}%
+\contentsline {chapter}{Bibliography}{35}{chapter*.26}%
+\contentsline {chapter}{\numberline {A}Project Planning Schedule}{37}{appendix.A}%
+\contentsline {chapter}{\numberline {B}Outcomes Compliance}{38}{appendix.B}%

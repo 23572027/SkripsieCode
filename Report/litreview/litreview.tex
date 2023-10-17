@@ -210,11 +210,6 @@ The next design rule sets a constraint on the choice of L (the inductance of the
     \label{eq:SQUIDmodDepth}
 \end{equation}
 
-\subsubsection*{Coupled SQUIDS}
-\textcolor{red}{See pg 177}
-
-\subsubsection*{SQUID readout}
-\textcolor{red}{See pg 139 of SQUID hb}
 \section{Noise in SQUIDS}
 The importance of understanding, modelling and predicting the noise energy of a SQUID design cannot be understated. A reduction in flux noise necessarily increases the sensitivity of a SQUID system. As reported by \cite{LowNoiseGrad} a typical commercially available SQUID system can achieve magnetic field resolutions of $5 \si{fT/Hz}$. Experimental results suggest that the current consensus on the origin of white noise is in agreement with the theory, that is the origin of the noise is known. The theory explains the white noise as thermal noise and the statistical properties are usually well known \cite{Drung2016NBSQUIDS} \cite{SQUIDhandbook}. For frequencies greater than about $10 - 100\si{Hz}$ the thermal noise dominates. Below $10 - 100\si{Hz}$ the so called $1/f$ noise dominates \cite{DCSQUIDdesignImage}. Unlike thermal noise no consensus has been found on the origin of $1/f$ noise. According to \cite{SQUIDhandbook}, in the fields of biomagnetism and geophysics the low noise properties of SQUIDS must extend to frequencies below $1\si{Hz}$. Furthermore, \cite{QubitPerf} reports the primary cause of decoherence in frequency tuneable quits is the so called $1/f$ flux noise, once again highlighting the important role $1/f$ flux noise has.
 
@@ -239,7 +234,6 @@ The parameter A is insensitive to the geometry and materials of the substrate \c
 \label{subsec:PredictFluxNoise}
 The importance of being able to predict the low frequency flux noise in SQUID's has led many to attempt to predict it using the mostly agreed upon model of magnetic defects on the surface of the super conductor.
 
-\textcolor{red}{Change title}
 \subsubsection*{Numerical method by Bialczak et al.}
 In the work done by Bialczak et al. \cite{BialczakTestLoop}, the authors describe how they calculate the mean square flux noise due to a random distribution of surface defects on the substrate of the SQUID. Critically, the authors do not make the assumption that defects are confined to the surface of the superconducting film. In this method a test loop is used to represent a surface defect. The test loop is dimensioned such that the product of the area of the loop and the current in the test loop is equal to the Bohr magneton. The authors used FastHenry to calculate the mutual inductance between the SQUID and the test loop. Once the mutual inductance is known, one can simply relate it to the flux coupled into the loop by a single magnetic moment by multiplying the test current by the mutual inductance \cite{BialczakTestLoop}. 
 \begin{equation}

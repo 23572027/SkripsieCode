@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2023.9.30)  16 OCT 2023 09:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2023.9.30)  16 OCT 2023 18:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -722,7 +722,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
  (./frontmatter/skripsie_title_page.tex
-<USlogo-top.pdf, id=148, 560.0925pt x 183.68625pt>
+<USlogo-top.pdf, id=152, 560.0925pt x 183.68625pt>
 File: USlogo-top.pdf Graphic file (type pdf)
 <use USlogo-top.pdf>
 Package pdftex.def Info: USlogo-top.pdf  used on input line 7.
@@ -769,13 +769,13 @@ Chapter 2.
 [2
 
 ] [3]
-<litreview/fig//JJ.jpg, id=438, 80.39023pt x 80.39023pt>
+<litreview/fig//JJ.jpg, id=444, 80.39023pt x 80.39023pt>
 File: litreview/fig//JJ.jpg Graphic file (type jpg)
 <use litreview/fig//JJ.jpg>
 Package pdftex.def Info: litreview/fig//JJ.jpg  used on input line 72.
 (pdftex.def)             Requested size: 45.52718pt x 45.52849pt.
  [4 <./litreview/fig//JJ.jpg>] [5]
-<litreview/fig//SQUID.png, id=489, 494.52168pt x 480.7173pt>
+<litreview/fig//SQUID.png, id=495, 494.52168pt x 480.7173pt>
 File: litreview/fig//SQUID.png Graphic file (type png)
 <use litreview/fig//SQUID.png>
 Package pdftex.def Info: litreview/fig//SQUID.png  used on input line 139.
@@ -787,7 +787,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [6] [7 <./litreview/fig//SQUID.png>]
-<litreview/fig//UncoupledSQUID.png, id=531, 281.05pt x 298.11375pt>
+<litreview/fig//UncoupledSQUID.png, id=537, 281.05pt x 298.11375pt>
 File: litreview/fig//UncoupledSQUID.png Graphic file (type png)
 <use litreview/fig//UncoupledSQUID.png>
 Package pdftex.def Info: litreview/fig//UncoupledSQUID.png  used on input line 191.
@@ -797,23 +797,23 @@ Package pdftex.def Info: litreview/fig//UncoupledSQUID.png  used on input line 1
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [8] [9 <./litreview/fig//UncoupledSQUID.png>] [10] [11]
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 255.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 249.
  (/usr/share/texlive/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [12] [13]
-<litreview/fig//Washer.png, id=640, 475.7775pt x 354.32375pt>
+<litreview/fig//Washer.png, id=647, 475.7775pt x 354.32375pt>
 File: litreview/fig//Washer.png Graphic file (type png)
 <use litreview/fig//Washer.png>
-Package pdftex.def Info: litreview/fig//Washer.png  used on input line 323.
+Package pdftex.def Info: litreview/fig//Washer.png  used on input line 317.
 (pdftex.def)             Requested size: 227.62206pt x 169.51659pt.
  [14 <./litreview/fig//Washer.png>]) (./solutiondevelopment/sol.tex [15]
 Chapter 3.
-<solutiondevelopment/fig//Inductexproc.jpg, id=675, 703.62875pt x 352.31625pt>
+<solutiondevelopment/fig//Inductexproc.jpg, id=681, 703.62875pt x 352.31625pt>
 File: solutiondevelopment/fig//Inductexproc.jpg Graphic file (type jpg)
 <use solutiondevelopment/fig//Inductexproc.jpg>
 Package pdftex.def Info: solutiondevelopment/fig//Inductexproc.jpg  used on input line 18.
 (pdftex.def)             Requested size: 364.19667pt x 182.35611pt.
-<solutiondevelopment/fig//ProcessFlow.jpg, id=676, 844.15375pt x 389.455pt>
+<solutiondevelopment/fig//ProcessFlow.jpg, id=682, 844.15375pt x 389.455pt>
 File: solutiondevelopment/fig//ProcessFlow.jpg Graphic file (type jpg)
 <use solutiondevelopment/fig//ProcessFlow.jpg>
 Package pdftex.def Info: solutiondevelopment/fig//ProcessFlow.jpg  used on input line 24.
@@ -821,13 +821,13 @@ Package pdftex.def Info: solutiondevelopment/fig//ProcessFlow.jpg  used on input
 [16
 
 ] [17 <./solutiondevelopment/fig//Inductexproc.jpg> <./solutiondevelopment/fig/ProcessFLow.jpg>] [18] [19]
-<solutiondevelopment/fig//meshopt.png, id=703, 483.91992pt x 123.72624pt>
+<solutiondevelopment/fig//meshopt.png, id=709, 483.91992pt x 123.72624pt>
 File: solutiondevelopment/fig//meshopt.png Graphic file (type png)
 <use solutiondevelopment/fig//meshopt.png>
 Package pdftex.def Info: solutiondevelopment/fig//meshopt.png  used on input line 61.
 (pdftex.def)             Requested size: 409.71692pt x 104.75623pt.
  [20 <./solutiondevelopment/fig//meshopt.png>]
-<solutiondevelopment/fig//sigmoid.png, id=712, 415.5525pt x 328.8285pt>
+<solutiondevelopment/fig//sigmoid.png, id=718, 415.5525pt x 328.8285pt>
 File: solutiondevelopment/fig//sigmoid.png Graphic file (type png)
 <use solutiondevelopment/fig//sigmoid.png>
 Package pdftex.def Info: solutiondevelopment/fig//sigmoid.png  used on input line 72.
@@ -835,24 +835,24 @@ Package pdftex.def Info: solutiondevelopment/fig//sigmoid.png  used on input lin
  [21 <./solutiondevelopment/fig//sigmoid.png>]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 110.
  [22]
-<solutiondevelopment/fig//washerCloseUp.png, id=733, 800.9925pt x 602.25pt>
+<solutiondevelopment/fig//washerCloseUp.png, id=739, 800.9925pt x 602.25pt>
 File: solutiondevelopment/fig//washerCloseUp.png Graphic file (type png)
 <use solutiondevelopment/fig//washerCloseUp.png>
 Package pdftex.def Info: solutiondevelopment/fig//washerCloseUp.png  used on input line 120.
 (pdftex.def)             Requested size: 227.62206pt x 171.1376pt.
  [23 <./solutiondevelopment/fig//washerCloseUp.png>]
-<solutiondevelopment/fig//voro.png, id=746, 741.77126pt x 732.7375pt>
+<solutiondevelopment/fig//voro.png, id=752, 741.77126pt x 732.7375pt>
 File: solutiondevelopment/fig//voro.png Graphic file (type png)
 <use solutiondevelopment/fig//voro.png>
 Package pdftex.def Info: solutiondevelopment/fig//voro.png  used on input line 167.
 (pdftex.def)             Requested size: 136.57462pt x 134.90584pt.
  [24 <./solutiondevelopment/fig//voro.png>] [25]
-<solutiondevelopment/fig//vorocube.png, id=767, 189.70876pt x 199.49532pt>
+<solutiondevelopment/fig//vorocube.png, id=774, 189.70876pt x 199.49532pt>
 File: solutiondevelopment/fig//vorocube.png Graphic file (type png)
 <use solutiondevelopment/fig//vorocube.png>
 Package pdftex.def Info: solutiondevelopment/fig//vorocube.png  used on input line 222.
 (pdftex.def)             Requested size: 102.42923pt x 107.71367pt.
-<solutiondevelopment/fig//vorocubeWrong.png, id=768, 189.70876pt x 199.49532pt>
+<solutiondevelopment/fig//vorocubeWrong.png, id=775, 189.70876pt x 199.49532pt>
 File: solutiondevelopment/fig//vorocubeWrong.png Graphic file (type png)
 <use solutiondevelopment/fig//vorocubeWrong.png>
 Package pdftex.def Info: solutiondevelopment/fig//vorocubeWrong.png  used on input line 228.
@@ -862,7 +862,7 @@ Package pdftex.def Info: solutiondevelopment/fig//vorocubeWrong.png  used on inp
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [26]
-<solutiondevelopment/fig//plane.png, id=780, 385.44pt x 198.9834pt>
+<solutiondevelopment/fig//plane.png, id=786, 385.44pt x 198.9834pt>
 File: solutiondevelopment/fig//plane.png Graphic file (type png)
 <use solutiondevelopment/fig//plane.png>
 Package pdftex.def Info: solutiondevelopment/fig//plane.png  used on input line 246.
@@ -876,48 +876,49 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 ) (./results/results.tex [27 <./solutiondevelopment/fig//vorocube.png> <./solutiondevelopment/fig/vorocubewrong.png>] [28 <./solutiondevelopment/fig//plane.png>]
 Chapter 4.
-<results/fig//torusThick.png, id=799, 1326.9575pt x 717.68124pt>
-File: results/fig//torusThick.png Graphic file (type png)
-<use results/fig//torusThick.png>
-Package pdftex.def Info: results/fig//torusThick.png  used on input line 16.
-(pdftex.def)             Requested size: 102.42923pt x 55.38974pt.
-<results/fig//torusThin.png, id=800, 1326.9575pt x 717.68124pt>
-File: results/fig//torusThin.png Graphic file (type png)
-<use results/fig//torusThin.png>
-Package pdftex.def Info: results/fig//torusThin.png  used on input line 22.
-(pdftex.def)             Requested size: 102.42923pt x 55.38974pt.
-<results/fig//torusAVN.png, id=802, 409.7709pt x 354.8457pt>
-File: results/fig//torusAVN.png Graphic file (type png)
-<use results/fig//torusAVN.png>
-Package pdftex.def Info: results/fig//torusAVN.png  used on input line 35.
-(pdftex.def)             Requested size: 218.51521pt x 189.22601pt.
-<results/fig//torusEVRD.png, id=803, 400.3758pt x 328.8285pt>
-File: results/fig//torusEVRD.png Graphic file (type png)
-<use results/fig//torusEVRD.png>
-Package pdftex.def Info: results/fig//torusEVRD.png  used on input line 42.
-(pdftex.def)             Requested size: 218.51521pt x 179.47139pt.
 [29
 
- <./results/fig//torusThick.png> <./results/fig//torusThin.png>] [30 <./results/fig//torusAVN.png> <./results/fig//torusEVRD.png>]
-<results/fig//thickloop.png, id=819, 878.28125pt x 574.145pt>
+]
+<results/fig//torusThick.png, id=813, 1326.9575pt x 717.68124pt>
+File: results/fig//torusThick.png Graphic file (type png)
+<use results/fig//torusThick.png>
+Package pdftex.def Info: results/fig//torusThick.png  used on input line 20.
+(pdftex.def)             Requested size: 102.42923pt x 55.38974pt.
+<results/fig//torusThin.png, id=814, 1326.9575pt x 717.68124pt>
+File: results/fig//torusThin.png Graphic file (type png)
+<use results/fig//torusThin.png>
+Package pdftex.def Info: results/fig//torusThin.png  used on input line 26.
+(pdftex.def)             Requested size: 102.42923pt x 55.38974pt.
+<results/fig//torusAVN.png, id=816, 409.7709pt x 354.8457pt>
+File: results/fig//torusAVN.png Graphic file (type png)
+<use results/fig//torusAVN.png>
+Package pdftex.def Info: results/fig//torusAVN.png  used on input line 39.
+(pdftex.def)             Requested size: 218.51521pt x 189.22601pt.
+<results/fig//torusEVRD.png, id=817, 400.3758pt x 328.8285pt>
+File: results/fig//torusEVRD.png Graphic file (type png)
+<use results/fig//torusEVRD.png>
+Package pdftex.def Info: results/fig//torusEVRD.png  used on input line 46.
+(pdftex.def)             Requested size: 218.51521pt x 179.47139pt.
+ [30 <./results/fig//torusThick.png> <./results/fig//torusThin.png> <./results/fig//torusAVN.png> <./results/fig//torusEVRD.png>]
+<results/fig//thickloop.png, id=829, 878.28125pt x 574.145pt>
 File: results/fig//thickloop.png Graphic file (type png)
 <use results/fig//thickloop.png>
-Package pdftex.def Info: results/fig//thickloop.png  used on input line 60.
+Package pdftex.def Info: results/fig//thickloop.png  used on input line 64.
 (pdftex.def)             Requested size: 218.51521pt x 142.8438pt.
-<results/fig//thinloop.png, id=820, 878.28125pt x 574.145pt>
+<results/fig//thinloop.png, id=830, 878.28125pt x 574.145pt>
 File: results/fig//thinloop.png Graphic file (type png)
 <use results/fig//thinloop.png>
-Package pdftex.def Info: results/fig//thinloop.png  used on input line 67.
+Package pdftex.def Info: results/fig//thinloop.png  used on input line 71.
 (pdftex.def)             Requested size: 218.51521pt x 142.8438pt.
  [31 <./results/fig//thickloop.png> <./results/fig//thinloop.png>]
-<results/fig//errvtime.png, id=830, 450.2421pt x 366.4089pt>
+<results/fig//errvtime.png, id=840, 450.2421pt x 366.4089pt>
 File: results/fig//errvtime.png Graphic file (type png)
 <use results/fig//errvtime.png>
-Package pdftex.def Info: results/fig//errvtime.png  used on input line 100.
+Package pdftex.def Info: results/fig//errvtime.png  used on input line 104.
 (pdftex.def)             Requested size: 227.62206pt x 185.2391pt.
-) (./conclusion/conclusion.tex [32 <./results/fig//errvtime.png>]
+) (./conclusion/conclusion.tex [32 <./results/fig//errvtime.png>] [33]
 Chapter 5.
-) (./stellenbosch_ee_report.bbl [33
+) (./stellenbosch_ee_report.bbl [34
 
 ]
 ** WARNING: IEEEtran.bst: No hyphenation pattern has been
@@ -935,7 +936,7 @@ Chapter 5.
 ** WARNING: IEEEtran.bst: No hyphenation pattern has been
 ** loaded for the language `eng'. Using the pattern for
 ** the default language instead.
-[34
+[35
 
 ]
 ** WARNING: IEEEtran.bst: No hyphenation pattern has been
@@ -980,34 +981,34 @@ Chapter 5.
 ** WARNING: IEEEtran.bst: No hyphenation pattern has been
 ** loaded for the language `eng'. Using the pattern for
 ** the default language instead.
-) (./appendices/appendices.tex [35]
+) (./appendices/appendices.tex [36]
 Appendix A.
-[36
+[37
 
 ]
 Appendix B.
-) [37
+) [38
 
 ] (./stellenbosch_ee_report.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `stellenbosch_ee_report.out' has not changed.
-(rerunfilecheck)             Checksum: D74AEF01B692F3E6C34E2255C5E77386;5415.
+(rerunfilecheck)             Checksum: 23645B11F3FDD7B549A26AD22CDC50CA;5662.
  ) 
 Here is how much of TeX's memory you used:
- 19970 strings out of 480852
- 343613 string characters out of 5906873
- 678646 words of memory out of 6000000
- 36467 multiletter control sequences out of 15000+600000
+ 19975 strings out of 480852
+ 343672 string characters out of 5906873
+ 678684 words of memory out of 6000000
+ 36469 multiletter control sequences out of 15000+600000
  506297 words of font info for 220 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  61i,13n,75p,1637b,915s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmssbo10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on stellenbosch_ee_report.pdf (48 pages, 1151793 bytes).
+Output written on stellenbosch_ee_report.pdf (49 pages, 1154186 bytes).
 PDF statistics:
- 970 PDF objects out of 1000 (max. 8388607)
- 847 compressed objects within 9 object streams
- 185 named destinations out of 1000 (max. 500000)
- 62346 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 986 PDF objects out of 1000 (max. 8388607)
+ 862 compressed objects within 9 object streams
+ 188 named destinations out of 1000 (max. 500000)
+ 62354 words of extra memory for PDF output out of 74296 (max. 10000000)
 

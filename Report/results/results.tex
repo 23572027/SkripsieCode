@@ -2,8 +2,12 @@
 
 \chapter{Results}
 \label{chap:results}
-An incremental approach to testing was done for this project. Each software component was tested individually. This section will report on the results of the incremental testing as well as the results of the entire system. Lastly the entire system will be used to calculate the mean square flux noise figure of an actual SQUID design with measured mean square flux noise values.
-
+An incremental approach to testing was done for this project. Each software component was tested individually. This section will report on the results of the incremental testing as well as the results of the entire system. Lastly the entire system will be used to calculate the mean square flux noise figure of an actual SQUID design. Low frequency flux noise is typically reported in terms of a power spectral density. To relate the power spectral density to the mean square flux noise one can simply apply equation \ref{eq:PSDtoMSFN}.
+\begin{equation}
+    \langle \Phi_0^2 \rangle = \int_{f_1}^{f_2}S_\Phi (f) df
+    \label{eq:PSDtoMSFN}
+\end{equation} 
+The limits of the integral are still the subject of debate \cite{fluxNoiseSquidsStevenAnton}. For the purposes of this analysis, I will follow the example of \cite{fluxNoiseSquidsStevenAnton} and choose $f_1$ to be $10^{-2}$. The value of $f_2$ is not known, and I will therefore choose it to be $10^6$. The value for the MSFN figure will then not be exact as the bandwidth of the noise process is not known. This analysis will hope to show trends between measured flux noise power spectral densities and the MSFN figure produced by the noise extraction module.
 \section{The noise extraction module}
 The accuracy of this module is tested by comparing its output to a numerical solution for the given geometry. This module is tested without mesh optimisation. It is tested before the mesh optimisation module because the test setup for the mesh optimisation module requires the use of the noise extraction module.
 \subsection{Test setup}
@@ -104,4 +108,6 @@ Table \ref{tab:relerr} gives some indication that after 4 iterations the solutio
 
 The optimal number of mesh iterations steps to minimize the time taken, and the error is between 1 and 2 iterations. The choice ultimately comes down to how accurate the user would like the solution to be. To compare the optimized mesh performance to the baseline I will select 2 as the optimal number of iterations. \par
 
-\textcolor{red}{I need Dr Jackman to run more simulations for me}
+\textcolor{red}{I need Dr Jackman to run more simulations for me. Will be done by the start of next week}
+
+\section{Comparison with actual SQUID designs}
