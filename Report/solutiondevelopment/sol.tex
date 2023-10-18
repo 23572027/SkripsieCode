@@ -143,7 +143,7 @@ Let $\Vec{X}$ be a metric space representing the surface area of the structure. 
     \label{eq:objFunc}
 \end{equation}
 \textcolor{red}{check the def of k-means}
-The problem reduces to finding the choice of $t_k(\Vec{x})$ that minimizes $J$. The obvious choice for minimizing the sum is to set $t_k(\Vec{x})$ to zero for all $K$ regions except for the region where the distance to the point $\Vec{P_k}$ is at a minimum. Mathematically this can be expressed by equation \ref{eq:tk}
+The problem reduces to finding the choice of $t_k(\Vec{x})$ that minimizes $J$. The function, $t_k(\Vec{x})$ can be understood as a "label" function. It is 1 for every point $\Vec{x}$ we choose to be in region $k$ or 0 if the point is not in region $k$. The obvious choice for minimizing the sum is to set $t_k(\Vec{x})$ to zero for all $K$ regions except for the region where the distance to the point $\Vec{P_k}$ is at a minimum. Mathematically this can be expressed by equation \ref{eq:tk}
 
 \begin{equation}
     t_k(\Vec{x}) = 
@@ -155,7 +155,7 @@ The problem reduces to finding the choice of $t_k(\Vec{x})$ that minimizes $J$. 
 \end{equation}
 Recalling the definition of the Voronoi region defined in the metric space $\Vec{X}$ with the distance function $d$ and sites defined by the points $(\Vec{P_k})_{k \in K} $: 
 \begin{equation}
-    \Vec{A_k} = \{\Vec{x} \in \Vec{X} \quad | \quad d(\Vec{x},\Vec{P_k}) \leq d(\Vec{x},\Vec{P_j})\forall  j \neq k \}
+    \Vec{A_k} = \{\Vec{x} \in \Vec{X}|d(\Vec{x},\Vec{P_k}) \leq d(\Vec{x},\Vec{P_j})\forall  j \neq k \}
     \label{eq:voronoi}
 \end{equation}
 If we choose the distance function in equation \ref{eq:voronoi} to be the euclidean distance we see that the regions that minimize the objective function is the Voronoi regions. \par

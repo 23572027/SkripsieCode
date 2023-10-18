@@ -40,6 +40,12 @@ C.~Geuzaine and J.-F. Remacle, ``\BIBforeignlanguage{eng}{Gmsh: a
   journal for numerical methods in engineering}}, vol.~79, no.~11, pp.
   1309--1331, 2009.
 
+\bibitem{KochModel}
+R.~H. Koch, D.~P. Divincenzo, and J.~Clarke, ``\BIBforeignlanguage{eng}{Model
+  for 1/f flux noise in squids and qubits},''
+  \emph{\BIBforeignlanguage{eng}{Physical review letters}}, vol.~98, no.~26,
+  pp. 267\,003--267\,003, 2007.
+
 \bibitem{Golubov_1998}
 A.~A. Golubov, \emph{The Evolution of Superconducting theories}.\hskip 1em plus
   0.5em minus 0.4em\relax Institute of Physics Pub., 1998, pp. 3--37.
@@ -127,12 +133,6 @@ R.~C. Bialczak, R.~McDermott, M.~Ansmann, M.~Hofheinz, N.~Katz, E.~Lucero,
   ``\BIBforeignlanguage{eng}{1/f flux noise in josephson phase qubits},''
   \emph{\BIBforeignlanguage{eng}{Physical review letters}}, vol.~99, no.~18,
   pp. 187\,006--187\,006, 2007.
-
-\bibitem{KochModel}
-R.~H. Koch, D.~P. Divincenzo, and J.~Clarke, ``\BIBforeignlanguage{eng}{Model
-  for 1/f flux noise in squids and qubits},''
-  \emph{\BIBforeignlanguage{eng}{Physical review letters}}, vol.~98, no.~26,
-  pp. 267\,003--267\,003, 2007.
 
 \bibitem{TLSDefectExplanation}
 L.~V. Abdurakhimov, I.~Mahboob, H.~Toida, K.~Kakuyanagi, Y.~Matsuzaki, and

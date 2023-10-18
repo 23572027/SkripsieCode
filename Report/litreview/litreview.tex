@@ -8,8 +8,6 @@
 In order to understand and apply the methods described in \cite{fluxNoiseSquidsStevenAnton} one must first understand the basic theory behind superconductivity as well as some examples of how this theory is used in practice.
 
 \subsection{Superconductivity}
-\textcolor{red}{REVIEW NEEDED}
-
 Since the first discovery of superconductivity a couple of successfully theories have been put forth to explain the phenomenon. The London theory is a framework that describes the qualitative behaviour of superconductors and correctly describes perfect diamagnetism and zero resistance but fails to explain the effect on a microscopic level \cite{Golubov_1998}. The London equations (equation \ref{eq:london1} and equation \ref{eq:london2}) \cite{Tinkham_2015} is an addition to Maxwell's equations.
 \begin{equation}
     E = \frac{\partial}{\partial t}(\Lambda J_s)
@@ -19,7 +17,7 @@ Since the first discovery of superconductivity a couple of successfully theories
     h = -c \nabla\times (\Lambda J_s)
     \label{eq:london2}
 \end{equation}
-Here $\Lambda$ is a phenomenological parameter determined through experimentation. The London equations allow us to calculate the current distribution in a superconductor which is very important to the objective of this project. BCS theory put forth a microscopic model of superconductors and explains the phenomenon as a quantum mechanical effect. The details are out of scope for this project but on a crude qualitative level BCS theory can be explained by the pairing of electrons in the crystal lattice of the superconductor allowing them to be considered one particle. These particles are known as cooper-pairs. At extremely low temperatures the formation of these cooper pairs are energetically favourable \cite{Feynman_Leighton_Sands_2013}. Electron pairs in this state can flow through the superconductor unimpeded. BCS theory is the most successful model of superconductivity discovered to date. 
+Here $\Lambda$ is a phenomenological parameter determined through experimentation. \par BCS theory put forth a microscopic model of superconductors and explains the phenomenon as a quantum mechanical effect. The details are out of scope for this project but on a crude, qualitative level BCS theory can be explained by the pairing of electrons in the crystal lattice of the superconductor allowing them to be considered one particle. These particles are known as cooper-pairs. At extremely low temperatures the formation of these cooper pairs are energetically favourable \cite{Feynman_Leighton_Sands_2013}. Electron pairs in this state can flow through the superconductor unimpeded.
 
 \subsection{The Josephson junction}
 In superconducting electronics the active component is the Josephson junction \cite{Duzer_1999_Princip_Super}. The Josephson junction refers to a situation where two superconductors are connected through a thin non-conductive barrier. If this barrier is thin enough one can observe what is known as the Josephson effect. This phenomenon is can be explained by considering the effect of quantum tunnelling of cooper pairs through the non-conductive boundary. For a sufficiently large barrier one can express the ensemble average wave function in each superconductor independently\cite{Duzer_1999_Princip_Super}:
@@ -74,8 +72,14 @@ It is important to note that \ref{eq:joseph} is only valid for a limited number 
     \caption{The circuit symbol for a Josephson junction}
 \end{figure}
 \subsubsection*{The RCSJ model}
-\textcolor{red}{The math in this section needs review}
-The phase-current and phase-voltage relation makes the assumption of a perfect Junction. This assumption is inaccurate and as such the RCSJ model is used to more accurately model the behaviour of a junction \cite{Tinkham_2015}. The resistively and capacitively shunted junction is a simple model used to describe the dynamics of a junction. As the name implies it consists of a resistor ($R$), capacitance ($C$) and a Josephson current ($I_s$). In a non-ideal junction a displacement current flows between the two superconductors. This displacement current is modelled by the capacitor. The resistive element models the effect of quasi-particle tunnelling across the boundary \cite{Duzer_1999_Princip_Super}. Figure \textcolor{red}{Insert fig} depicts the RCSJ model. To derive the current-voltage relation of an RCSJ model one can express the voltage across the parallel components as a function of the current flowing into the junction: 
+The phase-current and phase-voltage relation makes the assumption of a perfect Junction. This assumption is inaccurate and as such the RCSJ model is used to more accurately model the behaviour of a junction \cite{Tinkham_2015}. The resistively and capacitively shunted junction is a simple model used to describe the dynamics of a junction. As the name implies it consists of a resistor ($R$), capacitance ($C$) and a Josephson current ($I_s$). In a non-ideal junction a displacement current flows between the two superconductors. This displacement current is modelled by the capacitor. The resistive element models the effect of quasi-particle tunnelling across the boundary \cite{Duzer_1999_Princip_Super}. Figure \ref{fig:RCSJ} depicts the RCSJ model. 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{RCSJ}
+    \caption{The circuit schematic of an RCSJ model.}
+    \label{fig:RCSJ}
+\end{figure}
+To derive the current-voltage relation of an RCSJ model one can express the voltage across the parallel components as a function of the current flowing into the junction: 
 \begin{equation}
     I = I_csin(\delta)+C\frac{dV}{dt}+\frac{V}{R}
     \label{eq:RCSJ}
@@ -85,7 +89,7 @@ Equation \ref{eq:RCSJ} can be re-written using equation \ref{eq:phaseVoltage}. T
     K = \frac{d\varphi }{d\tau} + sin(\varphi)
     \label{eq:C0}
 \end{equation}
-This equation can be integrated directly using separation of variables and a Weierstrass substitution \cite{Duzer_1999_Princip_Super}. A detailed derivation is listed in appendix \textcolor{red}{List appendix}. The resulting equation describes the dynamics of the phase shift for a constant input current. The frequency of the current through the junction is determined by the dynamics of the phase. The period of the phase-dynamics is the Josephson frequency. Using the Josephson frequency relation \cite{Duzer_1999_Princip_Super},
+This equation can be integrated directly using separation of variables and a Weierstrass substitution \cite{Duzer_1999_Princip_Super}. The resulting equation describes the dynamics of the phase shift for a constant input current. The frequency of the current through the junction is determined by the dynamics of the phase. The period of the phase-dynamics is the Josephson frequency. Using the Josephson frequency relation \cite{Duzer_1999_Princip_Super},
 \begin{equation}
     \omega = \frac{q}{\hbar}V
     \label{eq:JosephsonFreq}
@@ -99,7 +103,6 @@ as well as the period of the equation for the phase, we find the time average vo
     \end{cases}
     \label{eq:IVCHAR}
 \end{equation}
-Graphing equation \ref{eq:IVCHAR} yields the figure below: \textcolor{red}{Insert fig}
 
 \subsection{SQUID's}
 An application of the Josephson effect is the superconducting quantum interference device (SQUID). In essence a SQUID refers to a superconducting ring that contains one or more Josephson junction. This interference effect is analogous to interference one might encounter in the field of optics \cite{DCSQUIDoriginalPaper}. The SQUID is a highly sensitive device that can in some cases measure fields as weak as $5\times 10^{-14} T$ \cite{Drung2016NBSQUIDS}.
@@ -167,7 +170,13 @@ Using equation \ref{eq:joseph}, \ref{eq:loopInt} and a KCL at the top or bottom 
     \label{eq:squidI}
 \end{equation}
 
-Equation \ref{eq:squidI} describes the general behaviour of the DC SQUID. The current voltage characteristics are shown in the figure below \textcolor{red}{Get figure} \newline
+Equation \ref{eq:squidI} describes the current phase characteristic of a 2 junction SQUID. Figure \ref{fig:cv} shows the flux-voltage and current-voltage relationships. 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\linewidth]{cvfv}
+    \caption{A figure that depicts both the current-voltage (left) and flux-voltage (right) relationship for a DC SQUID. }
+    \label{fig:cv}
+\end{figure}
 It is worth pointing out the mechanism through which flux is quantized in the SQUID loop. When an external field is applied to the washer a screening current begins to flow around the loop to oppose the applied field. The magnitude of the current is determined by the loop inductance. Assuming that the applied flux density is constant throughout the hole in the loop, the magnetic flux generated by the screening current is $\Phi_s = LI_s$. The total flux in the loop is $\Phi_{\text{ext}} + \Phi_{s} = n\Phi_0$. If applied flux is less than $\frac{\Phi}{2}$ the screening current flows to oppose the build up of flux in the loop by ensuring that $\Phi_s = -\Phi_{\text{ext}}$ and thus the total flux in the loop is 0. When the applied flux increases to $\frac{\Phi}{2}$ the flux state of the loop changes and the screening current changes direction \cite{Drung2016NBSQUIDS} to ensure that the total flux in the loop is $\Phi_0$. If the external flux is further increased the flux induced by the screening current decreases from $\frac{\Phi_0}{2}$ to $0$ such that the total flux in the loop remains $\Phi_0$. The trend continues as the external field strength is increased. Because of this mechanism the critical current and voltage-flux characteristics of the SQUID always has a period of $\Phi_0$ \cite{SQUIDhandbook}. As pointed out by \cite{Drung2016NBSQUIDS}, this allows the SQUID to be automatically calibrated as 1 period corresponds to 1 flux quantum in the loop.
 
 \subsection{Practical DC SQUIDS and design considerations}
