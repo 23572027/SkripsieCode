@@ -40,6 +40,12 @@ C.~Geuzaine and J.-F. Remacle, ``\BIBforeignlanguage{eng}{Gmsh: a
   journal for numerical methods in engineering}}, vol.~79, no.~11, pp.
   1309--1331, 2009.
 
+\bibitem{FluxNoiseCol}
+F.~C. Wellstood, C.~Urbina, and J.~Clarke, ``\BIBforeignlanguage{eng}{Role of
+  geometry on the color of flux noise in dc squids},''
+  \emph{\BIBforeignlanguage{eng}{IEEE transactions on applied
+  superconductivity}}, vol.~21, no.~3, pp. 856--859, 2011.
+
 \bibitem{KochModel}
 R.~H. Koch, D.~P. Divincenzo, and J.~Clarke, ``\BIBforeignlanguage{eng}{Model
   for 1/f flux noise in squids and qubits},''
@@ -107,12 +113,6 @@ J.~Braumüller, L.~Ding, A.~P. Vepsäläinen, Y.~Sung, M.~Kjaergaard, T.~Menke,
   ``\BIBforeignlanguage{eng}{Characterizing and optimizing qubit coherence
   based on squid geometry},'' \emph{\BIBforeignlanguage{eng}{Physical review
   applied}}, vol.~13, no.~5, 2020.
-
-\bibitem{FluxNoiseCol}
-F.~C. Wellstood, C.~Urbina, and J.~Clarke, ``\BIBforeignlanguage{eng}{Role of
-  geometry on the color of flux noise in dc squids},''
-  \emph{\BIBforeignlanguage{eng}{IEEE transactions on applied
-  superconductivity}}, vol.~21, no.~3, pp. 856--859, 2011.
 
 \bibitem{SurfaceSpinOrig}
 H.~Wang, C.~Shi, J.~Hu, S.~Han, C.~C. Yu, and R.~Wu,

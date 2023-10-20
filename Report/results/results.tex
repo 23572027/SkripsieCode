@@ -4,7 +4,7 @@
 \label{chap:results}
 An incremental approach to testing was done for this project. Each software component was tested individually. This section will report on the results of the incremental testing as well as the results of the entire system. Lastly the entire system will be used to calculate the mean square flux noise figure of an actual SQUID design. Low frequency flux noise is typically reported in terms of a power spectral density. To relate the power spectral density to the mean square flux noise one can simply apply equation \ref{eq:PSDtoMSFN}.
 \begin{equation}
-    \langle \Phi_0^2 \rangle = \int_{f_1}^{f_2}S_\Phi (f) df
+    \langle \Phi^2 \rangle = \int_{f_1}^{f_2}S_\Phi (f) df
     \label{eq:PSDtoMSFN}
 \end{equation} 
 The limits of the integral are still the subject of debate \cite{fluxNoiseSquidsStevenAnton}. For the purposes of this analysis, I will follow the example of \cite{fluxNoiseSquidsStevenAnton} and choose $f_1$ to be $10^{-2}$. The value of $f_2$ is not known, and I will therefore choose it to be $10^6$. The value for the MSFN figure will then not be exact as the bandwidth of the noise process is not known. This analysis will hope to show trends between measured flux noise power spectral densities and the MSFN figure produced by the noise extraction module.
@@ -111,3 +111,38 @@ The optimal number of mesh iterations steps to minimize the time taken, and the 
 \textcolor{red}{I need Dr Jackman to run more simulations for me. Will be done by the start of next week}
 
 \section{Comparison with actual SQUID designs}
+\subsection{Test setup}
+Equation \ref{eq:PSDtoMSFN} can be used in conjunction with the parameters determined by F.C. Wellstood et al. \cite{FluxNoiseCol} to relate the output of the noise extraction module to practical measurements. The integration limits are determined by choosing $f1 = 10^{-1} Hz$ as this correspond to the lowest frequency measured in \cite{FluxNoiseCol}. The second limit is chosen such that the noise extraction module results approximately match the measured flux noise figures for 1 of the SQUID's. Both limits are then kept constant for varying SQUID geometries. \par
+To simplify the structure of the SQUID washer I will ignore the multi-layer design. The SQUID will be modelled as a single layer washer. This is technically not accurate but the modelling of a multi-layer design is outside the scope of this project. The parameters are weak functions of the materials used and as such the choice of which material to use for the SQUID washer is not of importance. Figure \ref{fig:realCOMP} shows the various squid loop geometries analysed. 
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{td1}
+        \caption{The geometry used to analyse SQUID type D from \cite{FluxNoiseCol}.}
+        \label{fig:type1D}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{tf1}
+        \caption{The geometry used to analyse SQUID type F from \cite{FluxNoiseCol}.}
+        \label{fig:type1F}
+    \end{subfigure}
+    \caption{The two types of SQUID loops analysed with the noise extraction module. The type value corresponds to the naming scheme used in \cite{FluxNoiseCol}. All dimensions are in $\mu m$. All SQUID designs have the same film thickness of $0.2 \mu m$}
+    \label{fig:realCOMP}
+\end{figure}
+
+\subsection{Results}
+Table 
+
+
+\begin{table}[H]
+    \begin{tabular}{lll}
+    \hline
+    SQUID Type & Predicted $\langle \Phi_0 ^2 \rangle$ & Measured $\langle \Phi_0 ^2 \rangle$ \\ \hline
+    D          & 4.678e-10                         & 5.644e-09            \\
+    F          & 2.708e-09                         & 3.955e-08            \\ \hline
+    \end{tabular}
+\end{table}

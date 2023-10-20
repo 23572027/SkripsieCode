@@ -1,0 +1,338 @@
+* InductEx layer definition file for MIT-LL SFQ4ee and SFQ5ee processes - CALIBRATED
+*
+* Resistance
+*
+* CJF 10 June 2021: SuperTools
+******************************************************************************
+* Calibrated against MITLL test set -- use only with "-th" setting
+*    Calibration results             
+*    Average error for all L         1.4%
+*    Results within 15% tolerance    100%
+*    Results within 10% tolerance    100%
+*    Results within 5%  tolerance     98%
+*      
+******************************************************************************
+
+$Parameters
+  Units             =  1e-6  
+  SegmentSize       =  1.0  // The max segment size (SegmentSize) was fixed for calibration. DO NOT ADJUST.
+  AbsMin            =  0.025
+  //   For negative mask ground planes, we can get away with GPOverhang = 0 only when ground planes are NOT CROPPED,
+  //     or there is a mandatory skyplane over all structures.  {CF}
+  //   Here, the ground plane (M4) is mask positive, so GPOverhang is irrelevant. Set it 0 just in case...  {CF}
+  GPOverhang        =  0.0
+  ProcessHasGroundPlane = TRUE
+  BlankAllCutsGP    =  TRUE
+  ZSegsToEC         =  FALSE
+  //   Use CropGP = TRUE if there is no skyplane in M7 and M4 is mask negative. This is not so in current setup.   {CF}
+  //   CropGP has no effect on positive-mask ground planes, but we set it "FALSE" just to be complete.  {CF}
+  CropGP            =  FALSE
+  LastDieLayerOrder =  24
+  GPLayer           =  40
+  TermLayer         =  19
+  TextLayer         =  18
+  BlankAllLayer     =  255
+  Lambda            =  0.09
+  HFilaments        =  1
+  TerminalInRange   =  1.0
+  UnitL             =  1e-12
+  EpsilonR          =  4.6
+  DecimationDistance = 0.02
+$End
+* L0  -  lowest layer (HKIL - No lambda data available - value is found to match inductance measurements)
+$Layer
+  Number      =     3
+  Name        =     L0
+  Bias        =     0
+  Thickness   =     0.040
+  Lambda      =     0.505    // empirically derived to get 8 pH/sq Lkin {CF}
+  Order       =     0
+  Mask        =     1
+  Filmtype    =     S
+  HFilaments  =     1
+$End
+* C0  -  isolation
+$Layer
+  Number      =     4
+  Name        =     C0
+  Bias        =     0
+  Thickness   =     0.060
+  Order       =     1
+  Mask        =    -1
+  Filmtype    =     I
+  PlanarModel =     1
+$End
+* M0  -  lowest conductor
+$Layer  
+  Number      =     1
+  Name        =     M0
+  Bias        =     0
+  Thickness   =     0.200
+  Lambda      =     0.102    // Value from calibration to fit measurements
+  Order       =     2
+  Mask        =     1
+  Filmtype    =     S
+  HFilaments  =     2
+$End
+* I0  -  isolation
+$Layer
+  Number      =     2
+  Name        =     I0
+  Bias        =     0
+  Thickness   =     0.200
+  Order       =     3
+  Mask        =    -1
+  Filmtype    =     I
+  PlanarModel =     1
+$End
+* M1  -  conductor
+$Layer
+  Number      =     10
+  Name        =     M1
+  Bias        =    -0.01     // Value from calibration to fit measurements
+  Thickness   =     0.200
+  Lambda      =     0.102    // Value from calibration to fit measurements
+  Order       =     4
+  Mask        =     1
+  Filmtype    =     S
+  HFilaments  =     2
+$End
+* I1  -  isolation
+$Layer
+  Number      =     11
+  Name        =     I1
+  Bias        =     0
+  Thickness   =     0.200
+  Order       =     5
+  Mask        =    -1
+  Filmtype    =     I
+  PlanarModel =     1
+$End
+* M2  -  conductor
+$Layer
+  Number      =     20
+  Name        =     M2
+  Bias        =     0
+  Thickness   =     0.200
+  Lambda      =     0.1     // Value from calibration to fit measurements
+  Order       =     6
+  Mask        =     1
+  Filmtype    =     S
+  HFilaments  =     2
+$End
+* I2  -  isolation
+$Layer
+  Number      =     21
+  Name        =     I2
+  Bias        =     0
+  Thickness   =     0.200
+  Order       =     7
+  Mask        =    -1
+  Filmtype    =     I
+  PlanarModel =     1
+$End
+* M3  -  conductor
+$Layer
+  Number      =     30
+  Name        =     M3
+  Bias        =     0  
+  Thickness   =     0.200
+  Lambda      =     0.107    // Value from calibration to fit measurements
+  Order       =     8
+  Mask        =     1
+  Filmtype    =     S
+  HFilaments  =     2
+$End
+* I3  -  isolation
+$Layer
+  Number      =     31
+  Name        =     I3
+  Bias        =     0
+  Thickness   =     0.200
+  Order       =     9
+  Mask        =    -1
+  Filmtype    =     I
+  PlanarModel =     1
+$End
+* M4  -  lower ground plane
+$Layer
+  Number      =     40
+  Name        =     M4
+  Bias        =     0
+  Thickness   =     0.200
+  Lambda      =     0.09
+  Order       =     10
+  Mask        =     1
+  Filmtype    =     S
+  HFilaments  =     2
+$End
+* I4  -  first isolation
+$Layer
+  Number      =     41
+  Name        =     I4
+  Bias        =     0
+  Thickness   =     0.250
+  Order       =     11
+  Mask        =    -1
+  Filmtype    =     I
+  PlanarModel =     1
+$End
+* M5  -  conductor
+$Layer
+  Number     =     50
+  Name       =     M5
+  Bias       =    -0.02    // Value from calibration to fit measurements
+  Thickness  =     0.150
+  Lambda     =     0.103   // Value from calibration to fit measurements
+  Order      =     12
+  Mask       =     1
+  Filmtype   =     S
+  //  Line thickness is <2*lambda, so 1 HFilaments is sufficient
+  HFilaments =     1
+$End
+* J5  -  JJ definition
+$Layer
+  Number      =     51
+  Name        =     J5
+  Bias        =     0
+  Thickness   =     0.001
+  Order       =     13
+  Mask        =     0
+  Filmtype    =     A
+  IDensity   =      10e-5
+$End
+* I5L  -  lower part of I5
+$Layer
+  Number      =     59
+  Name        =     I5L
+  Bias        =     0
+  Thickness   =     0.19
+  Order       =     14
+  Mask        =     -1
+  Filmtype    =     I
+  LayerAdd    =     [54]
+  LayerSub    =     [52 56]
+  PlanarModel =     1
+$End
+* C5J  -  contact to JJ
+$Layer
+  Number      =     55
+  Name        =     C5J
+  Bias        =     0
+  Thickness   =     0.001
+  Order       =     15
+  Mask        =     0
+  Filmtype    =     A
+  PlanarModel =     1
+$End
+* R5  -  shunt/bias resistor
+$Layer
+  Number      =     52
+  Name        =     R5
+  Bias        =     0
+  Thickness   =     0.040
+  // Sigma = 1/(Rsheet*thickness); see: 'C.J. Fourie, IEEE T. Appl. Supercond., vol. 25, 1300209, Feb. 2015.'
+  //          Result is in S/um = 1/(Ohm.um)
+  //          This is only used if 'Filmtype = R', but inserted here to make conversion to full resistance extraction easy.
+  // Sigma = 12.5 S/um when Rsheet = 2.0 Ohm/square, and 4.1667 S/um when Rsheet = 6.0 Ohm/square
+  Sigma       =     12.5
+  //Sigma       =     4.1667 
+  Order       =     16
+  Mask        =     1
+  Filmtype    =     R
+  ViaBypass   =     TRUE
+$End
+* C5R  -  contact to resistor
+$Layer
+  Number      =     56
+  Name        =     C5R
+  Bias        =     0
+  Thickness   =     0.001
+  Order       =     17
+  Mask        =     0 
+  Filmtype    =     A
+$End
+* I5  -  second isolation
+$Layer
+  Number      =     54
+  Name        =     I5
+  Bias        =     0
+  //Thickness   =     0.270  // Anodization only above M5 - planarization levels SiO2. 80 nm + 190 nm
+  Thickness   =     0.04     // Down from 0.08 because of thickness of resistive layer which is not planarized...
+  Order       =     18
+  Mask        =    -1
+  Filmtype    =     I
+  PlanarModel =     1
+  LayerADD    =     [55 56]
+$End
+* M6  -  conductor
+$Layer
+  Number     =     60
+  Name       =     M6
+  Bias       =     0
+  Thickness  =     0.200
+  Lambda     =     0.093
+  Order      =     20
+  Mask       =     1
+  Filmtype   =     S
+  HFilaments =     2
+  Colour     =     150
+$End
+* I6  -  third isolation
+$Layer
+  Number      =     61
+  Name        =     I6
+  Bias        =     0
+  Thickness   =     0.200
+  Order       =     21
+  Mask        =    -1
+  Filmtype    =     I
+  PlanarModel =     1
+$End
+* M7  -  upper ground plane
+$Layer
+  Number     =     70
+  Name       =     M7
+  Bias       =     0
+  Thickness  =     0.200
+  Lambda     =     0.09
+  Order      =     22
+  Mask       =     1
+  Filmtype   =     S
+  HFilaments =     2
+  Colour     =     254
+$End
+* I7  -  via in chip passivation (overglass)
+$Layer
+  Number      =     71
+  Name        =     I7
+  Bias        =     0
+  Thickness   =     0.100 // Thickness not specified for process - irrelevant 
+  Order       =     23
+  Mask        =    -1
+  Filmtype    =     I
+  PlanarModel =     1
+$End
+* M8  -  Pads
+$Layer
+  Number     =     80
+  Name       =     M8
+  Bias       =     0
+  Thickness  =     0.250
+  Sigma      =     10
+  // material not specified - assume Au - actual sigma not important (irrelevant for SFQ circuits)
+  Order      =     24
+  Mask       =     1
+  Filmtype   =     S
+  HFilaments =     1
+$End
+* TERM
+$Layer
+  Number     =     19
+  Name       =     TERM
+  Bias       =     0
+  Thickness  =     0.001
+  Order      =     25
+  Mask       =    -4
+$End
+*============================================================
