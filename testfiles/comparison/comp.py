@@ -5,10 +5,10 @@ import seaborn as sns
 phi0 = 2.067833848E-15
 
 f1 = 10E-3
-f2 = 10e6
+f2 = 10e9
 
 # msfn = lambda A,alpha,f1,f2 : A*(-f1**(1+alpha)+f2**(1-alpha))/(1+alpha)*10**-12
-msfn = lambda A,alpha,f1,f2 : (A * (f1 * f2)**(-alpha) * (-f1**alpha * f2 + f1 * f2**alpha))/(-1+alpha) * 10**-12
+msfn = lambda A,alpha,f1,f2 : (A * (f1 * f2)**(-alpha) * (-f1**alpha * f2 + f1 * f2**alpha))/(-1+alpha)
 """ 
 spectrum for d1: 
 
@@ -18,7 +18,7 @@ SQRT A = 14.5
 
 """
 simA = 4.67775e-10
-typeD1_A = 14.5 ** 2
+typeD1_A = (14.5*1e-6) ** 2
 typeD1_alpha = 0.96
 
 print(f"type D1 msfn: {msfn(typeD1_A,typeD1_alpha,f1,f2)}, noise ex module {simA}")
@@ -34,10 +34,21 @@ SQRT A = 8
 """
 
 simF = 2.70796e-09
-typef1_A = 8**2
+typef1_A = (8*1e-6)**2
 typef1_alpha =  0.67
 
 
 print(f"type f1 msfn integral: {msfn(typef1_A,typef1_alpha,f1,f2)}, noise ex module {simF}")
+
+"""
+5.67634e-11
+
+"""
+simC = 5.67634e-11
+typeC_A = (7.5*1e-6)**2
+typeC_alpha =  0.50
+
+
+print(f"type f1 msfn integral: {msfn(typeC_A,typeC_alpha,f1,f2)}, noise ex module {simC}")
 
 

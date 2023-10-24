@@ -40,6 +40,10 @@ C.~Geuzaine and J.-F. Remacle, ``\BIBforeignlanguage{eng}{Gmsh: a
   journal for numerical methods in engineering}}, vol.~79, no.~11, pp.
   1309--1331, 2009.
 
+\bibitem{msfnCode}
+S.~M. Anton, ``{MSFN MATLAB implementation},''
+  \url{https://github.com/stevenmanton/msfn}, 2023.
+
 \bibitem{FluxNoiseCol}
 F.~C. Wellstood, C.~Urbina, and J.~Clarke, ``\BIBforeignlanguage{eng}{Role of
   geometry on the color of flux noise in dc squids},''

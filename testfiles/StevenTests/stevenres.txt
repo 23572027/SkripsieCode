@@ -1,0 +1,221 @@
+Starting simulations...
+Current iteration: 1
+Extracted inductance: 31.923 pH
+Warning: Current segment found without corresponding node.
+Extracted inductance: 31.903 pH
+Warning: Current segment found without corresponding node.
+Extracted inductance: 31.901 pH
+Warning: Current segment found without corresponding node.
+Phi 	5.80245e-11	5.84667e-11	5.16836e-11
+Current iteration: 2
+Extracted inductance: 29.83 pH
+Warning: Current segment found without corresponding node.
+Extracted inductance: 29.864 pH
+Warning: Current segment found without corresponding node.
+Extracted inductance: 29.866 pH
+Warning: Current segment found without corresponding node.
+Phi 	5.07871e-11	5.11134e-11	4.31776e-11
+Current iteration: 3
+Extracted inductance: 28.052 pH
+Warning: Current segment found without corresponding node.
+Extracted inductance: 28.026 pH
+Warning: Current segment found without corresponding node.
+Extracted inductance: 28.031 pH
+Warning: Current segment found without corresponding node.
+Phi 	4.41439e-11	4.43783e-11	3.59581e-11
+Current iteration: 4
+Extracted inductance: 26.377 pH
+Warning: Current segment found without corresponding node.
+Extracted inductance: 26.347 pH
+Warning: Current segment found without corresponding node.
+Extracted inductance: 26.354 pH
+Warning: Current segment found without corresponding node.
+Phi 	3.82402e-11	3.83924e-11	2.97852e-11
+Current iteration: 5
+Extracted inductance: 24.845 pH
+Warning: Current segment found without corresponding node.
+Extracted inductance: 24.823 pH
+Warning: Current segment found without corresponding node.
+Extracted inductance: 24.824 pH
+Warning: Current segment found without corresponding node.
+Phi 	3.29668e-11	3.31524e-11	2.44664e-11
+Current iteration: 6
+Extracted inductance: 23.456 pH
+Warning: Current segment found without corresponding node.
+Extracted inductance: 23.441 pH
+Warning: Current segment found without corresponding node.
+Extracted inductance: 23.44 pH
+Warning: Current segment found without corresponding node.
+Phi 	2.85469e-11	2.86825e-11	2.03928e-11
+Current iteration: 7
+Extracted inductance: 22.197 pH
+Warning: Current segment found without corresponding node.
+Extracted inductance: 22.185 pH
+Warning: Current segment found without corresponding node.
+Extracted inductance: 22.18 pH
+Warning: Current segment found without corresponding node.
+Phi 	2.47202e-11	2.48157e-11	1.70984e-11
+Current iteration: 8
+Extracted inductance: 21.04 pH
+Warning: Current segment found without corresponding node.
+Extracted inductance: 21.042 pH
+Warning: Current segment found without corresponding node.
+Warning: Node areas do not add up correctly. Relative error is 1.20964e-07
+Extracted inductance: 21.037 pH
+Warning: Current segment found without corresponding node.
+Phi 	2.15428e-11	2.15987e-11	1.4431e-11
+Current iteration: 9
+Extracted inductance: 20.013 pH
+Warning: Current segment found without corresponding node.
+Warning: Some columns of the Jacobian are effectively zero at the solution, indicating that the model is insensitive to some of its parameters.  That may be because those parameters are not present in the model, or otherwise do not affect the predicted values.  It may also be due to numerical underflow in the model function, which can sometimes be avoided by choosing better initial parameter values, or by rescaling or recentering.  Parameter estimates may be unreliable.
+Extracted inductance: 19.996 pH
+Warning: Current segment found without corresponding node.
+Extracted inductance: 19.993 pH
+Warning: Current segment found without corresponding node.
+Phi 	1.89327e-11	1.89639e-11	1.22732e-11
+Current iteration: 10
+Extracted inductance: 19.109 pH
+Warning: Current segment found without corresponding node.
+Warning: Some columns of the Jacobian are effectively zero at the solution, indicating that the model is insensitive to some of its parameters.  That may be because those parameters are not present in the model, or otherwise do not affect the predicted values.  It may also be due to numerical underflow in the model function, which can sometimes be avoided by choosing better initial parameter values, or by rescaling or recentering.  Parameter estimates may be unreliable.
+Extracted inductance: 19.088 pH
+Warning: Current segment found without corresponding node.
+Extracted inductance: 19.087 pH
+Phi 	1.67127e-11	1.67301e-11	1.06066e-11
+Current iteration: 11
+Extracted inductance: 18.299 pH
+Warning: Current segment found without corresponding node.
+Warning: Some columns of the Jacobian are effectively zero at the solution, indicating that the model is insensitive to some of its parameters.  That may be because those parameters are not present in the model, or otherwise do not affect the predicted values.  It may also be due to numerical underflow in the model function, which can sometimes be avoided by choosing better initial parameter values, or by rescaling or recentering.  Parameter estimates may be unreliable.
+Extracted inductance: 18.281 pH
+Extracted inductance: 18.283 pH
+Warning: Current segment found without corresponding node.
+Phi 	1.49266e-11	1.49405e-11	9.28404e-12
+Current iteration: 12
+Extracted inductance: 17.61 pH
+Warning: Some columns of the Jacobian are effectively zero at the solution, indicating that the model is insensitive to some of its parameters.  That may be because those parameters are not present in the model, or otherwise do not affect the predicted values.  It may also be due to numerical underflow in the model function, which can sometimes be avoided by choosing better initial parameter values, or by rescaling or recentering.  Parameter estimates may be unreliable.
+Extracted inductance: 17.616 pH
+Warning: Current segment found without corresponding node.
+Extracted inductance: 17.619 pH
+Warning: Current segment found without corresponding node.
+Phi 	1.34791e-11	1.34725e-11	8.31213e-12
+Current iteration: 13
+Extracted inductance: 17.016 pH
+Warning: Some columns of the Jacobian are effectively zero at the solution, indicating that the model is insensitive to some of its parameters.  That may be because those parameters are not present in the model, or otherwise do not affect the predicted values.  It may also be due to numerical underflow in the model function, which can sometimes be avoided by choosing better initial parameter values, or by rescaling or recentering.  Parameter estimates may be unreliable.
+Extracted inductance: 0 pH
+Oh no! I ran into an error on iteration 2:
+iewasher:run:J_P1_missing
+The file J_P1.mat does not exist.
+	In iewasher.run
+	In runBatchIEW
+	In LiveEditorEvaluationHelperE275427545
+Phi 	1.23148e-11	1.23342e-11	7.22505e-12
+Current iteration: 14
+Extracted inductance: 16.5 pH
+Warning: Some columns of the Jacobian are effectively zero at the solution, indicating that the model is insensitive to some of its parameters.  That may be because those parameters are not present in the model, or otherwise do not affect the predicted values.  It may also be due to numerical underflow in the model function, which can sometimes be avoided by choosing better initial parameter values, or by rescaling or recentering.  Parameter estimates may be unreliable.
+Extracted inductance: 16.482 pH
+Warning: Current segment found without corresponding node.
+Extracted inductance: 16.483 pH
+Warning: Current segment found without corresponding node.
+Phi 	1.13811e-11	1.13926e-11	6.83515e-12
+Current iteration: 15
+Extracted inductance: 16.05 pH
+Warning: Some columns of the Jacobian are effectively zero at the solution, indicating that the model is insensitive to some of its parameters.  That may be because those parameters are not present in the model, or otherwise do not affect the predicted values.  It may also be due to numerical underflow in the model function, which can sometimes be avoided by choosing better initial parameter values, or by rescaling or recentering.  Parameter estimates may be unreliable.
+Extracted inductance: 16.02 pH
+Warning: Current segment found without corresponding node.
+Extracted inductance: 16.022 pH
+Warning: Current segment found without corresponding node.
+Phi 	1.07166e-11	1.07338e-11	6.34423e-12
+Current iteration: 16
+Extracted inductance: 15.665 pH
+Warning: Some columns of the Jacobian are effectively zero at the solution, indicating that the model is insensitive to some of its parameters.  That may be because those parameters are not present in the model, or otherwise do not affect the predicted values.  It may also be due to numerical underflow in the model function, which can sometimes be avoided by choosing better initial parameter values, or by rescaling or recentering.  Parameter estimates may be unreliable.
+Extracted inductance: 15.635 pH
+Warning: Current segment found without corresponding node.
+Warning: Some columns of the Jacobian are effectively zero at the solution, indicating that the model is insensitive to some of its parameters.  That may be because those parameters are not present in the model, or otherwise do not affect the predicted values.  It may also be due to numerical underflow in the model function, which can sometimes be avoided by choosing better initial parameter values, or by rescaling or recentering.  Parameter estimates may be unreliable.
+Extracted inductance: 15.643 pH
+Warning: Current segment found without corresponding node.
+Phi 	9.94099e-12	9.97222e-12	5.82697e-12
+Current iteration: 17
+Extracted inductance: 15.376 pH
+Warning: Some columns of the Jacobian are effectively zero at the solution, indicating that the model is insensitive to some of its parameters.  That may be because those parameters are not present in the model, or otherwise do not affect the predicted values.  It may also be due to numerical underflow in the model function, which can sometimes be avoided by choosing better initial parameter values, or by rescaling or recentering.  Parameter estimates may be unreliable.
+Extracted inductance: 15.338 pH
+Warning: Current segment found without corresponding node.
+Warning: Some columns of the Jacobian are effectively zero at the solution, indicating that the model is insensitive to some of its parameters.  That may be because those parameters are not present in the model, or otherwise do not affect the predicted values.  It may also be due to numerical underflow in the model function, which can sometimes be avoided by choosing better initial parameter values, or by rescaling or recentering.  Parameter estimates may be unreliable.
+Extracted inductance: 15.344 pH
+Warning: Current segment found without corresponding node.
+Phi 	9.36822e-12	9.43102e-12	5.48045e-12
+Current iteration: 18
+Extracted inductance: 15.123 pH
+Warning: Some columns of the Jacobian are effectively zero at the solution, indicating that the model is insensitive to some of its parameters.  That may be because those parameters are not present in the model, or otherwise do not affect the predicted values.  It may also be due to numerical underflow in the model function, which can sometimes be avoided by choosing better initial parameter values, or by rescaling or recentering.  Parameter estimates may be unreliable.
+Extracted inductance: 15.085 pH
+Warning: Current segment found without corresponding node.
+Warning: Some columns of the Jacobian are effectively zero at the solution, indicating that the model is insensitive to some of its parameters.  That may be because those parameters are not present in the model, or otherwise do not affect the predicted values.  It may also be due to numerical underflow in the model function, which can sometimes be avoided by choosing better initial parameter values, or by rescaling or recentering.  Parameter estimates may be unreliable.
+Extracted inductance: 15.075 pH
+Phi 	8.85695e-12	8.91764e-12	5.23761e-12
+Current iteration: 19
+Extracted inductance: 14.883 pH
+Warning: Some columns of the Jacobian are effectively zero at the solution, indicating that the model is insensitive to some of its parameters.  That may be because those parameters are not present in the model, or otherwise do not affect the predicted values.  It may also be due to numerical underflow in the model function, which can sometimes be avoided by choosing better initial parameter values, or by rescaling or recentering.  Parameter estimates may be unreliable.
+Extracted inductance: 14.848 pH
+Warning: Some columns of the Jacobian are effectively zero at the solution, indicating that the model is insensitive to some of its parameters.  That may be because those parameters are not present in the model, or otherwise do not affect the predicted values.  It may also be due to numerical underflow in the model function, which can sometimes be avoided by choosing better initial parameter values, or by rescaling or recentering.  Parameter estimates may be unreliable.
+Extracted inductance: 14.846 pH
+Phi 	8.54647e-12	8.62674e-12	5.0629e-12
+Current iteration: 20
+Extracted inductance: 14.712 pH
+Warning: Some columns of the Jacobian are effectively zero at the solution, indicating that the model is insensitive to some of its parameters.  That may be because those parameters are not present in the model, or otherwise do not affect the predicted values.  It may also be due to numerical underflow in the model function, which can sometimes be avoided by choosing better initial parameter values, or by rescaling or recentering.  Parameter estimates may be unreliable.
+Extracted inductance: 14.661 pH
+Warning: Some columns of the Jacobian are effectively zero at the solution, indicating that the model is insensitive to some of its parameters.  That may be because those parameters are not present in the model, or otherwise do not affect the predicted values.  It may also be due to numerical underflow in the model function, which can sometimes be avoided by choosing better initial parameter values, or by rescaling or recentering.  Parameter estimates may be unreliable.
+Extracted inductance: 14.659 pH
+Phi 	8.27829e-12	8.35277e-12	4.9062e-12
+Current iteration: 21
+Extracted inductance: 14.594 pH
+Warning: Some columns of the Jacobian are effectively zero at the solution, indicating that the model is insensitive to some of its parameters.  That may be because those parameters are not present in the model, or otherwise do not affect the predicted values.  It may also be due to numerical underflow in the model function, which can sometimes be avoided by choosing better initial parameter values, or by rescaling or recentering.  Parameter estimates may be unreliable.
+Extracted inductance: 0 pH
+Oh no! I ran into an error on iteration 2:
+iewasher:run:J_P1_missing
+The file J_P1.mat does not exist.
+	In iewasher.run
+	In runBatchIEW
+	In LiveEditorEvaluationHelperE275427545
+Phi 	8.34598e-12	8.43274e-12	4.00814e-12
+Current iteration: 22
+Extracted inductance: 14.497 pH
+Warning: Some columns of the Jacobian are effectively zero at the solution, indicating that the model is insensitive to some of its parameters.  That may be because those parameters are not present in the model, or otherwise do not affect the predicted values.  It may also be due to numerical underflow in the model function, which can sometimes be avoided by choosing better initial parameter values, or by rescaling or recentering.  Parameter estimates may be unreliable.
+Extracted inductance: 14.39 pH
+Warning: Some columns of the Jacobian are effectively zero at the solution, indicating that the model is insensitive to some of its parameters.  That may be because those parameters are not present in the model, or otherwise do not affect the predicted values.  It may also be due to numerical underflow in the model function, which can sometimes be avoided by choosing better initial parameter values, or by rescaling or recentering.  Parameter estimates may be unreliable.
+Extracted inductance: 0 pH
+Oh no! I ran into an error on iteration 3:
+iewasher:run:J_P1_missing
+The file J_P1.mat does not exist.
+	In iewasher.run
+	In runBatchIEW
+	In LiveEditorEvaluationHelperE275427545
+Phi 	7.82544e-12	7.9126e-12	4.59365e-12
+Current iteration: 23
+Extracted inductance: 14.431 pH
+Warning: Some columns of the Jacobian are effectively zero at the solution, indicating that the model is insensitive to some of its parameters.  That may be because those parameters are not present in the model, or otherwise do not affect the predicted values.  It may also be due to numerical underflow in the model function, which can sometimes be avoided by choosing better initial parameter values, or by rescaling or recentering.  Parameter estimates may be unreliable.
+Extracted inductance: 0 pH
+Oh no! I ran into an error on iteration 2:
+iewasher:run:J_P1_missing
+The file J_P1.mat does not exist.
+	In iewasher.run
+	In runBatchIEW
+	In LiveEditorEvaluationHelperE275427545
+Starting parallel pool (parpool) using the 'Processes' profile ...
+Connected to the parallel pool (number of workers: 4).
+Phi 	8.02093e-12	8.11897e-12	3.56518e-12
+Current iteration: 24
+Extracted inductance: 0 pH
+Oh no! I ran into an error on iteration 1:
+iewasher:run:J_P1_missing
+The file J_P1.mat does not exist.
+	In iewasher.run
+	In runBatchIEW
+	In LiveEditorEvaluationHelperE275427545
+Dot indexing is not supported for variables of this type.
+
+Error in iewasher/calcBedge (line 1639)
+         inds = abs(iew.edges.yMid) < iew.iDim(2)/2 & iew.edges.xMid < 0;
+
+Error in iewasher/run (line 796)
+            iew.calcBedge;
+
+Error in runBatchIEW (line 122)
+   iewAll(i).run(iewArgs{:});

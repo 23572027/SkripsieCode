@@ -4,9 +4,10 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{\ignorespaces The first column refers to the point label and is a reference to figure \ref {fig:planeVoro}. The second column is the result of applying equation \ref {eq:angle}. The third column shows the sign of the projection of vector $P_i$ onto the second basis vector. The fourth column shows the angle after adjustment. The fourth column is calculated as: $360 - Angle$.\relax }}{29}{table.caption.22}%
+\contentsline {table}{\numberline {3.1}{\ignorespaces The first column refers to the point label and is a reference to figure \ref {fig:planeVoro}. The second column is the result of applying equation \ref {eq:angle}. The third column shows the sign of the projection of vector $P_i$ onto the second basis vector. The fourth column shows the angle after adjustment. The fourth column is calculated as: $360 - Angle$.\relax }}{28}{table.caption.22}%
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {4.1}{\ignorespaces Table of relative errors for each mesh optimisation cycle\relax }}{33}{table.caption.26}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces The resulting MSFN figure predicted by the noise extraction module as well as the derived MSFN figure\relax }}{36}{table.caption.31}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

@@ -30,14 +30,17 @@
 \contentsline {section}{\numberline {4.1}The noise extraction module}{30}{section.4.1}%
 \contentsline {subsection}{\numberline {4.1.1}Test setup}{30}{subsection.4.1.1}%
 \contentsline {subsection}{\numberline {4.1.2}Results}{31}{subsection.4.1.2}%
-\contentsline {section}{\numberline {4.2}The mesh optimisation module}{31}{section.4.2}%
+\contentsline {section}{\numberline {4.2}The mesh optimisation module}{32}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}Test setup}{32}{subsection.4.2.1}%
 \contentsline {subsection}{\numberline {4.2.2}Results}{33}{subsection.4.2.2}%
-\contentsline {section}{\numberline {4.3}Comparison with actual SQUID designs}{34}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Test setup}{34}{subsection.4.3.1}%
+\contentsline {section}{\numberline {4.3}Comparison with the results of S.M. Anton \textit {et al.}}{34}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Test Setup}{34}{subsection.4.3.1}%
 \contentsline {subsection}{\numberline {4.3.2}Results}{34}{subsection.4.3.2}%
-\contentsline {chapter}{\numberline {5}Summary and Conclusion}{35}{chapter.5}%
-\contentsline {chapter}{Bibliography}{36}{chapter*.29}%
-\contentsline {chapter}{\numberline {A}Example settings file}{38}{appendix.A}%
-\contentsline {chapter}{\numberline {B}Project Planning Schedule}{40}{appendix.B}%
-\contentsline {chapter}{\numberline {C}Outcomes Compliance}{41}{appendix.C}%
+\contentsline {section}{\numberline {4.4}Comparison with actual SQUID designs}{35}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Test setup}{35}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Results}{36}{subsection.4.4.2}%
+\contentsline {chapter}{\numberline {5}Summary and Conclusion}{37}{chapter.5}%
+\contentsline {chapter}{Bibliography}{38}{chapter*.32}%
+\contentsline {chapter}{\numberline {A}Example settings file}{40}{appendix.A}%
+\contentsline {chapter}{\numberline {B}Project Planning Schedule}{42}{appendix.B}%
+\contentsline {chapter}{\numberline {C}Outcomes Compliance}{43}{appendix.C}%
