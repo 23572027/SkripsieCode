@@ -144,4 +144,20 @@ L.~V. Abdurakhimov, I.~Mahboob, H.~Toida, K.~Kakuyanagi, Y.~Matsuzaki, and
   \emph{\BIBforeignlanguage{eng}{PRX quantum}}, vol.~3, no.~4, pp. 040\,332--,
   2022.
 
+\bibitem{FNdisord}
+\BIBentryALTinterwordspacing
+J.~A. Nava~Aquino and R.~de~Sousa, ``Flux noise in disordered spin systems,''
+  \emph{Phys. Rev. B}, vol. 106, p. 144506, Oct 2022. [Online]. Available:
+  \url{https://link.aps.org/doi/10.1103/PhysRevB.106.144506}
+\BIBentrySTDinterwordspacing
+
+\bibitem{FNtempdepend}
+\BIBentryALTinterwordspacing
+T.~Lanting, M.~H. Amin, A.~J. Berkley, C.~Rich, S.-F. Chen, S.~LaForest, and
+  R.~de~Sousa, ``Evidence for temperature-dependent spin diffusion as a
+  mechanism of intrinsic flux noise in squids,'' \emph{Phys. Rev. B}, vol.~89,
+  p. 014503, Jan 2014. [Online]. Available:
+  \url{https://link.aps.org/doi/10.1103/PhysRevB.89.014503}
+\BIBentrySTDinterwordspacing
+
 \end{thebibliography}
