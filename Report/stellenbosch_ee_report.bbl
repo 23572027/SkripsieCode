@@ -28,10 +28,9 @@ I.~Sochnikov, D.~Davino, and B.~Kalisky, ``\BIBforeignlanguage{eng}{dc squid
   2020.
 
 \bibitem{fluxNoiseSquidsStevenAnton}
-S.~M. Anton, I.~A. Sognnaes, J.~S. Birenbaum, S.~R. O'Kelley, C.~J. Fourie, and
-  J.~Clarke, ``Mean square flux noise in squids and qubits: Numerical
-  calculations,'' \emph{Superconductor Science and Technology}, vol.~26, no.~7,
-  p. 075022, 2013.
+S.~Anton, ``Magnetic flux noise in squids and qubits,'' PhD thesis, University
+  of California, Berkeley, Berkley, CA, 2013, available at
+  \url{https://escholarship.org/uc/item/5146t75k}.
 
 \bibitem{GMSH}
 C.~Geuzaine and J.-F. Remacle, ``\BIBforeignlanguage{eng}{Gmsh: a
@@ -43,12 +42,6 @@ C.~Geuzaine and J.-F. Remacle, ``\BIBforeignlanguage{eng}{Gmsh: a
 \bibitem{msfnCode}
 S.~M. Anton, ``{MSFN MATLAB implementation},''
   \url{https://github.com/stevenmanton/msfn}, 2023.
-
-\bibitem{FluxNoiseCol}
-F.~C. Wellstood, C.~Urbina, and J.~Clarke, ``\BIBforeignlanguage{eng}{Role of
-  geometry on the color of flux noise in dc squids},''
-  \emph{\BIBforeignlanguage{eng}{IEEE transactions on applied
-  superconductivity}}, vol.~21, no.~3, pp. 856--859, 2011.
 
 \bibitem{KochModel}
 R.~H. Koch, D.~P. Divincenzo, and J.~Clarke, ``\BIBforeignlanguage{eng}{Model
@@ -117,6 +110,12 @@ J.~Braumüller, L.~Ding, A.~P. Vepsäläinen, Y.~Sung, M.~Kjaergaard, T.~Menke,
   ``\BIBforeignlanguage{eng}{Characterizing and optimizing qubit coherence
   based on squid geometry},'' \emph{\BIBforeignlanguage{eng}{Physical review
   applied}}, vol.~13, no.~5, 2020.
+
+\bibitem{FluxNoiseCol}
+F.~C. Wellstood, C.~Urbina, and J.~Clarke, ``\BIBforeignlanguage{eng}{Role of
+  geometry on the color of flux noise in dc squids},''
+  \emph{\BIBforeignlanguage{eng}{IEEE transactions on applied
+  superconductivity}}, vol.~21, no.~3, pp. 856--859, 2011.
 
 \bibitem{SurfaceSpinOrig}
 H.~Wang, C.~Shi, J.~Hu, S.~Han, C.~C. Yu, and R.~Wu,

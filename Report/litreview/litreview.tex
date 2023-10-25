@@ -240,15 +240,6 @@ Although there is no consensus on the exact origin of $1/f$ noise many agree tha
 \end{equation}
 The parameter A is insensitive to the geometry and materials of the substrate \cite{fluxNoiseSquidsStevenAnton}. The parameter $\alpha$ is the slope of the noise on a log-log plot. In \cite{SurfaceSpinOrig} the authors propose that the origin of magnetic moments on the surface of the superconductor can be attributed to $O_2$ molecules absorbed on the surface. In \cite{OriginAndReductionOf1/fNoise} the authors provide further supporting evidence to the claims of \cite{SurfaceSpinOrig} by investigating the effect of surface treatments on low frequency flux noise. They found that surface treatments as well as a better sample vacuum environment led to significant improvement in low frequency flux noise. Experimental results suggest the spin density on the surface of the superconductor to be $5\times10^{17}m^{-2}$. According to \cite{fluxNoiseSquidsStevenAnton} various authors have characterized the noise due to surface spins by calculating the mean square flux noise ($\langle \Phi^2\rangle $). The authors make use of a model where spins are independently and identically distributed with each spin having a magnetic moment equal to the Bohr magneton ($\mu_B$). The results correlated with experimental evidence as it conformed to the properties of the power spectral density one expects from the low frequency flux noise \cite{fluxNoiseSquidsStevenAnton}. Specifically, the models conformed to the property that the magnitude of the flux noise is a weak function of the geometry of the SQUID.
 
-\subsubsection*{Flux noise measurements}
-This project will be tested against recorded flux noise measurements. The critical current will not be accounted for, so it is important that the practical data used for comparison is consistent with this assumption. In \cite{FluxNoiseCol} the authors cooled various SQUID's to millikelvin temperatures. The authors tested a variety of SQUID loop designs. Each SQUID consisted of a $200 nm$ sputtered niobium layer as well as $200nm$ lead layer separated by an isolation layer made of $500nm$ of silicon oxide. To form the Josephson junctions a $2\times 2 um$ via through the silicon oxide was created. The tunnel barrier was constructed out of niobium-oxide. The authors then measured the noise PSD and fit the measurements to equation \ref{eq:PSDFit} to determine the parameters $A$ and $\alpha$.
-
-\begin{equation}
-    S_\Phi(f) = Af^{-\alpha} + C
-    \label{eq:PSDFit}
-\end{equation}
-In equation \ref{eq:PSDFit}, the variable $C$ refers to power spectral density of the frequency independent white noise. The authors tabulated these parameters as well as the inductance and physical dimensions of the SQUID loops.
-
 \subsection{Techniques for predicting mean square flux noise}
 \label{subsec:PredictFluxNoise}
 The importance of being able to predict the low frequency flux noise in SQUID's has led many to attempt to predict it using the mostly agreed upon model of magnetic defects on the surface of the super conductor.
@@ -333,7 +324,7 @@ The authors concluded that the standard TLS model incorrectly describes the mech
 This method follows on closely from the method employed by \cite{KochModel}. In \cite{fluxNoiseSquidsStevenAnton} the same assumptions are made about the nature of the surface defects as in \cite{KochModel}. This technique takes the analytical method demonstrated by \cite{KochModel} and implements it numerically. To do this \cite{fluxNoiseSquidsStevenAnton} makes use of a superconducting version of FastHenry to compute the current distribution due to a time varying voltage source applied to a test port on the SQUID washer as shown in figure \ref{fig:WASHERSteven}.
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.5\linewidth]{Washer}
+    \includegraphics[width=0.4\linewidth]{Washer}
     \caption{A figure produced by \cite{fluxNoiseSquidsStevenAnton} showing the use of a test port on the SQUID washer}
     \label{fig:WASHERSteven}
 \end{figure}
@@ -347,5 +338,5 @@ The current is assumed to be constant throughout each individual segment so $J_n
     \langle \Phi^2 \rangle = \frac{N\mu_B^2}{3I^2}\langle \Vec{B}^2(\Vec{r}) \rangle
     \label{eq:MSFNfromBfield}
 \end{equation}
-In conclusion, the author reduces the problem of calculating the mean square flux noise to finding the average magnetic flux density on the surface of the conductor. A detail that is worth mentioning is that the number of spin densities $N$ in equation \ref{eq:MSFNfromBfield} is considered large enough such that one can make a continuum approximation \cite{fluxNoiseSquidsStevenAnton}. It was also found that equation \ref{eq:ThinFilmMSFN} does not agree well with the numerical framework due to assumptions that introduce significant error in the final result.
+In conclusion, the author reduces the problem of calculating the mean square flux noise to finding the average magnetic flux density on the surface of the conductor. A detail that is worth mentioning is that the number of spin densities $N$ in equation \ref{eq:MSFNfromBfield} is considered large enough such that one can make a continuum approximation \cite{fluxNoiseSquidsStevenAnton}. It was also found that equation \ref{eq:ThinFilmMSFN} does not agree well with the numerical framework due to assumptions that introduce significant error in the final result \cite{fluxNoiseSquidsStevenAnton}.
 

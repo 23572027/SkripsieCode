@@ -2,12 +2,7 @@
 
 \chapter{Results}
 \label{chap:results}
-An incremental approach to testing was done for this project. Each software component was tested individually. This section will report on the results of the incremental testing as well as the results of the entire system. As a sanity check, the results will also be compared to the results in \cite{fluxNoiseSquidsStevenAnton}. Lastly the entire system will be used to calculate the mean square flux noise figure of an actual SQUID design. Low frequency flux noise is typically reported in terms of a power spectral density. To relate the power spectral density to the mean square flux noise one can simply apply equation \ref{eq:PSDtoMSFN}.
-\begin{equation}
-    \langle \Phi^2 \rangle = \int_{f_1}^{f_2}S_\Phi (f) df
-    \label{eq:PSDtoMSFN}
-\end{equation} 
-The limits of the integral are still the subject of debate \cite{fluxNoiseSquidsStevenAnton}. For the purposes of this analysis, the example of \cite{fluxNoiseSquidsStevenAnton} will be followed and $f_1$ is choosen to be $10^{-2}$. The value of $f_2$ is not known, and will therefore be arbitrarily chosen to be $10^6$. The value for the MSFN figure will then not be exact as the bandwidth of the noise process is not known. This analysis will hope to show trends between measured flux noise power spectral densities and the MSFN figure produced by the noise extraction module.
+An incremental approach to testing was done for this project. Each software component was tested individually. This section will report on the results of the incremental testing as well as the results of the entire system. As a sanity check, the results will also be compared to the results in \cite{fluxNoiseSquidsStevenAnton}. Lastly the entire system will be used to calculate the flux noise power of a real SQUID design. The results will be compared to the measured noise power for each design. 
 \section{The noise extraction module}
 The accuracy of this module is tested by comparing its output to a numerical solution for the given geometry. This module is tested without mesh optimisation. It is tested before the mesh optimisation module because the test setup for the mesh optimisation module requires the use of the noise extraction module.
 \subsection{Test setup}
@@ -134,42 +129,48 @@ From figure \ref{fig:steveComp} it is clear to see that the noise extraction mod
 
 \section{Comparison with actual SQUID designs}
 \subsection{Test setup}
-Equation \ref{eq:PSDtoMSFN} can be used in conjunction with the parameters determined by F.C. Wellstood et al. \cite{FluxNoiseCol} to relate the output of the noise extraction module to practical measurements. The integration limits are determined by choosing $f1 = 10^{-1} Hz$ as this correspond to the lowest frequency measured in \cite{FluxNoiseCol}. The second limit is chosen such that the noise extraction module results approximately match the measured flux noise figures for 1 of the SQUID's. Both limits are then kept constant for varying SQUID geometries. \par
-To simplify the structure of the SQUID washer the multi-layer design will be ignored. The SQUID will be modelled as a single layer washer. This is technically not accurate but the modelling of a multi-layer design is outside the scope of this project. The parameters are weak functions of the materials used and as such the choice of which material to use for the SQUID washer is not of importance. Figure \ref{fig:realCOMP} shows the various squid loop geometries analysed. 
+The authors of \cite{fluxNoiseSquidsStevenAnton} performed accurate measurements of the PSD of a variety of SQUIDs. The authors also calculated the inferred MSFN by fitting each spectrum to equation \ref{eq:PSDfit}. Once the parameters in equation \ref{eq:PSDfit} where determined the authors calculated the MSFN figure. The authors measured MSFN values on 2 groups of SQUIDs. Both groups utilised Nb-AlOx-Nb junctions. The SQUIDs in group \textit{I} had film thickness of $150 nm$ and the SQUIDs in group \textit{II} had a film thickness of $200 nm$. 
+\begin{equation}
+    S_\Phi (f) = Af^{-\alpha}+C
+    \label{eq:PSDfit}
+\end{equation}
+Both groups utilised the same square washer design but varied different parameters across each SQUID in the group. Group \textit{I} fixed the track width while varying the width of the washer. Group \textit{II} varied both the track width and the width of the washer. Table \ref{tab:sweepres} shows the results of the parameter sweep as well as the values of each parameter used in the sweep and figure \ref{fig:sqsweep} shows the square washer design along with what each parameter refers to.
 
 \begin{figure}[H]
     \centering
-    \begin{subfigure}[b]{0.4\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{td1}
-        \caption{The geometry used to analyse SQUID type D from \cite{FluxNoiseCol}.}
-        \label{fig:type1D}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[b]{0.4\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{tf1}
-        \caption{The geometry used to analyse SQUID type F from \cite{FluxNoiseCol}.}
-        \label{fig:type1F}
-    \end{subfigure}
-    \caption{The two types of SQUID loops analysed with the noise extraction module. The type value corresponds to the naming scheme used in \cite{FluxNoiseCol}. All dimensions are in $\mu m$. All SQUID designs have the same film thickness of $0.2 \mu m$}
-    \label{fig:realCOMP}
+    \includegraphics[width=0.4\linewidth]{sqsweep}
+    \caption{A figure showing the parameters that are changed during the parameter sweep. W is referred to as the track width and R is referred to as the loop radius. 2R is the SQUID width.}
+    \label{fig:sqsweep}
 \end{figure}
-
 \subsection{Results}
-\textcolor{red}{I will do the analysis for 1 more SQUID}
-Table \ref{tab:COMP} shows the predicted MSFN figure as well as the derived MSFN from the measured power spectral density. 
+The MSFN figure cannot be measured directly. The power spectral density of the noise is measured. To relate the power spectral density to the mean square flux noise one can simply apply equation \ref{eq:PSDtoMSFN}.
+\begin{equation}
+    \langle \Phi^2 \rangle = \int_{f_1}^{f_2}S_\Phi (f) df
+    \label{eq:PSDtoMSFN}
+\end{equation} 
+The limits of the integral are still the subject of debate \cite{fluxNoiseSquidsStevenAnton}. This is important to take note of as the choice of integration limits directly influence the result. The measured noise power in \cite{fluxNoiseSquidsStevenAnton} was calculated using $f_1 = 10^{-3}$ and $f_2 = 10^9$. Table \ref{tab:sweepres} shows the results of the parameter sweep. Figure \ref{fig:stevefig} is taken directly from \cite{fluxNoiseSquidsStevenAnton} and shows the flux noise measurements. For this comparison only the measurements at $0.1 K$ is used. 
 \begin{table}[H]
-    \centering
-    \begin{tabular}{lll}
-    \hline
-    SQUID Type & Predicted $\langle \Phi_0 ^2 \rangle$ & Measured $\langle \Phi_0 ^2 \rangle$ \\ \hline
-    D          & $4.678e-10$                         & $5.644e-09$            \\
-    F          & $2.708e-09$                         & $3.955e-08$            \\ \hline
+    \centering   
+    \begin{tabular}{lllll}
+        \hline
+        SQUID Number & R & W & MSFN (measured) ($\frac{\si{\nano}\Phi_0^2}{Hz}$) & MSFN (numerical) ($\frac{\si{\nano}\Phi_0^2}{Hz}$)\\ \hline
+        I.1 & 12 & 0.5 & 4.5 & 111.924000 \\
+        I.2 & 6 & 0.5 & 3 & 88.018600 \\
+        I.3 & 3 & 0.5 & 1.2 & 0.121771 \\
+        II.5 & 40 & 15 & 1 & 0.110498 \\
+        II.1 & 265 & 240 & 2 & 0.098736 \\
+        II.3 & 85 & 60 & 0.8 & 0.043155 \\ \hline
     \end{tabular}
-    \caption{The resulting MSFN figure predicted by the noise extraction module as well as the derived MSFN figure}
-    \label{tab:COMP}
+    \caption{The table shows the measured MSFN figures from \cite{fluxNoiseSquidsStevenAnton} and the MSFN values calculated using the noise extraction module. The parameters R and W are listed in $\si{\micro m}$. The SQUID number uses the same numbering as used in \cite{fluxNoiseSquidsStevenAnton}. The table is sorted by the numerical MSFN figure in ascending order.}
+    \label{tab:sweepres}
 \end{table}
 
-There is a large discrepancy in the predicted and derived figures. On average, the values vary by an order of magnitude. The noise extraction module predicts less noise than what is actually observed. The measurements where taken at very low temperatures (as low as $20 mk$) to limit the amount of critical current noise present in the system. This cannot completely eliminate the noise as that would require zero kelvin temperatures. This can account for a portion of the discrepancy but at the temperatures these measurements where taken it seems unlikely that it can be wholly attributed to critical current noise. Another likely source of error is the simplistic model for the SQUID washer. The arbitrary choice of integration limits is another potential source of error. \par 
-Despite the large discrepancy the tool is useful as the trends across various geometries hold. This means that the tool can help designers choose loop geometries that improve on low frequency performance without being able to accurately predict the MSFN noise figure.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\linewidth]{stevenfig}
+    \caption{The figure shows the various flux noise measurements taken in \cite{fluxNoiseSquidsStevenAnton}. The dashed line is predicted flux noise from the analytic equation \ref{eq:ThinFilmMSFN}.}
+    \label{fig:stevefig}
+\end{figure}
+
+Table \ref{tab:sweepres} demonstrates that there is a large discrepancy between the measured MSFN figures and the figures calculated using the noise extraction module. If we only consider SQUIDs in group \textit{I} for the moment, we observe that the noise extraction module calculates MSFN figures that follow the same trend as the measured values. The SQUID with the largest measured MSFN value is also the SQUID with the largest MSFN figure calculated by the noise extraction module. If we consider only the SQUIDs in group \textit{II} then this trend is violated. We do note that in group 2 the analytical predictions roughly follow the same trend. The authors noted that a potential source of error in the inferred MSFN figures is the sensitivity of the alpha parameter. Fitting the measured PSD to equation \ref{eq:PSDfit} will lead to some error. The authors noted that at low temperatures a $0.03$ change in $\alpha$ can change the inferred MSFN figure by a factor of $1.6$. The violation of the trend in group \textit{II} can easily be accounted for by error in the $\alpha$ parameter. The authors also noted their difficulty in reconciling their data with the uncorrelated surface spin model and suggested that their data is consistent with a model where spins are spatially correlated \cite{fluxNoiseSquidsStevenAnton}. \par
+In this context one could make the argument that the module is useful for design as it can enable designers to compare designs but not useful for accurately predicting MSFN figures. More data over a wider range is required to conclusively make this claim as errors in fitting the data makes it hard to compare designs with similar MSFN figures.
