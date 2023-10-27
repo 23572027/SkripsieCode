@@ -104,7 +104,7 @@ as well as the period of the equation for the phase, we find the time average vo
     \label{eq:IVCHAR}
 \end{equation}
 
-\subsection{SQUID's}
+\subsection{SQUIDs}
 An application of the Josephson effect is the superconducting quantum interference device (SQUID). In essence a SQUID refers to a superconducting ring that contains one or more Josephson junction. This interference effect is analogous to interference one might encounter in the field of optics \cite{DCSQUIDoriginalPaper}. The SQUID is a highly sensitive device that can in some cases measure fields as weak as $5\times 10^{-14} T$ \cite{Drung2016NBSQUIDS}.
 
 \subsubsection*{Flux quantisation}
@@ -232,7 +232,7 @@ A simple model that gives rise to a 1/f like spectrum is that of the random tele
     \label{eq:RTSPSD}
 \end{equation}
 If we assume a number of IID random telegraph processes then the resulting distribution is the sum of each individual distribution. Furthermore, if the distribution of each $\tau$ for all processes varies with $1/\tau$ then you get a distribution that scales with $1/f$ \cite{fluxNoiseSquidsStevenAnton}. 
-\subsubsection*{The properties of flux noise in SQUID's}
+\subsubsection*{The properties of flux noise in SQUIDs}
 Although there is no consensus on the exact origin of $1/f$ noise many agree that the origin of the excess noise at low frequencies is due to randomly reversing of magnetic moments distributed thinly on the surface of a super conductor \cite{FluxNoiseCol}. As \cite{FluxNoiseCol} reports the noise has a power spectral density of the form of equation \ref{eq:PSDnoise}.
 \begin{equation}
     S_\Phi(f) = \frac{A}{f^\alpha}
@@ -242,7 +242,7 @@ The parameter A is insensitive to the geometry and materials of the substrate \c
 
 \subsection{Techniques for predicting mean square flux noise}
 \label{subsec:PredictFluxNoise}
-The importance of being able to predict the low frequency flux noise in SQUID's has led many to attempt to predict it using the mostly agreed upon model of magnetic defects on the surface of the super conductor.
+The importance of being able to predict the low frequency flux noise in SQUIDs has led many to attempt to predict it using the mostly agreed upon model of magnetic defects on the surface of the super conductor.
 
 \subsubsection*{Numerical method by Bialczak et al.}
 In the work done by Bialczak et al. \cite{BialczakTestLoop}, the authors describe how they calculate the mean square flux noise due to a random distribution of surface defects on the substrate of the SQUID. Critically, the authors do not make the assumption that defects are confined to the surface of the superconducting film. In this method a test loop is used to represent a surface defect. The test loop is dimensioned such that the product of the area of the loop and the current in the test loop is equal to the Bohr magneton. The authors used FastHenry to calculate the mutual inductance between the SQUID and the test loop. Once the mutual inductance is known, one can simply relate it to the flux coupled into the loop by a single magnetic moment by multiplying the test current by the mutual inductance \cite{BialczakTestLoop}. 
