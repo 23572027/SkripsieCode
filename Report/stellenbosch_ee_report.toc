@@ -32,15 +32,23 @@
 \contentsline {subsection}{\numberline {4.1.2}Results}{29}{subsection.4.1.2}%
 \contentsline {section}{\numberline {4.2}The mesh optimisation module}{30}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}Test setup}{31}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Results}{31}{subsection.4.2.2}%
-\contentsline {section}{\numberline {4.3}Comparison with the results of S.M. Anton \textit {et al.}}{32}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Test Setup}{32}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Results}{33}{subsection.4.3.2}%
-\contentsline {section}{\numberline {4.4}Comparison with actual SQUID designs}{34}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Test setup}{34}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Results}{34}{subsection.4.4.2}%
-\contentsline {chapter}{\numberline {5}Summary and Conclusion}{37}{chapter.5}%
-\contentsline {chapter}{Bibliography}{39}{chapter*.33}%
-\contentsline {chapter}{\numberline {A}Example settings file}{42}{appendix.A}%
-\contentsline {chapter}{\numberline {B}Project Planning Schedule}{44}{appendix.B}%
-\contentsline {chapter}{\numberline {C}Outcomes Compliance}{45}{appendix.C}%
+\contentsline {subsection}{\numberline {4.2.2}Results}{32}{subsection.4.2.2}%
+\contentsline {section}{\numberline {4.3}Comparison with the results of S.M. Anton \textit {et al.}}{33}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Test Setup}{33}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Results}{34}{subsection.4.3.2}%
+\contentsline {section}{\numberline {4.4}Comparison with actual SQUID designs}{35}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Test setup}{35}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Results}{35}{subsection.4.4.2}%
+\contentsline {chapter}{\numberline {5}Summary and Conclusion}{38}{chapter.5}%
+\contentsline {chapter}{Bibliography}{40}{chapter*.34}%
+\contentsline {chapter}{\numberline {A}Example settings file}{43}{appendix.A}%
+\contentsline {chapter}{\numberline {B}Project Planning Schedule}{45}{appendix.B}%
+\contentsline {chapter}{\numberline {C}Outcomes Compliance}{46}{appendix.C}%
+\contentsline {section}{\numberline {C.1}GA 1. Problem Solving}{46}{section.C.1}%
+\contentsline {section}{\numberline {C.2}GA 2. Application of Scientific and Engineering Knowledge}{46}{section.C.2}%
+\contentsline {section}{\numberline {C.3}GA 3. Engineering Design}{46}{section.C.3}%
+\contentsline {section}{\numberline {C.4}GA 4. Investigations, experiments and data analysis}{47}{section.C.4}%
+\contentsline {section}{\numberline {C.5}GA 5. Engineering methods, skills and tools, including Information Technology}{47}{section.C.5}%
+\contentsline {section}{\numberline {C.6}GA 6. Professional and technical communication}{47}{section.C.6}%
+\contentsline {section}{\numberline {C.7}GA 8. Individual work}{47}{section.C.7}%
+\contentsline {section}{\numberline {C.8}GA 9. Independent Learning Ability}{48}{section.C.8}%

@@ -5,6 +5,7 @@
 
 
 \section{Theory and applications of superconductivity}
+\label{chap:sup}
 In order to understand and apply the methods described in \cite{fluxNoiseSquidsStevenAnton} one must first understand the basic theory behind superconductivity as well as some examples of how this theory is used in practice.
 
 \subsection{Superconductivity}
@@ -20,6 +21,7 @@ Since the first discovery of superconductivity a couple of successfully theories
 Here $\Lambda$ is a phenomenological parameter determined through experimentation. \par BCS theory put forth a microscopic model of superconductors and explains the phenomenon as a quantum mechanical effect. The details are out of scope for this project but on a crude, qualitative level BCS theory can be explained by the pairing of electrons in the crystal lattice of the superconductor allowing them to be considered one particle. These particles are known as cooper-pairs. At extremely low temperatures the formation of these cooper pairs are energetically favourable \cite{Feynman_Leighton_Sands_2013}. Electron pairs in this state can flow through the superconductor unimpeded.
 
 \subsection{The Josephson junction}
+\label{chap:JJ}
 In superconducting electronics the active component is the Josephson junction \cite{Duzer_1999_Princip_Super}. The Josephson junction refers to a situation where two superconductors are connected through a thin non-conductive barrier. If this barrier is thin enough one can observe what is known as the Josephson effect. This phenomenon is can be explained by considering the effect of quantum tunnelling of cooper pairs through the non-conductive boundary. For a sufficiently large barrier one can express the ensemble average wave function in each superconductor independently\cite{Duzer_1999_Princip_Super}:
 \begin{equation}
     \Psi = |\Psi(\Vec{r})| \exp{\{i\theta(\Vec{r})\}}
@@ -105,9 +107,11 @@ as well as the period of the equation for the phase, we find the time average vo
 \end{equation}
 
 \subsection{SQUIDs}
+\label{chap:SQUIDS}
 An application of the Josephson effect is the superconducting quantum interference device (SQUID). In essence a SQUID refers to a superconducting ring that contains one or more Josephson junction. This interference effect is analogous to interference one might encounter in the field of optics \cite{DCSQUIDoriginalPaper}. The SQUID is a highly sensitive device that can in some cases measure fields as weak as $5\times 10^{-14} T$ \cite{Drung2016NBSQUIDS}.
 
 \subsubsection*{Flux quantisation}
+\label{chap:FQ}
 To understand the basic operation of a SQUID, one must first understand the concept of flux quantisation. To do so we consider a superconducting ring in the presence of a uniform magnetic field. The ring is superconducting, so it exhibits the Meissner effect and thus the current density inside the ring is zero. Recall that the flux through a ring is:
 \begin{equation}
     \Phi = \oint \Vec{A} \cdot d\Vec{s}

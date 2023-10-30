@@ -1273,6 +1273,14 @@ INPUT ./results/fig//errvtime.png
 INPUT results/fig//errvtime.png
 INPUT ./results/fig//errvtime.png
 INPUT ./results/fig//errvtime.png
+INPUT ./results/fig//timevsimnum.png
+INPUT results/fig//timevsimnum.png
+INPUT ./results/fig//timevsimnum.png
+INPUT ./results/fig//timevsimnum.png
+INPUT ./results/fig//msfnvssimnum.png
+INPUT results/fig//msfnvssimnum.png
+INPUT ./results/fig//msfnvssimnum.png
+INPUT ./results/fig//msfnvssimnum.png
 INPUT ./results/fig//sqwasher.png
 INPUT results/fig//sqwasher.png
 INPUT ./results/fig//sqwasher.png

@@ -160,4 +160,8 @@ T.~Lanting, M.~H. Amin, A.~J. Berkley, C.~Rich, S.-F. Chen, S.~LaForest, and
   \url{https://link.aps.org/doi/10.1103/PhysRevB.89.014503}
 \BIBentrySTDinterwordspacing
 
+\bibitem{paulcode}
+P.~D. Rossouw, ``{SkripsieCode},''
+  \url{https://github.com/23572027/SkripsieCode}, 2023.
+
 \end{thebibliography}
