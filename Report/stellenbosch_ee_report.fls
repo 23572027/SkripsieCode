@@ -1,8 +1,8 @@
-PWD /home/paul/Skripsie/Code/SkripsieCode/Report
+PWD /home/paul/Skripsie/Code/SkripsieCode/Report (1)
 INPUT /usr/share/texlive/texmf-dist/web2c/texmf.cnf
 INPUT /usr/share/texlive/texmf-dist/web2c/texmf.cnf
 INPUT /home/paul/.texlive2021/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /home/paul/Skripsie/Code/SkripsieCode/Report/stellenbosch_ee_report.tex
+INPUT /home/paul/Skripsie/Code/SkripsieCode/Report (1)/stellenbosch_ee_report.tex
 OUTPUT stellenbosch_ee_report.log
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/report.cls
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/report.cls

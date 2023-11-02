@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2023.9.30)  2 NOV 2023 15:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2023.9.30)  2 NOV 2023 15:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/home/paul/Skripsie/Code/SkripsieCode/Report/stellenbosch_ee_report.tex
-(/home/paul/Skripsie/Code/SkripsieCode/Report/stellenbosch_ee_report.tex
+**"/home/paul/Skripsie/Code/SkripsieCode/Report (1)/stellenbosch_ee_report.tex"
+(/home/paul/Skripsie/Code/SkripsieCode/Report (1)/stellenbosch_ee_report.tex
 LaTeX2e <2020-10-01> patch level 4
 L3 programming layer <2021-05-07> (/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
 Document Class: report 2020/04/10 v1.4m Standard LaTeX document class
@@ -1048,12 +1048,12 @@ Package rerunfilecheck Info: File `stellenbosch_ee_report.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  20262 strings out of 480852
- 348867 string characters out of 5906873
+ 348881 string characters out of 5906873
  683993 words of memory out of 6000000
  36662 multiletter control sequences out of 15000+600000
  520749 words of font info for 259 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 61i,17n,75p,1921b,934s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 61i,17n,75p,1927b,934s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmssbo10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
 Output written on stellenbosch_ee_report.pdf (59 pages, 1780229 bytes).
 PDF statistics:
