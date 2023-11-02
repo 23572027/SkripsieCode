@@ -1050,10 +1050,10 @@ INPUT frontmatter/skripsie_title_page.tex
 INPUT ./frontmatter/skripsie_title_page.tex
 INPUT ./frontmatter/skripsie_title_page.tex
 INPUT frontmatter/skripsie_title_page.tex
-INPUT /usr/share/texlive/texmf-dist/tex/latex/stellenbosch/logos/USlogo-top.pdf
-INPUT /usr/share/texlive/texmf-dist/tex/latex/stellenbosch/logos/USlogo-top.pdf
-INPUT /usr/share/texlive/texmf-dist/tex/latex/stellenbosch/logos/USlogo-top.pdf
-INPUT /usr/share/texlive/texmf-dist/tex/latex/stellenbosch/logos/USlogo-top.pdf
+INPUT ./frontmatter/fig//US.pdf
+INPUT frontmatter/fig//US.pdf
+INPUT ./frontmatter/fig//US.pdf
+INPUT ./frontmatter/fig//US.pdf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/rm-lmssbx10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/rm-lmssbx10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/rm-lmr12.tfm
@@ -1075,6 +1075,7 @@ INPUT frontmatter/declaration.tex
 INPUT ./frontmatter/declaration.tex
 INPUT ./frontmatter/declaration.tex
 INPUT frontmatter/declaration.tex
+INPUT /usr/share/texlive/texmf-dist/tex/latex/stellenbosch/logos/USlogo-top.pdf
 INPUT /usr/share/texlive/texmf-dist/tex/latex/stellenbosch/logos/USlogo-top.pdf
 INPUT /usr/share/texlive/texmf-dist/tex/latex/stellenbosch/logos/USlogo-top.pdf
 INPUT /usr/share/texlive/texmf-dist/tex/latex/stellenbosch/logos/USlogo-top.pdf
