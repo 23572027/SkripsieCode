@@ -45,6 +45,6 @@ Physical Surface("FieldPlane0", 25) = {5, 9, 4, 13, 6, 12, 8, 11, 10, 7};
 
 
 Coherence;
-Mesh 2;
-Save "loopFIELD.msh";
+//Mesh 2;
+//Save "loopFIELD.msh";
 
