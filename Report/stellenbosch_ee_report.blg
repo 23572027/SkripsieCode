@@ -1,56 +1,78 @@
-This is BibTeX, Version 0.99d (TeX Live 2021)
+This is BibTeX, Version 0.99d (TeX Live 2022/CVE-2023-32700 patched)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: stellenbosch_ee_report.aux
 The style file: IEEEtran.bst
+I found no \bibdata command---while reading file stellenbosch_ee_report.aux
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-Database file #1: mybib.bib
+Warning--I didn't find a database entry for "DCSQUIDdesignImage"
+Warning--I didn't find a database entry for "fluxNoiseSquidsStevenAnton"
+Warning--I didn't find a database entry for "GMSH"
+Warning--I didn't find a database entry for "msfnCode"
+Warning--I didn't find a database entry for "KochModel"
+Warning--I didn't find a database entry for "Golubov_1998"
+Warning--I didn't find a database entry for "Tinkham_2015"
+Warning--I didn't find a database entry for "Feynman_Leighton_Sands_2013"
+Warning--I didn't find a database entry for "Duzer_1999_Princip_Super"
+Warning--I didn't find a database entry for "CPRJJ"
+Warning--I didn't find a database entry for "DCSQUIDoriginalPaper"
+Warning--I didn't find a database entry for "Drung2016NBSQUIDS"
+Warning--I didn't find a database entry for "JOSEPHSONJUNCTION"
+Warning--I didn't find a database entry for "SQUIDhandbook"
+Warning--I didn't find a database entry for "LowNoiseGrad"
+Warning--I didn't find a database entry for "QubitPerf"
+Warning--I didn't find a database entry for "FluxNoiseCol"
+Warning--I didn't find a database entry for "SurfaceSpinOrig"
+Warning--I didn't find a database entry for "OriginAndReductionOf1/fNoise"
+Warning--I didn't find a database entry for "BialczakTestLoop"
+Warning--I didn't find a database entry for "TLSDefectExplanation"
 -- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
 
 Done.
-You've used 24 entries,
+You've used 0 entries,
             4087 wiz_defined-function locations,
-            1005 strings with 12363 characters,
-and the built_in function-call counts, 19633 in all, are:
-= -- 1584
-> -- 533
-< -- 162
-+ -- 313
-- -- 121
-* -- 1039
-:= -- 2900
-add.period$ -- 48
-call.type$ -- 24
-change.case$ -- 21
-chr.to.int$ -- 348
-cite$ -- 24
-duplicate$ -- 1370
-empty$ -- 1464
-format.name$ -- 117
-if$ -- 4561
+            862 strings with 7961 characters,
+and the built_in function-call counts, 104 in all, are:
+= -- 0
+> -- 0
+< -- 0
++ -- 0
+- -- 0
+* -- 19
+:= -- 27
+add.period$ -- 0
+call.type$ -- 0
+change.case$ -- 0
+chr.to.int$ -- 0
+cite$ -- 0
+duplicate$ -- 0
+empty$ -- 1
+format.name$ -- 0
+if$ -- 3
 int.to.chr$ -- 0
-int.to.str$ -- 24
-missing$ -- 249
-newline$ -- 103
-num.names$ -- 24
-pop$ -- 551
+int.to.str$ -- 0
+missing$ -- 0
+newline$ -- 23
+num.names$ -- 0
+pop$ -- 0
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 1487
+skip$ -- 1
 stack$ -- 0
-substring$ -- 910
-swap$ -- 1212
-text.length$ -- 46
+substring$ -- 0
+swap$ -- 0
+text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 24
+type$ -- 0
 warning$ -- 0
-while$ -- 70
-width$ -- 26
-write$ -- 270
+while$ -- 0
+width$ -- 0
+write$ -- 22
+(There was 1 error message)
